@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://2yr8h8k7u6ii"]
+
+[node name="PlayerButFr" type="Node2D"]
+scale = Vector2(23.12, 1)
