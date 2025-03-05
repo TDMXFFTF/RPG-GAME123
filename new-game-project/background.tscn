@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7ph4gkjhyl8f"]
+
+[ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="1_k4dwh"]
+[ext_resource type="Texture2D" uid="uid://c6bafqnvnprnp" path="res://icon.svg" id="2_8rpb7"]
+
+[node name="Background" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_k4dwh")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(302, 132)
+texture = ExtResource("2_8rpb7")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(298, 345)
+texture = ExtResource("2_8rpb7")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(294, 577)
+texture = ExtResource("2_8rpb7")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(844, 336)
+texture = ExtResource("2_8rpb7")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(845, 118)
+texture = ExtResource("2_8rpb7")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(844, 559)
+texture = ExtResource("2_8rpb7")
