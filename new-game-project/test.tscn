@@ -10,6 +10,6 @@ position = Vector2(936, 675)
 texture = ExtResource("1_ivfkw")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.153077, 0.153077, 0.153077, 1)
+color = Color(0.0497766, 0.0497766, 0.0497767, 1)
 
 [node name="Player" parent="." instance=ExtResource("2_nxe3u")]
