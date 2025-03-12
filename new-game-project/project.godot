@@ -50,6 +50,10 @@ right={
 
 locale/translations_pot_files=PackedStringArray("res://main.dialogue")
 
+[layer_names]
+
+2d_physics/layer_5="Actionable"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

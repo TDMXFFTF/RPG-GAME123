@@ -1,5 +1,7 @@
 class_name Player extends CharacterBody2D
 
+@onready var actionable_finder: Area2D = $Direction/ActionableFinder
+
 @export var speed := 400
 @export var drag_factor := 12.0
 
@@ -14,5 +16,8 @@ func _physics_process(delta: float) -> void:
 
 func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
-		DialogueManager.show_example_dialogue_balloon(load("res://main.dialogue"),"start")
-		return
+		var actionables = actionable_finder.get_overlapping_areas()
+		if actionables.size() > 0:
+			actionables[0].action()
+		#DialogueManager.show_example_dialogue_balloon(load("res://main.dialogue"),"start")
+			return
