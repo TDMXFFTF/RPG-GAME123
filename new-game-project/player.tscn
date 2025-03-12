@@ -20,9 +20,6 @@ shape = SubResource("CircleShape2D_jjb6k")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.066755, 0.066755, 0.066755, 1)
-
 [node name="Node2D" type="Node2D" parent="."]
 script = ExtResource("3_dbr1r")
 
