@@ -13,6 +13,15 @@ func _physics_process(delta: float) -> void:
 	velocity += steering * drag_factor * delta
 	var direction_discrete := move_direction.sign()
 	move_and_slide()
+	if Input.is_action_just_pressed("right"):
+		$AnimationPlayer.play("right")
+	elif Input.is_action_just_pressed("left"):
+		$AnimationPlayer.play("left")
+	elif Input.is_action_just_pressed("up"):
+		$AnimationPlayer.play("UP")
+	elif Input.is_action_just_pressed("down"):
+		$AnimationPlayer.play("DoWn")
+
 
 func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept"):

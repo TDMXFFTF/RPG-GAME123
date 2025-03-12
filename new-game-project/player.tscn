@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://yjhoyjnry8qm"]
+[gd_scene load_steps=12 format=3 uid="uid://yjhoyjnry8qm"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_yqf8w"]
 [ext_resource type="Texture2D" uid="uid://byi0udgi5gw75" path="res://icon.svg" id="2_5llva"]
@@ -8,6 +8,94 @@ radius = 82.0244
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_im43p"]
 radius = 75.0067
+
+[sub_resource type="Animation" id="Animation_pdqtv"]
+resource_name = "new_animation"
+
+[sub_resource type="Animation" id="Animation_h5tpd"]
+resource_name = "UP"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Direction:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [3.14159]
+}
+
+[sub_resource type="Animation" id="Animation_grx5c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Direction:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [3.14159]
+}
+
+[sub_resource type="Animation" id="Animation_0qh7o"]
+resource_name = "DoWn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Direction:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_nmjce"]
+resource_name = "right"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Direction:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [4.71239]
+}
+
+[sub_resource type="Animation" id="Animation_mse7v"]
+resource_name = "left"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Direction:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5708]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tj5fg"]
+_data = {
+"DoWn": SubResource("Animation_0qh7o"),
+"RESET": SubResource("Animation_grx5c"),
+"UP": SubResource("Animation_h5tpd"),
+"left": SubResource("Animation_mse7v"),
+"new_animation": SubResource("Animation_pdqtv"),
+"right": SubResource("Animation_nmjce")
+}
 
 [node name="Player" type="CharacterBody2D"]
 motion_mode = 1
@@ -21,6 +109,7 @@ visible = false
 shape = SubResource("CircleShape2D_jjb6k")
 
 [node name="Direction" type="Marker2D" parent="."]
+rotation = 3.14159
 
 [node name="ActionableFinder" type="Area2D" parent="Direction"]
 collision_layer = 0
@@ -29,3 +118,8 @@ collision_mask = 16
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/ActionableFinder"]
 position = Vector2(1, 98)
 shape = SubResource("CircleShape2D_im43p")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_tj5fg")
+}
