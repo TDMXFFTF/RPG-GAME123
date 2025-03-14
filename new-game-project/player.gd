@@ -8,9 +8,10 @@ class_name Player extends CharacterBody2D
 var health := max_health: set = set_health
 
 func _ready() -> void:
-	_health_bar.max_value = max_health
-	_health_bar.value = health
-	_health_bar.init_health(health)
+	pass
+	#_health_bar.max_value = max_health
+	#_health_bar.value = health
+	#_health_bar.init_health(health)
 
 func _physics_process(delta: float) -> void:
 	var move_direction := Input.get_vector("left", "right", "up", "down")
