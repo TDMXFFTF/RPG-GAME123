@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bjjy23482ltfb"]
+[gd_scene load_steps=7 format=3 uid="uid://bjjy23482ltfb"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_yqf8w"]
 [ext_resource type="Texture2D" uid="uid://c6bafqnvnprnp" path="res://icon.svg" id="2_5llva"]
 [ext_resource type="Script" path="res://node_2d.gd" id="3_dbr1r"]
 [ext_resource type="Texture2D" uid="uid://cmbu23hrg3pce" path="res://Tlight.png" id="3_qbhfv"]
+[ext_resource type="Texture2D" uid="uid://wqlh7tq13qi5" path="res://light (1).png" id="5_58ulv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jjb6k"]
 
@@ -27,9 +28,12 @@ script = ExtResource("3_dbr1r")
 position = Vector2(570, 0)
 
 [node name="PointLight2D" type="PointLight2D" parent="Node2D/Marker2D"]
-position = Vector2(67.4649, 0)
+position = Vector2(128, 0.00134182)
 rotation = 4.71238
-scale = Vector2(0.17447, -0.559365)
+scale = Vector2(0.17447, -0.462815)
 range_z_min = 0
 texture = ExtResource("3_qbhfv")
-texture_scale = 6.0
+texture_scale = 8.0
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+texture = ExtResource("5_58ulv")
