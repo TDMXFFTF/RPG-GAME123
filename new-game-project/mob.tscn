@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://s1qekke3u7nt"]
+
+[ext_resource type="Script" path="res://mob.gd" id="1_d5gvf"]
+[ext_resource type="Texture2D" uid="uid://c6bafqnvnprnp" path="res://icon.svg" id="2_2ocqo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_52nya"]
+radius = 83.0241
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6vt1h"]
+radius = 189.042
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oam0v"]
+radius = 84.0
+
+[node name="Mob" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_d5gvf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_2ocqo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_52nya")
+
+[node name="Detection" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detection"]
+shape = SubResource("CircleShape2D_6vt1h")
+
+[node name="HitBox" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource("CircleShape2D_oam0v")
+
+[node name="DamageTimer" type="Timer" parent="."]
+unique_name_in_owner = true
