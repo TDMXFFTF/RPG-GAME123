@@ -5,8 +5,8 @@
 
 [node name="Game" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_oj6ds")]
-position = Vector2(545, 343)
-
 [node name="Mob" parent="." instance=ExtResource("2_pnsiy")]
 position = Vector2(859, 326)
+
+[node name="Player" parent="." instance=ExtResource("1_oj6ds")]
+position = Vector2(545, 343)

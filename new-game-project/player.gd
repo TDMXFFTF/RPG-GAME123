@@ -4,6 +4,8 @@ class_name Player extends CharacterBody2D
 @export var drag_factor := 12.0
 @export var max_health := 10
 @onready var _health_bar: ProgressBar = %HealthBar
+@onready var _hit_box: Area2D = %HitBox
+@onready var _animation_player := $AnimationPlayer as AnimationPlayer
 
 var health := max_health: set = set_health
 
@@ -27,3 +29,13 @@ func set_health(new_health: int) -> void:
 	if health == 0:
 		queue_free()
 	_health_bar.health = health
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("attack"):
+		_animation_player.play("sword")
+		get_viewport().set_input_as_handled()
+		set_deferred("monitoring", false)
+
+func _on_hit_box_body_entered(body):
+	if body.has_method("take_damage"):
+		body.take_damage()
