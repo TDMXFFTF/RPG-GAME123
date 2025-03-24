@@ -4,11 +4,14 @@ class_name Mob extends CharacterBody2D
 @export var SPEED := 600.0
 @export var acceleration := 450.0
 @export var drag_factor := 1.5
-@export var health := 3
+@export var max_health := 3
 var _player: Player = null
+var health := max_health: set = set_health
 @onready var _detection: Area2D = %Detection
 @onready var _hit_box: Area2D = %HitBox
 @onready var _damage_timer: Timer = %DamageTimer
+@onready var _health_bar: ProgressBar = %HealthBar
+
 
 func _ready() -> void:
 	const damage = 1.0
@@ -32,6 +35,9 @@ func _ready() -> void:
 	_damage_timer.timeout.connect(func () -> void:
 		_player.health -= damage
 	)
+	_health_bar.max_value = max_health
+	_health_bar.value = health
+	_health_bar.init_health(health)
 
 func _physics_process(delta: float) -> void:
 	if _player == null:
@@ -50,5 +56,11 @@ func get_global_player_position() -> Vector2:
 
 func take_damage():
 	health -= 1
+
+func set_health(new_health: int) -> void:
+	var previous_health := health
+	health = clampi(new_health, 0, max_health)
+	_health_bar.value = health
 	if health == 0:
 		queue_free()
+	_health_bar.health = health
