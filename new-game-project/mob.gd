@@ -1,7 +1,7 @@
 class_name Mob extends CharacterBody2D
 
 
-@export var SPEED := 600.0
+@export var SPEED := 100.0
 @export var acceleration := 450.0
 @export var drag_factor := 1.5
 var _player: Player = null

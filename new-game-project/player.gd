@@ -11,6 +11,8 @@ func _ready() -> void:
 	_health_bar.max_value = max_health
 	_health_bar.value = health
 	_health_bar.init_health(health)
+	
+
 
 func _physics_process(delta: float) -> void:
 	var move_direction := Input.get_vector("left", "right", "up", "down")
@@ -19,6 +21,12 @@ func _physics_process(delta: float) -> void:
 	velocity += steering * drag_factor * delta
 	var direction_discrete := move_direction.sign()
 	move_and_slide()
+	if Input.is_action_just_pressed("potion_use"):
+		if IdontKnowingly.potions > 0:
+			health += 2.5
+			IdontKnowingly.potions -= 1
+	print(IdontKnowingly.potions)
+	
 
 func set_health(new_health: int) -> void:
 	var previous_health := health

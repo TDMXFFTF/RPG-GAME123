@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://bqm7p8re45r14"]
+
+[ext_resource type="Texture2D" uid="uid://byoaoxa7045hd" path="res://Artwork/GRASS AGAIN.png" id="1_2g6rc"]
+[ext_resource type="Script" path="res://p_otion_testing_2.gd" id="2_m72kp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2w8h"]
+atlas = ExtResource("1_2g6rc")
+region = Rect2(541, 992, 541, 496)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a670h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2w8h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s0etu"]
+radius = 280.708
+
+[node name="Potion_testing 2" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_a670h")
+frame_progress = 0.806514
+script = ExtResource("2_m72kp")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_s0etu")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
