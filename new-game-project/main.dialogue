@@ -1,11 +1,11 @@
 ~ start
 Npc: [[Hi|Hello|Howdy]], this is some dialogue.
- - I hate you [do! on_yes_choice()]
-	Npc: Yes
+ - I hate you 
+	Npc: Yes [do! on_yes_choice()]
  - cool
 	Npc: i know right now do this quest for me
 	 - ok fine
 		Npc: cool lets go! 
-	 - no
+	 - no [do! on_no_choice()]
 		Npc: jeez ok
 => END
