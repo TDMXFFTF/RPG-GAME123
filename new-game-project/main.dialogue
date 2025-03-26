@@ -1,3 +1,12 @@
 ~ start
-Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
+Npc: [[Hi|Hello|Howdy]], this is some dialogue.
+ - I hate you
+	Npc: Yes
+ - cool
+	Npc: i know right now do this quest for me
+	 - ok fine
+		Npc: cool lets go
+	 - no
+		Npc: jeez ok
+
 => END
