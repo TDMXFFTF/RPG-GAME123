@@ -5,7 +5,7 @@ Npc: [[Hi|Hello|Howdy]], this is some dialogue.
  - cool
 	Npc: i know right now do this quest for me
 	 - ok fine
-		Npc: cool lets go
+		Npc: cool lets go! 
 	 - no
 		Npc: jeez ok
 
