@@ -4,6 +4,8 @@ class_name Player extends CharacterBody2D
 @export var drag_factor := 12.0
 @export var max_health := 10
 @onready var _health_bar: ProgressBar = %HealthBar
+@onready var potion: CanvasLayer = $Potion
+@onready var potion_value: Label = $"Potion/Potion value"
 
 var health := max_health: set = set_health
 
@@ -26,7 +28,9 @@ func _physics_process(delta: float) -> void:
 			health += 2.5
 			IdontKnowingly.potions -= 1
 	print(IdontKnowingly.potions)
-	
+
+
+
 
 func set_health(new_health: int) -> void:
 	var previous_health := health

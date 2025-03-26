@@ -1,9 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://doe8voplkxsu3"]
+[gd_scene load_steps=2 format=3 uid="uid://doe8voplkxsu3"]
 
 [ext_resource type="Script" path="res://PotionManager.gd" id="1_il8r3"]
-[ext_resource type="PackedScene" uid="uid://iqpmu1gw1h1t" path="res://potion_ui.tscn" id="2_ut31a"]
 
 [node name="PotionManager" type="Node"]
 script = ExtResource("1_il8r3")
-
-[node name="PotionUI" parent="." instance=ExtResource("2_ut31a")]
