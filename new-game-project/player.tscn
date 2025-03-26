@@ -50,10 +50,23 @@ tracks/2/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sword/Marker2D/Sprite2D:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_2nx4g"]
 resource_name = "sword"
-length = 0.2
+length = 0.3
+step = 0.0333
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -61,10 +74,10 @@ tracks/0/path = NodePath("Sword/Marker2D/Sprite2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.0333333, 0.0666667, 0.1, 0.133333, 0.166667, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0.0666666, 0.1, 0.133333, 0.166666, 0.2, 0.233133, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(96, -26), Vector2(111, -13), Vector2(111, 6), Vector2(108, 30), Vector2(94, 44), Vector2(96, -26)]
+"values": [Vector2(96, -26), Vector2(111, -13), Vector2(111, 6), Vector2(108, 30), Vector2(94, 44), Vector2(111, 3), Vector2(96, -26)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -73,10 +86,10 @@ tracks/1/path = NodePath("Sword/Marker2D/Sprite2D:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.0333333, 0.0666667, 0.1, 0.133333, 0.166667, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0.0666666, 0.1, 0.133333, 0.166666, 0.2, 0.233133, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [-1.23918, -0.696386, 0.0, 0.708604, 1.23918, -1.23918]
+"values": [-1.23918, -0.696386, 0.0, 0.708604, 1.23918, 0.0, -1.23918]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -89,6 +102,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [true, true, false, true, true, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sword/Marker2D/Sprite2D:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.0333, 0.0666667, 0.1, 0.133333, 0.166667, 0.2, 0.233133, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, true, true, true, true, true, true, false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3bdbl"]
@@ -158,6 +183,7 @@ shape = SubResource("CapsuleShape2D_g5w7s")
 disabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Sword/Marker2D"]
+visible = false
 position = Vector2(96, -26)
 rotation = -1.23918
 scale = Vector2(0.125523, 0.0793269)
