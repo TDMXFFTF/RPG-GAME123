@@ -10,13 +10,11 @@
 top_level = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
-color = Color(0.0475577, 0.0475576, 0.0475576, 1)
+color = Color(0.103744, 0.103743, 0.103744, 1)
 
 [node name="Background" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(888, 336)
-scale = Vector2(26.3049, 26.5297)
+scale = Vector2(26.3049, 26.1083)
 texture = ExtResource("2_yu84w")
 
 [node name="Trees" parent="." instance=ExtResource("3_777vs")]
