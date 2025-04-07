@@ -25,9 +25,9 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	if Input.is_action_just_pressed("potion_use"):
 		if IdontKnowingly.potions > 0:
-			health += 2.5
+			health += 3.33
 			IdontKnowingly.potions -= 1
-	print(IdontKnowingly.potions)
+
 
 
 
