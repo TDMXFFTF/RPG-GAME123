@@ -17,7 +17,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sword/Marker2D/Sprite2D:position")
+tracks/0/path = NodePath("BasicSword/Marker2D/Sprite2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -29,7 +29,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sword/Marker2D/Sprite2D:rotation")
+tracks/1/path = NodePath("BasicSword/Marker2D/Sprite2D:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -41,7 +41,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Sword/Marker2D/HitBox/CollisionShape2D:disabled")
+tracks/2/path = NodePath("BasicSword/Marker2D/HitBox/CollisionShape2D:disabled")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -53,7 +53,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Sword/Marker2D/Sprite2D:visible")
+tracks/3/path = NodePath("BasicSword/Marker2D/Sprite2D:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -70,7 +70,7 @@ step = 0.0333
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sword/Marker2D/Sprite2D:position")
+tracks/0/path = NodePath("BasicSword/Marker2D/Sprite2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -82,7 +82,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sword/Marker2D/Sprite2D:rotation")
+tracks/1/path = NodePath("BasicSword/Marker2D/Sprite2D:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -94,7 +94,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Sword/Marker2D/HitBox/CollisionShape2D:disabled")
+tracks/2/path = NodePath("BasicSword/Marker2D/HitBox/CollisionShape2D:disabled")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -106,7 +106,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Sword/Marker2D/Sprite2D:visible")
+tracks/3/path = NodePath("BasicSword/Marker2D/Sprite2D:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -169,24 +169,24 @@ libraries = {
 "": SubResource("AnimationLibrary_3bdbl")
 }
 
-[node name="Sword" type="Node2D" parent="."]
+[node name="BasicSword" type="Node2D" parent="."]
 script = ExtResource("7_8s3ow")
 
-[node name="Marker2D" type="Marker2D" parent="Sword"]
+[node name="Marker2D" type="Marker2D" parent="BasicSword"]
 
-[node name="HitBox" type="Area2D" parent="Sword/Marker2D"]
+[node name="HitBox" type="Area2D" parent="BasicSword/Marker2D"]
 unique_name_in_owner = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sword/Marker2D/HitBox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BasicSword/Marker2D/HitBox"]
 position = Vector2(142, 0)
 shape = SubResource("CapsuleShape2D_g5w7s")
 disabled = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Sword/Marker2D"]
+[node name="Sprite2D" type="Sprite2D" parent="BasicSword/Marker2D"]
 visible = false
 position = Vector2(84, -26)
 rotation = -0.354302
 scale = Vector2(4.70312, 4.70312)
 texture = ExtResource("8_mbki4")
 
-[connection signal="body_entered" from="Sword/Marker2D/HitBox" to="." method="_on_hit_box_body_entered"]
+[connection signal="body_entered" from="BasicSword/Marker2D/HitBox" to="." method="_on_hit_box_body_entered"]
