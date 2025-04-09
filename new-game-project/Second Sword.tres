@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cwcid627p5p0u"]
+
+[ext_resource type="Texture2D" uid="uid://mta8c28c735n" path="res://second sword.png" id="1_xjx1m"]
+[ext_resource type="Script" path="res://Item.gd" id="2_r7j2w"]
+
+[resource]
+script = ExtResource("2_r7j2w")
+name = "Second Sword"
+damage = 2.0
+icon = ExtResource("1_xjx1m")
+animation = "sword"
+projectile = 0

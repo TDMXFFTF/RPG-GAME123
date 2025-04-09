@@ -1,12 +1,57 @@
-[gd_scene load_steps=3 format=3 uid="uid://c5p0o25nxbj2p"]
+[gd_scene load_steps=6 format=3 uid="uid://c5p0o25nxbj2p"]
 
 [ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="1_oj6ds"]
+[ext_resource type="Script" path="res://inventory.gd" id="2_1ba64"]
 [ext_resource type="PackedScene" uid="uid://s1qekke3u7nt" path="res://mob.tscn" id="2_pnsiy"]
+[ext_resource type="PackedScene" uid="uid://b52xi0gtsmq6p" path="res://slot.tscn" id="3_8k5dn"]
+[ext_resource type="Script" path="res://character.gd" id="4_436i6"]
 
 [node name="Game" type="Node2D"]
 
 [node name="Mob" parent="." instance=ExtResource("2_pnsiy")]
 position = Vector2(859, 326)
 
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Manager" type="Panel" parent="UI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Inventory" type="GridContainer" parent="UI/Manager"]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 282.0
+offset_right = 454.0
+offset_bottom = 362.0
+columns = 5
+script = ExtResource("2_1ba64")
+
+[node name="Slot" parent="UI/Manager/Inventory" instance=ExtResource("3_8k5dn")]
+layout_mode = 2
+
+[node name="Slot2" parent="UI/Manager/Inventory" instance=ExtResource("3_8k5dn")]
+layout_mode = 2
+
+[node name="Slot3" parent="UI/Manager/Inventory" instance=ExtResource("3_8k5dn")]
+layout_mode = 2
+
+[node name="Slot4" parent="UI/Manager/Inventory" instance=ExtResource("3_8k5dn")]
+layout_mode = 2
+
+[node name="Character" type="GridContainer" parent="UI/Manager"]
+layout_mode = 0
+offset_left = 816.0
+offset_top = 278.0
+offset_right = 896.0
+offset_bottom = 358.0
+script = ExtResource("4_436i6")
+
+[node name="Slot" parent="UI/Manager/Character" instance=ExtResource("3_8k5dn")]
+layout_mode = 2
+
 [node name="Player" parent="." instance=ExtResource("1_oj6ds")]
 position = Vector2(545, 343)
+current_item = null

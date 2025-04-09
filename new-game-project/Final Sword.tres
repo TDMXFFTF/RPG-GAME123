@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://ck56xxwpaehuh"]
+
+[ext_resource type="Texture2D" uid="uid://7ff5tqvoxqre" path="res://final sword.png" id="1_r73hi"]
+[ext_resource type="Script" path="res://Item.gd" id="2_1evba"]
+
+[resource]
+script = ExtResource("2_1evba")
+name = "Final Sword"
+damage = 3.0
+icon = ExtResource("1_r73hi")
+animation = "sword"
+projectile = 0

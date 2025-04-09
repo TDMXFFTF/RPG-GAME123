@@ -3,6 +3,9 @@ class_name Player extends CharacterBody2D
 @export var speed := 400
 @export var drag_factor := 12.0
 @export var max_health := 10
+@export var current_item : Item:
+	set(value):
+		current_item = value
 @onready var _health_bar: ProgressBar = %HealthBar
 @onready var _hit_box: Area2D = %HitBox
 @onready var _animation_player := $AnimationPlayer as AnimationPlayer
