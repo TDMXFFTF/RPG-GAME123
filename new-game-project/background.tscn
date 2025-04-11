@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://dtcly4mn3vlxk"]
+[gd_scene load_steps=6 format=3 uid="uid://dtcly4mn3vlxk"]
 
 [ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="1_k4dwh"]
 [ext_resource type="Texture2D" uid="uid://csyd1ormvbcp8" path="res://Background.png" id="2_o5502"]
-[ext_resource type="PackedScene" uid="uid://dp7xndstmbxy" path="res://Trees.tscn" id="3_777vs"]
+[ext_resource type="PackedScene" path="res://Trees.tscn" id="3_777vs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8n6v7"]
+size = Vector2(8323, 616)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t1ybu"]
+size = Vector2(5404.84, 488.911)
 
 [node name="Background" type="Node2D"]
 
@@ -13,8 +19,30 @@ top_level = true
 color = Color(0.17104, 0.171039, 0.17104, 1)
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(888, 336)
-scale = Vector2(26.3049, 26.1083)
+position = Vector2(1042.5, 346)
+scale = Vector2(42.2633, 37.865)
 texture = ExtResource("2_o5502")
 
 [node name="Trees" parent="." instance=ExtResource("3_777vs")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(513.5, 3329)
+shape = SubResource("RectangleShape2D_8n6v7")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(5105, 551)
+rotation = -1.57593
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_t1ybu")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(478, -2412)
+shape = SubResource("RectangleShape2D_8n6v7")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-3773.96, 513.763)
+rotation = -1.57593
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_t1ybu")
