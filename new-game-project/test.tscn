@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://cogggrvuakgy1"]
+[gd_scene load_steps=8 format=3 uid="uid://b35ypgbhf3oqv"]
 
 [ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="1_h2w22"]
 [ext_resource type="Script" path="res://test.gd" id="1_pkjkl"]
-[ext_resource type="PackedScene" uid="uid://7lyuj1rmr55s" path="res://npc.tscn" id="2_7qxhd"]
-[ext_resource type="PackedScene" uid="uid://br71dsyya0q6u" path="res://actionable.tscn" id="3_g88hm"]
+[ext_resource type="PackedScene" uid="uid://cmqtxdo27vk60" path="res://npc.tscn" id="2_7qxhd"]
+[ext_resource type="PackedScene" uid="uid://rjtrww6si37w" path="res://actionable.tscn" id="3_g88hm"]
 [ext_resource type="Resource" uid="uid://1dl27laowf64" path="res://main.dialogue" id="4_3eoi0"]
+[ext_resource type="Script" path="res://actionable2.gd" id="6_6yrp3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a45xp"]
 radius = 58.0
@@ -16,9 +17,17 @@ script = ExtResource("1_pkjkl")
 
 [node name="NPC" parent="." instance=ExtResource("2_7qxhd")]
 position = Vector2(501, 171)
+first_dialog = ExtResource("4_3eoi0")
 
 [node name="Actionable" parent="NPC" instance=ExtResource("3_g88hm")]
 dialouge_resource = ExtResource("4_3eoi0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPC/Actionable"]
+shape = SubResource("CircleShape2D_a45xp")
+
+[node name="Actionable2" parent="NPC" instance=ExtResource("3_g88hm")]
+script = ExtResource("6_6yrp3")
+dialouge_start2 = "start2nd"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC/Actionable2"]
 shape = SubResource("CircleShape2D_a45xp")

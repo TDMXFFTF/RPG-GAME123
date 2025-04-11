@@ -1,5 +1,11 @@
 extends StaticBody2D
 
+@onready var first_actionable := $Actionable
+@onready var second_actionable := $Actionable2
+
+
+@export var first_dialog : DialogueResource;
+
 signal quest_menu_closed
 var quest_test_active = false
 var quest_test_completed = false
@@ -12,8 +18,7 @@ func quest_chat():
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

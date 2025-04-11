@@ -28,5 +28,5 @@ func _unhandled_input(_event: InputEvent) -> void:
 		var actionables = actionable_finder.get_overlapping_areas()
 		if actionables.size() > 0:
 			actionables[0].action()
-		#DialogueManager.show_example_dialogue_balloon(load("res://main.dialogue"),"start")
+			DialogueManager.show_example_dialogue_balloon(load("res://main.dialogue"),"start")
 			return

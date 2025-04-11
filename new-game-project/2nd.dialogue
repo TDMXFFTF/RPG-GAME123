@@ -1,0 +1,8 @@
+~ start
+Npc: [[Hi|Hello|Howdy]], this is some more dialogue.
+ - do I win? 
+	Npc: Yes 
+ - cool
+	Npc: yeah congrats on winning
+=> END
+
