@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bjjy23482ltfb"]
+[gd_scene load_steps=14 format=3 uid="uid://bjjy23482ltfb"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_yqf8w"]
 [ext_resource type="Texture2D" uid="uid://c6bafqnvnprnp" path="res://icon.svg" id="2_5llva"]
@@ -7,7 +7,6 @@
 [ext_resource type="Script" path="res://node_2d.gd" id="3_dbr1r"]
 [ext_resource type="Texture2D" uid="uid://cmbu23hrg3pce" path="res://Tlight.png" id="3_qbhfv"]
 [ext_resource type="Texture2D" uid="uid://wqlh7tq13qi5" path="res://light (1).png" id="5_58ulv"]
-[ext_resource type="Script" path="res://sword.gd" id="7_8s3ow"]
 [ext_resource type="Texture2D" uid="uid://c6g5br8ov8hku" path="res://basic sword.png" id="8_mbki4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jjb6k"]
@@ -172,7 +171,7 @@ libraries = {
 }
 
 [node name="BasicSword" type="Node2D" parent="."]
-script = ExtResource("7_8s3ow")
+unique_name_in_owner = true
 
 [node name="Marker2D" type="Marker2D" parent="BasicSword"]
 

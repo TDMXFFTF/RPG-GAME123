@@ -9,6 +9,8 @@ class_name Player extends CharacterBody2D
 @onready var _health_bar: ProgressBar = %HealthBar
 @onready var _hit_box: Area2D = %HitBox
 @onready var _animation_player := $AnimationPlayer as AnimationPlayer
+@onready var basic_sword = %BasicSword
+
 
 var health := max_health: set = set_health
 
@@ -16,6 +18,17 @@ func _ready() -> void:
 	_health_bar.max_value = max_health
 	_health_bar.value = health
 	_health_bar.init_health(health)
+
+func _process(_delta: float) -> void:
+	var mouse_direction: Vector2 = (get_global_mouse_position() - global_position).normalized()
+	basic_sword.rotation = mouse_direction.angle()
+	if basic_sword.scale.y == 1 and mouse_direction.x < 0:
+		basic_sword.scale.y = -1
+	elif basic_sword.scale.y == -1 and mouse_direction.x > 0:
+		basic_sword.scale.y = 1
+	if Input.is_action_just_pressed("attack") and not _animation_player.is_playing():
+		_animation_player.play("attack")
+
 
 func _physics_process(delta: float) -> void:
 	var move_direction := Input.get_vector("left", "right", "up", "down")
