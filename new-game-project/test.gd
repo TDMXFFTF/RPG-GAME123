@@ -13,6 +13,7 @@ func _ready() -> void:
 func test():
 	test_quest += 1
 	
+	
 func on_yes_choice():
 	print("Yes clicked!") 
 	quest1_active = true
@@ -22,10 +23,11 @@ func on_no_choice():
 	print("No clicked!") 
 	
 func _process(delta: float) -> void:
-	load("res://main.dialogue")
-	if Input.is_action_just_pressed("test"):
-		test()
-	if test_quest == 5:
-		quest1_active = false
-		quest1_done = true
-		DialogueManager.show_example_dialogue_balloon(load("res://2nd.dialogue"),"start2nd")
+	if quest1_active == true:
+		if Input.is_action_just_pressed("test"):
+			test()
+		if test_quest == 5:
+			quest1_active = false
+			quest1_done = true
+			print("you did it!")
+			DialogueManager.show_example_dialogue_balloon(load("res://2nd.dialogue"),"start")
