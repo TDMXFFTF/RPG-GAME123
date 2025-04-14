@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcgi84sdgoitn"]
+
+[ext_resource type="PackedScene" uid="uid://cwhhise2mvla5" path="res://weapon.tscn" id="1_iyjs5"]
+[ext_resource type="Texture2D" uid="uid://c6g5br8ov8hku" path="res://basic sword.png" id="2_r106c"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_csuhc"]
+radius = 22.8387
+height = 126.38
+
+[node name="BasicSword" instance=ExtResource("1_iyjs5")]
+
+[node name="Sprite2D" parent="Marker2D" index="0"]
+texture = ExtResource("2_r106c")
+
+[node name="CollisionShape2D" parent="Marker2D/Sprite2D/HitBox" index="0"]
+shape = SubResource("CapsuleShape2D_csuhc")

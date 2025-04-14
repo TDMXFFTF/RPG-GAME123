@@ -13,4 +13,3 @@ position = Vector2(859, 326)
 
 [node name="Player" parent="." instance=ExtResource("1_oj6ds")]
 position = Vector2(545, 343)
-current_item = null

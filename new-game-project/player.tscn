@@ -1,136 +1,22 @@
-[gd_scene load_steps=14 format=3 uid="uid://bjjy23482ltfb"]
+[gd_scene load_steps=11 format=3 uid="uid://bjjy23482ltfb"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_yqf8w"]
 [ext_resource type="Texture2D" uid="uid://c6bafqnvnprnp" path="res://icon.svg" id="2_5llva"]
-[ext_resource type="Resource" uid="uid://ck56xxwpaehuh" path="res://Final Sword.tres" id="2_jnuo7"]
 [ext_resource type="PackedScene" uid="uid://bh1artwwjkggp" path="res://health_bar.tscn" id="3_352dy"]
 [ext_resource type="Script" path="res://node_2d.gd" id="3_dbr1r"]
 [ext_resource type="Texture2D" uid="uid://cmbu23hrg3pce" path="res://Tlight.png" id="3_qbhfv"]
 [ext_resource type="Texture2D" uid="uid://wqlh7tq13qi5" path="res://light (1).png" id="5_58ulv"]
-[ext_resource type="Texture2D" uid="uid://c6g5br8ov8hku" path="res://basic sword.png" id="8_mbki4"]
+[ext_resource type="PackedScene" uid="uid://dcgi84sdgoitn" path="res://basic_sword.tscn" id="8_pgj2x"]
+[ext_resource type="PackedScene" uid="uid://bahw2djgy3qyc" path="res://second_sword.tscn" id="9_ypp2m"]
+[ext_resource type="PackedScene" uid="uid://tu8nunbk743w" path="res://final_sword.tscn" id="10_nr24y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jjb6k"]
 radius = 66.2722
-
-[sub_resource type="Animation" id="Animation_u5m4a"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("BasicSword/Marker2D/Sprite2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(84, -26)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("BasicSword/Marker2D/Sprite2D:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [-0.354302]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("BasicSword/Marker2D/HitBox/CollisionShape2D:disabled")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("BasicSword/Marker2D/Sprite2D:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
-[sub_resource type="Animation" id="Animation_2nx4g"]
-resource_name = "sword"
-length = 0.27
-step = 0.0333
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("BasicSword/Marker2D/Sprite2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.0333, 0.0333333, 0.0666, 0.0999, 0.1332, 0.1665, 0.1998),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(84, -26), Vector2(84, -39), Vector2(84, -26), Vector2(97, -28), Vector2(111, -13), Vector2(116, 3), Vector2(107, 38), Vector2(92, 57)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("BasicSword/Marker2D/Sprite2D:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.0333, 0.0666, 0.0999, 0.1332, 0.1665, 0.1998),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [-0.354302, -0.354302, 0.0, 0.443314, 0.797615, 1.41721, 1.86052]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("BasicSword/Marker2D/HitBox/CollisionShape2D:disabled")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0.0333333, 0.0666667, 0.1, 0.133333, 0.166667, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [true, true, false, true, true, true]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("BasicSword/Marker2D/Sprite2D:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.0333, 0.0666667, 0.1, 0.133333, 0.166667, 0.2, 0.233133, 0.266667),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [false, true, true, true, true, true, true, true, false]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_3bdbl"]
-_data = {
-"RESET": SubResource("Animation_u5m4a"),
-"sword": SubResource("Animation_2nx4g")
-}
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g5w7s"]
-radius = 31.0
-height = 154.0
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(574, 326)
 motion_mode = 1
 script = ExtResource("1_yqf8w")
-current_item = ExtResource("2_jnuo7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_5llva")
@@ -164,30 +50,11 @@ texture_scale = 8.0
 [node name="PointLight2D" type="PointLight2D" parent="."]
 texture = ExtResource("5_58ulv")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-unique_name_in_owner = true
-libraries = {
-"": SubResource("AnimationLibrary_3bdbl")
-}
-
-[node name="BasicSword" type="Node2D" parent="."]
+[node name="Weapons" type="Node2D" parent="."]
 unique_name_in_owner = true
 
-[node name="Marker2D" type="Marker2D" parent="BasicSword"]
+[node name="BasicSword" parent="Weapons" instance=ExtResource("8_pgj2x")]
 
-[node name="HitBox" type="Area2D" parent="BasicSword/Marker2D"]
-unique_name_in_owner = true
+[node name="SecondSword" parent="Weapons" instance=ExtResource("9_ypp2m")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BasicSword/Marker2D/HitBox"]
-position = Vector2(142, 0)
-shape = SubResource("CapsuleShape2D_g5w7s")
-disabled = true
-
-[node name="Sprite2D" type="Sprite2D" parent="BasicSword/Marker2D"]
-visible = false
-position = Vector2(84, -26)
-rotation = -0.354302
-scale = Vector2(4.70312, 4.70312)
-texture = ExtResource("8_mbki4")
-
-[connection signal="body_entered" from="BasicSword/Marker2D/HitBox" to="." method="_on_hit_box_body_entered"]
+[node name="FinalSword" parent="Weapons" instance=ExtResource("10_nr24y")]

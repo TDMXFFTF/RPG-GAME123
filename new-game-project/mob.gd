@@ -54,8 +54,8 @@ func _physics_process(delta: float) -> void:
 func get_global_player_position() -> Vector2:
 	return get_tree().root.get_node("Game/Player").global_position
 
-func take_damage():
-	health -= 1
+func take_damage(amount: float) -> void:
+	health -= amount
 
 func set_health(new_health: int) -> void:
 	var previous_health := health

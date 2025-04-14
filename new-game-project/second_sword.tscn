@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bahw2djgy3qyc"]
+
+[ext_resource type="PackedScene" uid="uid://cwhhise2mvla5" path="res://weapon.tscn" id="1_svolb"]
+[ext_resource type="Texture2D" uid="uid://mta8c28c735n" path="res://second sword.png" id="2_pynth"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kvib0"]
+radius = 22.2733
+height = 139.542
+
+[node name="SecondSword" instance=ExtResource("1_svolb")]
+
+[node name="Sprite2D" parent="Marker2D" index="0"]
+texture = ExtResource("2_pynth")
+
+[node name="CollisionShape2D" parent="Marker2D/Sprite2D/HitBox" index="0"]
+position = Vector2(-2.88723, -20.68)
+shape = SubResource("CapsuleShape2D_kvib0")
