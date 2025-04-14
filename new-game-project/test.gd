@@ -29,5 +29,4 @@ func _process(delta: float) -> void:
 		if test_quest == 5:
 			quest1_active = false
 			quest1_done = true
-			print("you did it!")
 			DialogueManager.show_example_dialogue_balloon(load("res://2nd.dialogue"),"start")
