@@ -12,6 +12,9 @@ func _ready() -> void:
 	animation_player.animation_finished.connect(_on_attack_finished)
 
 func _process(_delta: float) -> void:
+	if not is_visible_in_tree():
+		return
+
 	var mouse_direction = (get_global_mouse_position() - global_position).normalized()
 	rotation = mouse_direction.angle()
 

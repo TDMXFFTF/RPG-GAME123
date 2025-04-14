@@ -10,3 +10,4 @@ damage = 2.0
 icon = ExtResource("1_xjx1m")
 animation = "sword"
 projectile = 0
+weapon_scene_name = "SecondSword"

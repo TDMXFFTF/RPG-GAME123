@@ -10,3 +10,4 @@ damage = 3.0
 icon = ExtResource("1_r73hi")
 animation = "sword"
 projectile = 0
+weapon_scene_name = "FinalSword"

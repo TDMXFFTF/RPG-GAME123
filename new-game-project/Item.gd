@@ -7,3 +7,4 @@ class_name Item
 @export var icon : Texture2D
 @export var animation : String
 @export var projectile : int
+@export var weapon_scene_name : String 
