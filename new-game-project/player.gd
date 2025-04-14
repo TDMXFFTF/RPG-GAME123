@@ -1,7 +1,5 @@
 class_name Player extends CharacterBody2D
 
-enum {UP, DOWN}
-
 @export var speed := 400
 @export var drag_factor := 12.0
 @export var max_health := 10
@@ -61,31 +59,6 @@ func equip(item: Item):
 			weapon.set_process(true)
 			current_weapon = weapon
 
-func get_input() -> void:
-	if not current_weapon.is_busy():
-		if Input.is_action_just_released("previous_weapon"):
-			_switch_weapon(UP)
-		elif Input.is_action_just_released("next_weapon"):
-			_switch_weapon(DOWN)
-	current_weapon.get_input()
-
-func _switch_weapon(direction: int) -> void:
-	var index: int = current_weapon.get_index()
-	if direction == UP:
-		index -= 1
-		if index < 0:
-			index = weapons.get_child_count() - 1
-	else:
-		index += 1
-		if index >= weapons.get_child_count():
-			index = 0
-
-	current_weapon.hide()
-	current_weapon.set_process(false)
-
-	current_weapon = weapons.get_child(index)
-	current_weapon.show()
-	current_weapon.set_process(true)
 
 func set_health(new_health: int) -> void:
 	var previous_health := health
