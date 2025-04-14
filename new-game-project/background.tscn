@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dtcly4mn3vlxk"]
+[gd_scene load_steps=7 format=3 uid="uid://c0mbju3qwaf2t"]
 
 [ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="1_k4dwh"]
 [ext_resource type="Texture2D" uid="uid://csyd1ormvbcp8" path="res://Background.png" id="2_o5502"]
 [ext_resource type="PackedScene" path="res://Trees.tscn" id="3_777vs"]
+[ext_resource type="PackedScene" uid="uid://bd774bjwf8dk" path="res://inventory.tscn" id="4_7mvyc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8n6v7"]
 size = Vector2(8323, 616)
@@ -34,7 +35,6 @@ shape = SubResource("RectangleShape2D_8n6v7")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(5105, 551)
 rotation = -1.57593
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_t1ybu")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
@@ -44,5 +44,6 @@ shape = SubResource("RectangleShape2D_8n6v7")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-3773.96, 513.763)
 rotation = -1.57593
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_t1ybu")
+
+[node name="Inventory" parent="." instance=ExtResource("4_7mvyc")]

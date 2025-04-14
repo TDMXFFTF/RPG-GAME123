@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dglockys4nn4b"]
+[gd_scene load_steps=5 format=3 uid="uid://bd774bjwf8dk"]
 
 [ext_resource type="Script" path="res://manager.gd" id="1_psobt"]
 [ext_resource type="Script" path="res://inventory.gd" id="2_1ynk3"]
-[ext_resource type="PackedScene" uid="uid://b52xi0gtsmq6p" path="res://slot.tscn" id="3_b2hdj"]
+[ext_resource type="PackedScene" path="res://slot.tscn" id="3_b2hdj"]
 [ext_resource type="Script" path="res://character.gd" id="4_6tnjj"]
 
 [node name="Inventory" type="CanvasLayer"]

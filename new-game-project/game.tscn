@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="1_oj6ds"]
 [ext_resource type="PackedScene" uid="uid://s1qekke3u7nt" path="res://mob.tscn" id="2_pnsiy"]
-[ext_resource type="PackedScene" path="res://inventory.tscn" id="2_pwy1j"]
+[ext_resource type="PackedScene" uid="uid://bd774bjwf8dk" path="res://inventory.tscn" id="2_pwy1j"]
 
 [node name="Game" type="Node2D"]
 
