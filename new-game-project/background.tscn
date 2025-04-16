@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://c0mbju3qwaf2t"]
+[gd_scene load_steps=8 format=3 uid="uid://c0mbju3qwaf2t"]
 
 [ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="1_k4dwh"]
+[ext_resource type="PackedScene" uid="uid://cyg08wrgagqi8" path="res://mob_spawn.tscn" id="2_lu27u"]
 [ext_resource type="Texture2D" uid="uid://csyd1ormvbcp8" path="res://Background.png" id="2_o5502"]
 [ext_resource type="PackedScene" path="res://Trees.tscn" id="3_777vs"]
 [ext_resource type="PackedScene" uid="uid://bd774bjwf8dk" path="res://inventory.tscn" id="4_7mvyc"]
@@ -15,6 +16,8 @@ size = Vector2(5404.84, 488.911)
 
 [node name="Player" parent="." instance=ExtResource("1_k4dwh")]
 top_level = true
+
+[node name="MobSpawn" parent="." instance=ExtResource("2_lu27u")]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.17104, 0.171039, 0.17104, 1)
