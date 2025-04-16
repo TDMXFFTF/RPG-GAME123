@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://bfabu2cnlc6h4"]
+
+[ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="1_h2w22"]
+[ext_resource type="Script" path="res://test.gd" id="1_pkjkl"]
+[ext_resource type="PackedScene" path="res://npc.tscn" id="2_7qxhd"]
+[ext_resource type="PackedScene" path="res://actionable.tscn" id="3_g88hm"]
+[ext_resource type="Resource" uid="uid://1dl27laowf64" path="res://main.dialogue" id="4_3eoi0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a45xp"]
+radius = 58.0
+
+[node name="Test" type="Node2D"]
+script = ExtResource("1_pkjkl")
+
+[node name="Player" parent="." instance=ExtResource("1_h2w22")]
+
+[node name="NPC" parent="." instance=ExtResource("2_7qxhd")]
+position = Vector2(501, 171)
+first_dialog = ExtResource("4_3eoi0")
+
+[node name="Actionable" parent="NPC" instance=ExtResource("3_g88hm")]
+dialouge_resource = ExtResource("4_3eoi0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC/Actionable"]
+shape = SubResource("CircleShape2D_a45xp")
+
+[node name="Actionable2" parent="NPC" instance=ExtResource("3_g88hm")]
+script = null
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC/Actionable2"]
+shape = SubResource("CircleShape2D_a45xp")

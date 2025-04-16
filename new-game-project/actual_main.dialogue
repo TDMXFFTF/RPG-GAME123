@@ -1,0 +1,7 @@
+~ this_is_a_node_title
+NPC: hello fellow traveller
+ - Who are you?
+	NPC: I am the one and only NPC(put a name here)! Looked like you passed out back there, How are you feeling?
+ - Where am I?  
+	
+=> END
