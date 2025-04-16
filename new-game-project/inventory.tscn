@@ -23,6 +23,7 @@ bg_color = Color(0.439216, 0.439216, 0.439216, 1)
 [node name="Inventory" type="CanvasLayer"]
 
 [node name="Manager" type="Panel" parent="."]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
