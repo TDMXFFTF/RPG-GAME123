@@ -6,24 +6,43 @@
 [ext_resource type="Script" path="res://character.gd" id="4_6tnjj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rpsfm"]
-bg_color = Color(0.439216, 0.439216, 0.439216, 1)
+bg_color = Color(0.376471, 0.376471, 0.376471, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_11fwj"]
-bg_color = Color(0.439216, 0.439216, 0.439216, 1)
+bg_color = Color(0.376471, 0.376471, 0.376471, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rk0rk"]
-bg_color = Color(0.439216, 0.439216, 0.439216, 1)
+bg_color = Color(0.376471, 0.376471, 0.376471, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sooyc"]
-bg_color = Color(0.439216, 0.439216, 0.439216, 1)
+bg_color = Color(0.376471, 0.376471, 0.376471, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_581oh"]
-bg_color = Color(0.439216, 0.439216, 0.439216, 1)
+bg_color = Color(0.376471, 0.376471, 0.376471, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="Inventory" type="CanvasLayer"]
 
 [node name="Manager" type="Panel" parent="."]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
