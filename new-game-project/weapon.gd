@@ -1,6 +1,8 @@
 extends Node2D
 class_name Weapon
 
+@export var damage := 1.0  # Default damage for base weapon
+
 @onready var animation_player = %AnimationPlayer
 @onready var hit_box = %HitBox
 
@@ -30,19 +32,14 @@ func start_attack():
 	animation_player.play("sword")
 	attack_active = true
 	hit_mobs.clear()
-
-	# Attack window lasts 0.2 seconds (adjust this as needed)
 	await get_tree().create_timer(0.2).timeout
 	attack_active = false
 
 func _on_attack_finished(anim_name: String) -> void:
-	# Just in case you want to reset things when the animation ends
 	attack_active = false
 	hit_mobs.clear()
 
 func _on_hit_box_body_entered(body: Node) -> void:
-	const damage = 1.0
-
 	if not attack_active:
 		return
 

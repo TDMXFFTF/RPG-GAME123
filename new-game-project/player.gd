@@ -25,7 +25,7 @@ func _ready() -> void:
 		weapon.hide()
 		weapon.set_process(false)
 
-	await get_tree().process_frame  # 👈 wait one frame for everything to be ready
+	await get_tree().process_frame 
 
 	inventory = get_tree().get_current_scene().get_node("Manager/Inventory")
 
@@ -50,7 +50,7 @@ func _equip_weapon_from_item(item: Item) -> void:
 			weapon.set_process(true)
 
 func equip(item: Item):
-	current_item = item  # If you track current item
+	current_item = item  
 	for weapon in $Weapons.get_children():
 		weapon.hide()
 		weapon.set_process(false)

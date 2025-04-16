@@ -6,9 +6,9 @@
 [ext_resource type="Script" path="res://node_2d.gd" id="3_dbr1r"]
 [ext_resource type="Texture2D" uid="uid://cmbu23hrg3pce" path="res://Tlight.png" id="3_qbhfv"]
 [ext_resource type="Texture2D" uid="uid://wqlh7tq13qi5" path="res://light (1).png" id="5_58ulv"]
-[ext_resource type="PackedScene" path="res://basic_sword.tscn" id="8_pgj2x"]
-[ext_resource type="PackedScene" path="res://second_sword.tscn" id="9_ypp2m"]
-[ext_resource type="PackedScene" path="res://final_sword.tscn" id="10_nr24y"]
+[ext_resource type="PackedScene" uid="uid://dg7o3anwgnx0v" path="res://basic_sword.tscn" id="8_pgj2x"]
+[ext_resource type="PackedScene" uid="uid://cmd6xq3ppjhbd" path="res://second_sword.tscn" id="9_ypp2m"]
+[ext_resource type="PackedScene" uid="uid://pfxs5y5nydya" path="res://final_sword.tscn" id="10_nr24y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jjb6k"]
 radius = 66.2722
