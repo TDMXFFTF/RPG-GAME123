@@ -2,7 +2,7 @@ extends Node2D
 class_name Weapon
 
 @export var damage := 1.0  # Default damage for base weapon
-
+@export var attack_speed := 1.0
 @onready var animation_player = %AnimationPlayer
 @onready var hit_box = %HitBox
 
@@ -32,7 +32,7 @@ func start_attack():
 	animation_player.play("sword")
 	attack_active = true
 	hit_mobs.clear()
-	await get_tree().create_timer(0.2).timeout
+	await get_tree().create_timer(attack_speed).timeout  # Adjust the timer based on attack speed
 	attack_active = false
 
 func _on_attack_finished(anim_name: String) -> void:
