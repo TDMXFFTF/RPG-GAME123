@@ -1,13 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://bjjy23482ltfb"]
+[gd_scene load_steps=8 format=3 uid="uid://bjjy23482ltfb"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_yqf8w"]
-[ext_resource type="Texture2D" uid="uid://b4cuxyw4bexwx" path="res://icon.svg" id="2_5llva"]
+[ext_resource type="Texture2D" uid="uid://bkpb4a151kv8y" path="res://icon.svg" id="2_5llva"]
 [ext_resource type="PackedScene" path="res://health_bar.tscn" id="3_352dy"]
 [ext_resource type="Script" path="res://node_2d.gd" id="3_dbr1r"]
 [ext_resource type="Texture2D" uid="uid://cmbu23hrg3pce" path="res://Tlight.png" id="3_qbhfv"]
 [ext_resource type="Texture2D" uid="uid://wqlh7tq13qi5" path="res://light (1).png" id="5_58ulv"]
-[ext_resource type="Script" path="res://potion_value.gd" id="7_lv406"]
-[ext_resource type="Texture2D" uid="uid://uv0to88n52cb" path="res://Artwork/POTIon test.png" id="8_6nerb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jjb6k"]
 radius = 66.2722
@@ -19,7 +17,6 @@ script = ExtResource("1_yqf8w")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 texture = ExtResource("5_58ulv")
-texture_scale = 1.5
 
 [node name="Node2D" type="Node2D" parent="."]
 script = ExtResource("3_dbr1r")
@@ -28,12 +25,12 @@ script = ExtResource("3_dbr1r")
 position = Vector2(570, 0)
 
 [node name="PointLight2D" type="PointLight2D" parent="Node2D/Marker2D"]
-position = Vector2(128, 0.00134182)
+position = Vector2(160.018, -13.9974)
 rotation = 4.71238
-scale = Vector2(0.17447, -0.462815)
+scale = Vector2(0.17447, -0.350322)
 range_z_min = 0
 texture = ExtResource("3_qbhfv")
-texture_scale = 8.0
+texture_scale = 10.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_5llva")
@@ -49,18 +46,3 @@ offset_left = -115.0
 offset_top = -105.0
 offset_right = 125.0
 offset_bottom = -78.0
-
-[node name="Potion" type="CanvasLayer" parent="."]
-
-[node name="Potion value" type="Label" parent="Potion"]
-offset_left = 1043.0
-offset_top = 6.0
-offset_right = 1146.0
-offset_bottom = 116.0
-theme_override_font_sizes/font_size = 80
-text = "0"
-script = ExtResource("7_lv406")
-
-[node name="Sprite2D" type="Sprite2D" parent="Potion"]
-position = Vector2(1003, 51)
-texture = ExtResource("8_6nerb")

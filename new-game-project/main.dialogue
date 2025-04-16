@@ -1,0 +1,14 @@
+~ start
+Npc: [[Hi|Hello|Howdy]], this is some dialogue.
+ - I hate you 
+	Npc: Yes 
+ - cool
+	Npc: i know right now do this quest for me
+	 - ok fine
+		Npc: cool lets go! [do! on_yes_choice()]
+	 - no [do! on_no_choice()]
+		Npc: jeez ok
+=> END
+
+
+
