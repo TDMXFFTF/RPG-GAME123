@@ -1,14 +1,28 @@
-[gd_scene load_steps=5 format=3 uid="uid://bd774bjwf8dk"]
+[gd_scene load_steps=10 format=3 uid="uid://bd774bjwf8dk"]
 
 [ext_resource type="Script" path="res://manager.gd" id="1_psobt"]
 [ext_resource type="Script" path="res://inventory.gd" id="2_1ynk3"]
 [ext_resource type="PackedScene" path="res://slot.tscn" id="3_b2hdj"]
 [ext_resource type="Script" path="res://character.gd" id="4_6tnjj"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rpsfm"]
+bg_color = Color(0.439216, 0.439216, 0.439216, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_11fwj"]
+bg_color = Color(0.439216, 0.439216, 0.439216, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rk0rk"]
+bg_color = Color(0.439216, 0.439216, 0.439216, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sooyc"]
+bg_color = Color(0.439216, 0.439216, 0.439216, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_581oh"]
+bg_color = Color(0.439216, 0.439216, 0.439216, 1)
+
 [node name="Inventory" type="CanvasLayer"]
 
 [node name="Manager" type="Panel" parent="."]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -27,15 +41,19 @@ script = ExtResource("2_1ynk3")
 
 [node name="Slot" parent="Manager/Inventory" instance=ExtResource("3_b2hdj")]
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rpsfm")
 
 [node name="Slot2" parent="Manager/Inventory" instance=ExtResource("3_b2hdj")]
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_11fwj")
 
 [node name="Slot3" parent="Manager/Inventory" instance=ExtResource("3_b2hdj")]
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rk0rk")
 
 [node name="Slot4" parent="Manager/Inventory" instance=ExtResource("3_b2hdj")]
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sooyc")
 
 [node name="Character" type="GridContainer" parent="Manager"]
 layout_mode = 0
@@ -47,3 +65,4 @@ script = ExtResource("4_6tnjj")
 
 [node name="Slot" parent="Manager/Character" instance=ExtResource("3_b2hdj")]
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_581oh")
