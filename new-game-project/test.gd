@@ -6,6 +6,9 @@ var dialogue_manager : DialogueManager
 var quest1_done = false
 var quest1_active = false
 var test_quest = 0
+var main_quest = false
+var main_quest_done = false 
+
 
 func _ready() -> void:
 	pass
@@ -31,9 +34,12 @@ func _process(delta: float) -> void:
 			quest1_done = true
 			DialogueManager.show_example_dialogue_balloon(load("res://2nd.dialogue"),"start")
 
-#func _unhandled_input(_event: InputEvent) -> void:
-	#if Input.is_action_just_pressed("ui_accept"):
+func _unhandled_input(_event: InputEvent) -> void:
+	if Input.is_action_just_pressed("ui_accept"):
 		#var actionables = actionable_finder.get_overlapping_areas()
 		#if actionables.size() > 0:
-			#DialogueManager.show_example_dialogue_balloon(load("res://main.dialogue"),"start")
-			#return
+			DialogueManager.show_example_dialogue_balloon(load("res://actual_main.dialogue"),"start")
+			return
+func quest_start():
+	main_quest = true
+	print("uh oh")
