@@ -30,3 +30,10 @@ func _process(delta: float) -> void:
 			quest1_active = false
 			quest1_done = true
 			DialogueManager.show_example_dialogue_balloon(load("res://2nd.dialogue"),"start")
+
+#func _unhandled_input(_event: InputEvent) -> void:
+	#if Input.is_action_just_pressed("ui_accept"):
+		#var actionables = actionable_finder.get_overlapping_areas()
+		#if actionables.size() > 0:
+			#DialogueManager.show_example_dialogue_balloon(load("res://main.dialogue"),"start")
+			#return
