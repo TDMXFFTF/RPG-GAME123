@@ -25,7 +25,7 @@ func _process(_delta: float) -> void:
 	elif scale.y == -1 and mouse_direction.x > 0:
 		scale.y = 1
 
-	if Input.is_action_just_pressed("attack") and not animation_player.is_playing():
+	if Input.is_action_just_pressed("attack") and not attack_active:
 		start_attack()
 
 
@@ -43,8 +43,10 @@ func start_attack():
 	animation_player.speed_scale = attack_speed
 	animation_player.play("sword")
 	hit_mobs.clear()
+
 	await get_tree().create_timer(1.0 / attack_speed).timeout
 	attack_active = false
+
 
 
 
