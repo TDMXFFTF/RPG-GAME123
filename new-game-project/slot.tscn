@@ -1,12 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://b52xi0gtsmq6p"]
+[gd_scene load_steps=3 format=3 uid="uid://bdyybb7gpk05w"]
 
 [ext_resource type="Script" path="res://slot.gd" id="1_salni"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_diavj"]
+bg_color = Color(0.376471, 0.376471, 0.376471, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="Slot" type="PanelContainer"]
 custom_minimum_size = Vector2(80, 80)
 offset_right = 40.0
 offset_bottom = 40.0
 mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_diavj")
 script = ExtResource("1_salni")
 
 [node name="TextureRect" type="TextureRect" parent="."]

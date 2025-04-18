@@ -29,9 +29,6 @@ func _ready() -> void:
 
 	inventory = get_tree().get_current_scene().get_node("Manager/Inventory")
 
-func _process(_delta: float) -> void:
-	var mouse_direction: Vector2 = (get_global_mouse_position() - global_position.normalized())
-
 func _physics_process(delta: float) -> void:
 	var move_direction := Input.get_vector("left", "right", "up", "down")
 	var desired_velocity := speed * move_direction

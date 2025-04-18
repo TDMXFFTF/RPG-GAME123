@@ -5,8 +5,8 @@ class_name Slot
 @export var item : Item = null:
 	set(value):
 		item = value
-		if get_parent().name == "Character":
-			get_parent().equip(item)
+		if get_parent().name == "Character" and value != null:
+			get_parent().equip(value)
 		if value != null:
 			texture_rect.texture = value.icon
 		else:
@@ -32,6 +32,9 @@ func _can_drop_data(_pos, data):
 	return data is Slot
 
 func _drop_data(at_position, data):
-	var temp = item
-	item = data.item
-	data.item = temp
+	if data.item != null:
+		var temp = item
+		item = data.item
+		data.item = temp
+	else:
+		print("Dropped item is null!")

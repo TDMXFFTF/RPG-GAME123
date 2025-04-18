@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://csqmejwn4b0wk"]
 
 [ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="1_k4dwh"]
-[ext_resource type="PackedScene" path="res://mob_spawn.tscn" id="2_lu27u"]
+[ext_resource type="PackedScene" uid="uid://cyg08wrgagqi8" path="res://mob_spawn.tscn" id="2_lu27u"]
 [ext_resource type="Texture2D" uid="uid://csyd1ormvbcp8" path="res://Background.png" id="2_o5502"]
 [ext_resource type="PackedScene" path="res://Trees.tscn" id="3_777vs"]
 [ext_resource type="PackedScene" path="res://inventory.tscn" id="4_7mvyc"]

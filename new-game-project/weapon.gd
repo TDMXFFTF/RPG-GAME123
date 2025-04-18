@@ -1,8 +1,8 @@
 extends Node2D
 class_name Weapon
 
-@export var damage := 1.0  # Default damage for base weapon
-
+@export var damage := 1.0
+@export var attack_speed := 1.0
 @onready var animation_player = %AnimationPlayer
 @onready var hit_box = %HitBox
 
@@ -14,7 +14,7 @@ func _ready() -> void:
 	animation_player.animation_finished.connect(_on_attack_finished)
 
 func _process(_delta: float) -> void:
-	if not is_visible_in_tree():
+	if not is_visible_in_tree() or attack_active:
 		return
 
 	var mouse_direction = (get_global_mouse_position() - global_position).normalized()
@@ -28,16 +28,38 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("attack") and not animation_player.is_playing():
 		start_attack()
 
+
 func start_attack():
-	animation_player.play("sword")
 	attack_active = true
+
+	var mouse_direction = (get_global_mouse_position() - global_position).normalized()
+	rotation = mouse_direction.angle()
+
+	if scale.y == 1 and mouse_direction.x < 0:
+		scale.y = -1
+	elif scale.y == -1 and mouse_direction.x > 0:
+		scale.y = 1
+
+	animation_player.speed_scale = attack_speed
+	animation_player.play("sword")
 	hit_mobs.clear()
-	await get_tree().create_timer(0.2).timeout
+	await get_tree().create_timer(1.0 / attack_speed).timeout
 	attack_active = false
+
+
 
 func _on_attack_finished(anim_name: String) -> void:
 	attack_active = false
 	hit_mobs.clear()
+
+	var mouse_direction = (get_global_mouse_position() - global_position).normalized()
+	rotation = mouse_direction.angle()
+
+	if scale.y == 1 and mouse_direction.x < 0:
+		scale.y = -1
+	elif scale.y == -1 and mouse_direction.x > 0:
+		scale.y = 1
+
 
 func _on_hit_box_body_entered(body: Node) -> void:
 	if not attack_active:
