@@ -4,8 +4,7 @@ class_name Player extends CharacterBody2D
 @export var drag_factor := 12.0
 @export var max_health := 10
 @onready var _health_bar: ProgressBar = %HealthBar
-@onready var potion: CanvasLayer = $Potion
-@onready var potion_value: Label = $"Potion/Potion value"
+
 
 var health := max_health: set = set_health
 
@@ -23,10 +22,13 @@ func _physics_process(delta: float) -> void:
 	velocity += steering * drag_factor * delta
 	var direction_discrete := move_direction.sign()
 	move_and_slide()
+	#print(PotionManager.potions)
 	if Input.is_action_just_pressed("potion_use"):
-		if IdontKnowingly.potions > 0:
-			health += 3.33
-			IdontKnowingly.potions -= 1
+		if PotionManager.potions > 0: 
+			health += 3.3
+			PotionManager.potions -= 1
+
+
 
 
 

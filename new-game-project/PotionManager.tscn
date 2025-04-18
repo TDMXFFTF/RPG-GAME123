@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://doe8voplkxsu3"]
-
-[ext_resource type="Script" path="res://PotionManager.gd" id="1_il8r3"]
-
-[node name="PotionManager" type="Node"]
-script = ExtResource("1_il8r3")
