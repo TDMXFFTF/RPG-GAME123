@@ -5,7 +5,7 @@ class_name MobSpawn extends Node2D
 @export var spawn_interval: float = 1.0
 @export var stop_after: float = 5.0
 
-func _ready():
+func spawn_all_mobs():
 	randomize()
 
 	if $SpawnTimer and $StopTimer:
