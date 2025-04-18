@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://pfxs5y5nydya"]
+[gd_scene load_steps=4 format=3 uid="uid://dvufsgtn1au7x"]
 
-[ext_resource type="PackedScene" uid="uid://d3x6rdg1b7xqh" path="res://weapon.tscn" id="1_8vu4c"]
+[ext_resource type="PackedScene" path="res://weapon.tscn" id="1_8vu4c"]
 [ext_resource type="Texture2D" uid="uid://7ff5tqvoxqre" path="res://final sword.png" id="2_br7hy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h5b44"]
@@ -9,7 +9,7 @@ height = 137.04
 
 [node name="FinalSword" instance=ExtResource("1_8vu4c")]
 damage = 3.0
-attack_speed = 3.0
+attack_speed = 2.0
 
 [node name="Sprite2D" parent="Marker2D" index="0"]
 texture = ExtResource("2_br7hy")
