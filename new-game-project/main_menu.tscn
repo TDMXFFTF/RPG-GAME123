@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://b6sdboraie3b7"]
+[gd_scene load_steps=9 format=3 uid="uid://b6sdboraie3b7"]
 
 [ext_resource type="Script" path="res://main_menu.gd" id="1_r48f6"]
-[ext_resource type="Texture2D" uid="uid://kxsh4emlt226" path="res://icon.svg" id="2_b2ilo"]
+[ext_resource type="Texture2D" uid="uid://c8otlq4lopb3o" path="res://Artwork/MMBackground.png" id="2_4d3ps"]
+[ext_resource type="FontFile" uid="uid://b1p76i3ych1in" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/poco/Poco.ttf" id="3_swt37"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1bhto"]
-texture = ExtResource("2_b2ilo")
+texture = ExtResource("2_4d3ps")
 modulate_color = Color(0.244776, 0.244776, 0.244776, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8du2u"]
@@ -79,6 +80,7 @@ theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_swt37")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxEmpty_8du2u")
 theme_override_styles/hover = SubResource("StyleBoxFlat_u5c7t")
@@ -93,6 +95,7 @@ theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_swt37")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxEmpty_8du2u")
 theme_override_styles/hover = SubResource("StyleBoxFlat_u5c7t")
@@ -115,8 +118,9 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_y = 10
+theme_override_fonts/font = ExtResource("3_swt37")
 theme_override_font_sizes/font_size = 61
-text = "RPG Game"
+text = "Aziel In The Dark Forest"
 horizontal_alignment = 1
 vertical_alignment = 1
 
