@@ -9,6 +9,6 @@ NPC: hello fellow traveller
 			- Where is this cave?
 				NPC: Up ahead! But you need 3 keys to enter it, my 3 buddies over there have the keys! Go talk to them and good luck! [do! quest_start()]
 			
- - This is a test
+ - Goodbye
 	 NPC: AAAAAAAAAAAAAAAAA 
 => END
