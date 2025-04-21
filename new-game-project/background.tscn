@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" path="res://mob_spawn.tscn" id="2_lu27u"]
 [ext_resource type="Texture2D" uid="uid://csyd1ormvbcp8" path="res://Artwork/Background.png" id="2_o5502"]
 [ext_resource type="PackedScene" path="res://Trees.tscn" id="3_777vs"]
-[ext_resource type="PackedScene" path="res://inventory.tscn" id="4_7mvyc"]
+[ext_resource type="PackedScene" uid="uid://buav38h4m6eta" path="res://inventory.tscn" id="4_7mvyc"]
 [ext_resource type="PackedScene" path="res://potionitem.tscn" id="6_ryc51"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8n6v7"]

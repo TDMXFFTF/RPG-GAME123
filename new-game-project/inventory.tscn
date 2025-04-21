@@ -1,8 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://bd774bjwf8dk"]
+[gd_scene load_steps=9 format=3 uid="uid://buav38h4m6eta"]
 
 [ext_resource type="Script" path="res://manager.gd" id="1_psobt"]
 [ext_resource type="Script" path="res://inventory.gd" id="2_1ynk3"]
-[ext_resource type="PackedScene" uid="uid://bdyybb7gpk05w" path="res://slot.tscn" id="3_b2hdj"]
+[ext_resource type="PackedScene" path="res://slot.tscn" id="3_b2hdj"]
 [ext_resource type="Script" path="res://character.gd" id="4_6tnjj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rpsfm"]
@@ -20,13 +20,6 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rk0rk"]
-bg_color = Color(0.376471, 0.376471, 0.376471, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sooyc"]
 bg_color = Color(0.376471, 0.376471, 0.376471, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
@@ -53,9 +46,9 @@ script = ExtResource("1_psobt")
 
 [node name="Inventory" type="GridContainer" parent="Manager"]
 layout_mode = 0
-offset_left = 122.0
+offset_left = 203.0
 offset_top = 282.0
-offset_right = 454.0
+offset_right = 535.0
 offset_bottom = 362.0
 columns = 5
 script = ExtResource("2_1ynk3")
@@ -72,18 +65,33 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_11fwj")
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_rk0rk")
 
-[node name="Slot4" parent="Manager/Inventory" instance=ExtResource("3_b2hdj")]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_sooyc")
-
 [node name="Character" type="GridContainer" parent="Manager"]
 layout_mode = 0
-offset_left = 816.0
-offset_top = 278.0
-offset_right = 896.0
-offset_bottom = 358.0
+offset_left = 781.0
+offset_top = 282.0
+offset_right = 861.0
+offset_bottom = 362.0
 script = ExtResource("4_6tnjj")
 
 [node name="Slot" parent="Manager/Character" instance=ExtResource("3_b2hdj")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_581oh")
+
+[node name="Equip" type="Label" parent="Manager"]
+layout_mode = 0
+offset_left = 780.0
+offset_top = 215.0
+offset_right = 889.0
+offset_bottom = 270.0
+theme_override_colors/font_color = Color(0.689285, 0.689285, 0.689285, 1)
+theme_override_font_sizes/font_size = 30
+text = "Equip"
+
+[node name="Inv" type="Label" parent="Manager"]
+offset_left = 257.0
+offset_top = 215.0
+offset_right = 397.0
+offset_bottom = 270.0
+theme_override_colors/font_color = Color(0.689285, 0.689285, 0.689285, 1)
+theme_override_font_sizes/font_size = 30
+text = "Inventory"
