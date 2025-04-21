@@ -10,15 +10,22 @@ var inventory: Node
 		_equip_weapon_from_item(value)
 var current_weapon: Node2D
 @onready var _health_bar: ProgressBar = %HealthBar
+
 @onready var weapons = %Weapons
 
 
+@onready var animation_death: AnimationPlayer = $AnimationDeath
+
+
+var death = false
 var health := max_health: set = set_health
 
 func _ready() -> void:
 	_health_bar.max_value = max_health
 	_health_bar.value = health
 	_health_bar.init_health(health)
+	
+
 
 	current_weapon = weapons.get_child(0)
 	for weapon in %Weapons.get_children():
@@ -30,12 +37,25 @@ func _ready() -> void:
 	inventory = get_tree().get_current_scene().get_node("Manager/Inventory")
 
 func _physics_process(delta: float) -> void:
-	var move_direction := Input.get_vector("left", "right", "up", "down")
-	var desired_velocity := speed * move_direction
-	var steering := desired_velocity - velocity
-	velocity += steering * drag_factor * delta
-	var direction_discrete := move_direction.sign()
-	move_and_slide()
+	if death == false:
+		var move_direction := Input.get_vector("left", "right", "up", "down")
+		var desired_velocity := speed * move_direction
+		var steering := desired_velocity - velocity
+		velocity += steering * drag_factor * delta
+		var direction_discrete := move_direction.sign()
+		move_and_slide()
+	#print(PotionManager.potions)
+	if Input.is_action_just_pressed("potion_use"):
+		if PotionManager.potions == 1:
+			health += 3.3
+			PotionManager.potions -= 1
+
+
+
+
+
+
+
 
 func _equip_weapon_from_item(item: Item) -> void:
 	for weapon in weapons.get_children():
@@ -59,8 +79,10 @@ func equip(item: Item):
 
 func set_health(new_health: int) -> void:
 	var previous_health := health
-	health = clampi(new_health, 0, max_health)
-	_health_bar.value = health
+	if death == false:
+		health = clampi(new_health, 0, max_health)
+		_health_bar.value = health
+		_health_bar.health = health
 	if health == 0:
-		queue_free()
-	_health_bar.health = health
+		death = true
+		$AnimationDeath.play("Dying")

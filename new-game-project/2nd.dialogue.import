@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://bed4ohovrhlqm"
+path="res://.godot/imported/2nd.dialogue-f71595736ffa058df42beb4aec02e57c.tres"
+
+[deps]
+
+source_file="res://2nd.dialogue"
+dest_files=["res://.godot/imported/2nd.dialogue-f71595736ffa058df42beb4aec02e57c.tres"]
+
+[params]
+
+defaults=true
