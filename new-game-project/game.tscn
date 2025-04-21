@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c5p0o25nxbj2p"]
+[gd_scene load_steps=5 format=3 uid="uid://c5p0o25nxbj2p"]
 
 [ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="1_oj6ds"]
 [ext_resource type="PackedScene" uid="uid://s1qekke3u7nt" path="res://mob.tscn" id="2_pnsiy"]
 [ext_resource type="PackedScene" path="res://inventory.tscn" id="2_pwy1j"]
+[ext_resource type="PackedScene" path="res://potionitem.tscn" id="4_s0lcu"]
 
 [node name="Game" type="Node2D"]
 
@@ -13,3 +14,6 @@ position = Vector2(859, 326)
 
 [node name="Player" parent="." instance=ExtResource("1_oj6ds")]
 position = Vector2(545, 343)
+
+[node name="Potion" parent="." instance=ExtResource("4_s0lcu")]
+position = Vector2(202, 209)

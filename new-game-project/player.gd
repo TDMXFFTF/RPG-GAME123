@@ -46,7 +46,7 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 	#print(PotionManager.potions)
 	if Input.is_action_just_pressed("potion_use"):
-		if PotionManager.potions == 1:
+		if PotionManager.potions > 0:
 			health += 3.3
 			PotionManager.potions -= 1
 
@@ -85,4 +85,4 @@ func set_health(new_health: int) -> void:
 		_health_bar.health = health
 	if health == 0:
 		death = true
-		$AnimationDeath.play("Dying")
+		$AnimationDeath.play("dying")

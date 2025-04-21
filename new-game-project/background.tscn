@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://csqmejwn4b0wk"]
+[gd_scene load_steps=9 format=3 uid="uid://csqmejwn4b0wk"]
 
 [ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="1_k4dwh"]
-[ext_resource type="PackedScene" uid="uid://d08nm7rh8ljdv" path="res://mob_spawn.tscn" id="2_lu27u"]
+[ext_resource type="PackedScene" path="res://mob_spawn.tscn" id="2_lu27u"]
 [ext_resource type="Texture2D" uid="uid://csyd1ormvbcp8" path="res://Artwork/Background.png" id="2_o5502"]
 [ext_resource type="PackedScene" path="res://Trees.tscn" id="3_777vs"]
-[ext_resource type="PackedScene" uid="uid://bd774bjwf8dk" path="res://inventory.tscn" id="4_7mvyc"]
+[ext_resource type="PackedScene" path="res://inventory.tscn" id="4_7mvyc"]
+[ext_resource type="PackedScene" path="res://potionitem.tscn" id="6_ryc51"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8n6v7"]
 size = Vector2(8323, 616)
@@ -51,3 +52,6 @@ rotation = -1.57593
 shape = SubResource("RectangleShape2D_t1ybu")
 
 [node name="Inventory" parent="." instance=ExtResource("4_7mvyc")]
+
+[node name="Potion" parent="." groups=["Player"] instance=ExtResource("6_ryc51")]
+position = Vector2(656, 57)
