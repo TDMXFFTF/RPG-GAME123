@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://c4rpgynysv3yj"]
+[gd_scene load_steps=8 format=3 uid="uid://c4rpgynysv3yj"]
 
 [ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="1_h2w22"]
 [ext_resource type="Script" path="res://test.gd" id="1_pkjkl"]
 [ext_resource type="PackedScene" uid="uid://d0d4cbqlwh4sa" path="res://npc.tscn" id="2_7qxhd"]
-[ext_resource type="PackedScene" path="res://mob_spawn.tscn" id="2_vd6io"]
 [ext_resource type="Resource" uid="uid://1dl27laowf64" path="res://main.dialogue" id="4_3eoi0"]
 [ext_resource type="PackedScene" uid="uid://bq0u6boedlnpr" path="res://side_quest_npc_1.tscn" id="6_mnvb5"]
 [ext_resource type="PackedScene" uid="uid://gbqarcgrupfv" path="res://dialogue/actionable.tscn" id="6_uugiv"]
@@ -13,8 +12,6 @@ radius = 75.06
 
 [node name="Test" type="Node2D"]
 script = ExtResource("1_pkjkl")
-
-[node name="MobSpawn" parent="." instance=ExtResource("2_vd6io")]
 
 [node name="Player" parent="." instance=ExtResource("1_h2w22")]
 

@@ -38,7 +38,3 @@ func _process(delta: float) -> void:
 func quest_start():
 	main_quest = true
 	print("uh oh")
-
-
-#func spawn_all_mobs():
-	#randomize()
