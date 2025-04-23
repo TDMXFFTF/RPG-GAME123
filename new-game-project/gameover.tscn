@@ -7,27 +7,43 @@ process_mode = 3
 script = ExtResource("1_edgaf")
 
 [node name="Label" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_left = 222.0
 offset_top = 113.0
-offset_right = 944.0
-offset_bottom = 374.0
+offset_right = -208.0
+offset_bottom = -274.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_font_sizes/font_size = 80
 text = "Gaming is over"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Panel" type="Panel" parent="."]
-visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_left = 14.0
 offset_top = 20.0
-offset_right = 1136.0
-offset_bottom = 626.0
+offset_right = -16.0
+offset_bottom = -22.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Retry" type="Button" parent="."]
-offset_left = 459.0
-offset_top = 365.0
-offset_right = 706.0
-offset_bottom = 453.0
+anchors_preset = -1
+anchor_left = 0.398
+anchor_top = 0.563
+anchor_right = 0.613
+anchor_bottom = 0.699
+offset_left = 0.503967
+offset_top = 0.175995
+offset_right = -0.176025
+offset_bottom = 0.0479736
+grow_horizontal = 2
+grow_vertical = 2
 text = "Retry"
 
 [connection signal="pressed" from="Retry" to="." method="_on_retry_pressed"]
