@@ -1,5 +1,8 @@
 class_name Player extends CharacterBody2D
 
+
+@onready var actionable_finder: Area2D = $Direction/ActionableFinder
+
 @export var speed := 400
 @export var drag_factor := 12.0
 @export var max_health := 10
@@ -88,3 +91,11 @@ func set_health(new_health: int) -> void:
 		$AnimationDeath.play("dying")
 		await animation_death.animation_finished
 		get_node("GamingIsOver").game_over()
+
+
+func _unhandled_input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("ui_accept"):
+		var actionables = actionable_finder.get_overlapping_areas()
+		if actionables.size() > 0:
+			actionables[0].action
+			return

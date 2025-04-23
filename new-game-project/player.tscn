@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bjjy23482ltfb"]
+[gd_scene load_steps=16 format=3 uid="uid://bjjy23482ltfb"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_yqf8w"]
 [ext_resource type="Texture2D" uid="uid://c8qfwscqsg0vs" path="res://icon.svg" id="2_5llva"]
@@ -49,6 +49,9 @@ _data = {
 "RESET": SubResource("Animation_gu0xq"),
 "dying": SubResource("Animation_jmyrx")
 }
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1eggl"]
+radius = 66.0303
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 position = Vector2(574, 326)
@@ -102,3 +105,10 @@ libraries = {
 }
 
 [node name="GamingIsOver" parent="." instance=ExtResource("10_pw3wm")]
+
+[node name="Direction" type="Marker2D" parent="."]
+
+[node name="ActionableFinder" type="Area2D" parent="Direction"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/ActionableFinder"]
+shape = SubResource("CircleShape2D_1eggl")

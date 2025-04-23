@@ -40,5 +40,5 @@ func quest_start():
 	print("uh oh")
 
 
-func spawn_all_mobs():
-	randomize()
+#func spawn_all_mobs():
+	#randomize()
