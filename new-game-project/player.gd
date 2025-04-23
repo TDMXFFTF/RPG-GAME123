@@ -86,3 +86,5 @@ func set_health(new_health: int) -> void:
 	if health == 0:
 		death = true
 		$AnimationDeath.play("dying")
+		await animation_death.animation_finished
+		get_node("GamingIsOver").game_over()

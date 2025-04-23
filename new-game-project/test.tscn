@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cchvtdoaabk18" path="res://npc.tscn" id="2_7qxhd"]
 [ext_resource type="PackedScene" path="res://actionable.tscn" id="3_g88hm"]
 [ext_resource type="Resource" uid="uid://1dl27laowf64" path="res://main.dialogue" id="4_3eoi0"]
-[ext_resource type="PackedScene" uid="uid://bng6r8aei2prm" path="res://side_quest_npc_1.tscn" id="6_mnvb5"]
+[ext_resource type="PackedScene" path="res://side_quest_npc_1.tscn" id="6_mnvb5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a45xp"]
 radius = 58.0
@@ -14,9 +14,6 @@ radius = 58.0
 script = ExtResource("1_pkjkl")
 
 [node name="Player" parent="." instance=ExtResource("1_h2w22")]
-speed = null
-drag_factor = null
-max_health = null
 
 [node name="NPC" parent="." instance=ExtResource("2_7qxhd")]
 position = Vector2(501, 171)
