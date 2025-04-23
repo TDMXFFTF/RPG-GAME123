@@ -52,7 +52,7 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 
 func get_global_player_position() -> Vector2:
-	return get_tree().root.get_node("Test/Player").global_position
+	return get_tree().root.get_node("Background/Player").global_position
 
 func take_damage(amount: float) -> void:
 	health -= amount
