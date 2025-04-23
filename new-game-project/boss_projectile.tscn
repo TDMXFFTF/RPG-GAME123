@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://ip1bjj5h3qti"]
+
+[ext_resource type="Script" path="res://boss_projectile.gd" id="1_nnwkv"]
+[ext_resource type="Script" path="res://projectile.gd" id="2_qdxun"]
+[ext_resource type="Texture2D" uid="uid://c8qfwscqsg0vs" path="res://icon.svg" id="3_wg7p3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vpsy7"]
+radius = 28.0
+height = 144.0
+
+[node name="BossProjectile" type="Node2D"]
+script = ExtResource("1_nnwkv")
+
+[node name="Projectile" type="Area2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_qdxun")
+
+[node name="Sprite2D" type="Sprite2D" parent="Projectile"]
+scale = Vector2(0.914062, 0.335938)
+texture = ExtResource("3_wg7p3")
+
+[node name="HitBox" type="CollisionShape2D" parent="Projectile"]
+unique_name_in_owner = true
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_vpsy7")

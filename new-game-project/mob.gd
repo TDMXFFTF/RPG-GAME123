@@ -5,16 +5,17 @@ class_name Mob extends CharacterBody2D
 @export var acceleration := 450.0
 @export var drag_factor := 1.5
 @export var max_health := 3
+@export var damage := 1
 var _player: Player = null
 var health := max_health: set = set_health
 @onready var _detection: Area2D = %Detection
 @onready var _hit_box: Area2D = %HitBox
 @onready var _damage_timer: Timer = %DamageTimer
 @onready var _health_bar: ProgressBar = %HealthBar
+@onready var projectile_detection = %ProjectileDetection
 
 
 func _ready() -> void:
-	const damage = 1.0
 	_detection.body_entered.connect(func (body: Node) -> void:
 		if body is Player:
 			_player = body
@@ -23,6 +24,18 @@ func _ready() -> void:
 		if body is Player:
 			_player = null
 	)
+
+	if has_node("%ProjectileDetection"):
+		projectile_detection = %ProjectileDetection
+		projectile_detection.body_entered.connect(func (body: Node) -> void:
+			if body is Player:
+				_player = body
+		)
+		projectile_detection.body_exited.connect(func (body: Node) -> void:
+			if body is Player:
+				_player = null
+		)
+
 	_hit_box.body_entered.connect(func (body: Node) -> void:
 		if body is Player:
 			body.health -= damage

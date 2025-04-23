@@ -2,31 +2,16 @@
 
 [ext_resource type="Script" path="res://player.gd" id="1_yqf8w"]
 [ext_resource type="Texture2D" uid="uid://c8qfwscqsg0vs" path="res://icon.svg" id="2_5llva"]
-[ext_resource type="PackedScene" uid="uid://bh1artwwjkggp" path="res://health_bar.tscn" id="3_352dy"]
+[ext_resource type="PackedScene" path="res://health_bar.tscn" id="3_352dy"]
 [ext_resource type="Script" path="res://node_2d.gd" id="3_dbr1r"]
 [ext_resource type="Texture2D" uid="uid://cmbu23hrg3pce" path="res://Tlight.png" id="3_qbhfv"]
 [ext_resource type="Texture2D" uid="uid://wqlh7tq13qi5" path="res://light (1).png" id="5_58ulv"]
-[ext_resource type="PackedScene" uid="uid://ddd0s2jv7gwqy" path="res://basic_sword.tscn" id="8_pgj2x"]
-[ext_resource type="PackedScene" uid="uid://cp7i5vyjqhoqq" path="res://second_sword.tscn" id="9_ypp2m"]
-[ext_resource type="PackedScene" uid="uid://dvufsgtn1au7x" path="res://final_sword.tscn" id="10_nr24y"]
+[ext_resource type="PackedScene" path="res://basic_sword.tscn" id="8_pgj2x"]
+[ext_resource type="PackedScene" path="res://second_sword.tscn" id="9_ypp2m"]
+[ext_resource type="PackedScene" path="res://final_sword.tscn" id="10_nr24y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jjb6k"]
 radius = 66.2722
-
-[sub_resource type="Animation" id="Animation_jmyrx"]
-resource_name = "dying"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(2, 2)]
-}
 
 [sub_resource type="Animation" id="Animation_gu0xq"]
 length = 0.001
@@ -41,6 +26,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_jmyrx"]
+resource_name = "dying"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(2, 2)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bm5md"]

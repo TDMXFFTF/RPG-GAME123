@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://buav38h4m6eta"]
+[gd_scene load_steps=9 format=3 uid="uid://cjc22y46c01ct"]
 
 [ext_resource type="Script" path="res://manager.gd" id="1_psobt"]
 [ext_resource type="Script" path="res://inventory.gd" id="2_1ynk3"]
@@ -88,6 +88,7 @@ theme_override_font_sizes/font_size = 30
 text = "Equip"
 
 [node name="Inv" type="Label" parent="Manager"]
+layout_mode = 0
 offset_left = 257.0
 offset_top = 215.0
 offset_right = 397.0
