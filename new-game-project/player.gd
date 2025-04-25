@@ -49,9 +49,10 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 	#print(PotionManager.potions)
 	if Input.is_action_just_pressed("potion_use"):
-		if PotionManager.potions > 0:
-			health += 3.3
-			PotionManager.potions -= 1
+		if health < 10:
+			if PotionManager.potions > 0:
+				health += 3.3
+				PotionManager.potions -= 1
 
 
 

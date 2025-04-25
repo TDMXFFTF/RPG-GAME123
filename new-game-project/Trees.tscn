@@ -20,7 +20,6 @@ texture = ExtResource("1_1ccdh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tree2/StaticBody2D"]
 position = Vector2(-3.48553, 81.6235)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_gg5r2")
 
 [node name="Tree3" type="Sprite2D" parent="."]
@@ -32,7 +31,6 @@ texture = ExtResource("1_1ccdh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tree3/StaticBody2D"]
 position = Vector2(-3.48553, 81.6235)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_gg5r2")
 
 [node name="Tree12" type="Sprite2D" parent="."]
@@ -44,7 +42,6 @@ texture = ExtResource("1_1ccdh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tree12/StaticBody2D"]
 position = Vector2(-3.48553, 81.6235)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_gg5r2")
 
 [node name="Tree15" type="Sprite2D" parent="."]
@@ -56,7 +53,6 @@ texture = ExtResource("1_1ccdh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tree15/StaticBody2D"]
 position = Vector2(-3.48553, 81.6235)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_gg5r2")
 
 [node name="Tree4" type="Sprite2D" parent="."]
@@ -68,7 +64,6 @@ texture = ExtResource("1_1ccdh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tree4/StaticBody2D"]
 position = Vector2(-3.48553, 81.6235)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_gg5r2")
 
 [node name="Tree9" type="Sprite2D" parent="."]
@@ -80,7 +75,6 @@ texture = ExtResource("1_1ccdh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tree9/StaticBody2D"]
 position = Vector2(-3.48553, 81.6235)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_gg5r2")
 
 [node name="Tree13" type="Sprite2D" parent="."]
@@ -92,7 +86,6 @@ texture = ExtResource("1_1ccdh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tree13/StaticBody2D"]
 position = Vector2(-3.48553, 81.6235)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_gg5r2")
 
 [node name="Tree10" type="Sprite2D" parent="."]
@@ -104,7 +97,6 @@ texture = ExtResource("1_1ccdh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tree10/StaticBody2D"]
 position = Vector2(-3.48553, 81.6235)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_gg5r2")
 
 [node name="Tree8" type="Sprite2D" parent="."]
@@ -116,7 +108,6 @@ texture = ExtResource("1_1ccdh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tree8/StaticBody2D"]
 position = Vector2(-3.48553, 81.6235)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_gg5r2")
 
 [node name="Tree11" type="Sprite2D" parent="."]
@@ -128,7 +119,6 @@ texture = ExtResource("1_1ccdh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tree11/StaticBody2D"]
 position = Vector2(-3.48553, 81.6235)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_gg5r2")
 
 [node name="Tree5" type="Sprite2D" parent="."]
