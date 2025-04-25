@@ -48,6 +48,7 @@ func _ready() -> void:
 	_damage_timer.timeout.connect(func () -> void:
 		_player.health -= damage
 	)
+	health = max_health
 	_health_bar.max_value = max_health
 	_health_bar.value = health
 	_health_bar.init_health(health)
@@ -77,3 +78,11 @@ func set_health(new_health: int) -> void:
 	if health == 0:
 		queue_free()
 	_health_bar.health = health
+
+
+func _on_projectile_detection_body_entered(body):
+	pass # Replace with function body.
+
+
+func _on_projectile_detection_body_exited(body):
+	pass # Replace with function body.

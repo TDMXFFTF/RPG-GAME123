@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://mob.gd" id="1_d5gvf"]
 [ext_resource type="Texture2D" uid="uid://c8qfwscqsg0vs" path="res://icon.svg" id="2_2ocqo"]
-[ext_resource type="PackedScene" path="res://health_bar.tscn" id="3_74l6n"]
+[ext_resource type="PackedScene" uid="uid://bv6fyy7icqkqb" path="res://health_bar.tscn" id="3_74l6n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_52nya"]
 radius = 83.0241

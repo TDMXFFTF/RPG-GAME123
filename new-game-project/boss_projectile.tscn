@@ -23,3 +23,8 @@ texture = ExtResource("3_wg7p3")
 unique_name_in_owner = true
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_vpsy7")
+
+[node name="ShootTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 3.0
+autostart = true
