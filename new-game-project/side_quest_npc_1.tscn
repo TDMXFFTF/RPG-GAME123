@@ -1,10 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://bq0u6boedlnpr"]
+[gd_scene load_steps=7 format=3 uid="uid://bq0u6boedlnpr"]
 
 [ext_resource type="Texture2D" uid="uid://c8qfwscqsg0vs" path="res://icon.svg" id="1_ahcgi"]
 [ext_resource type="Script" path="res://side_quest_npc_1.gd" id="1_no4tn"]
+[ext_resource type="PackedScene" uid="uid://gbqarcgrupfv" path="res://dialogue/actionable.tscn" id="3_ba64j"]
+[ext_resource type="Resource" uid="uid://bgli1xybt72c" path="res://sidequest1.dialogue" id="4_hpvyf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j45wp"]
 radius = 83.5225
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c6b3c"]
+radius = 89.4427
 
 [node name="SideQuestNpc1" type="Area2D"]
 script = ExtResource("1_no4tn")
@@ -14,3 +19,9 @@ texture = ExtResource("1_ahcgi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_j45wp")
+
+[node name="actionable" parent="." instance=ExtResource("3_ba64j")]
+dialogue_resource = ExtResource("4_hpvyf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="actionable"]
+shape = SubResource("CircleShape2D_c6b3c")

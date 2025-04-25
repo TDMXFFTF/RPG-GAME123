@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://d0d4cbqlwh4sa"]
+[gd_scene load_steps=6 format=3 uid="uid://d0d4cbqlwh4sa"]
 
 [ext_resource type="Script" path="res://npc.gd" id="1_il6n7"]
 [ext_resource type="Texture2D" uid="uid://c8qfwscqsg0vs" path="res://icon.svg" id="1_rjl26"]
+[ext_resource type="PackedScene" uid="uid://gbqarcgrupfv" path="res://dialogue/actionable.tscn" id="3_5ho6m"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r3m1k"]
 radius = 58.0775
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jc0i8"]
+radius = 75.06
 
 [node name="NPC" type="StaticBody2D"]
 position = Vector2(499, 306)
@@ -16,3 +20,8 @@ texture = ExtResource("1_rjl26")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_r3m1k")
+
+[node name="actionable" parent="." instance=ExtResource("3_5ho6m")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="actionable"]
+shape = SubResource("CircleShape2D_jc0i8")

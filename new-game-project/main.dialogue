@@ -1,14 +1,22 @@
 ~ start
+if State.state_quest == "has"
+	Do you have it?
+	- Yeah here you go 
+		set State.state_quest = "done"
+if State.state_quest == "done"
+	NPC: OMG OMGOMGOMGOKGWjfiowEHFIOWEHFEIWFHJIOWEFJWEIOFHJEWUIFJHEWUIFJHWEIUFHEWUIFHEWUIFHEW
 Npc: [[Hi|Hello|Howdy]], this is some dialogue.
  - I hate you 
 	Npc: Yes 
  - cool
 	Npc: i know right now do this quest for me
 	 - ok fine
-		Npc: cool lets go! [do! on_yes_choice()]
-	 - no [do! on_no_choice()]
+		Npc: cool lets go! 
+		set State.state_quest = "in progress"
+	 - no 
 		Npc: jeez ok
 => END
 
-
+~ done_quest_1
+Aziel: Ok time to bring these back 
 

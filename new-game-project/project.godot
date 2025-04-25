@@ -21,10 +21,11 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 IdontKnowingly="*res://PotionManager.gd"
 PotionManager="*res://potion_manager.tscn"
 "<<<<<<<HEAD[editor_plugins]enabled"=PackedStringArray()
+State="*res://dialogue/state.gd"
 
 [editor_plugins]
 
-enabled=PackedStringArray()
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [global_group]
 

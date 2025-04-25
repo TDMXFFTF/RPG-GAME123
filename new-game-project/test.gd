@@ -2,7 +2,8 @@ extends Node2D
 
 signal menu_closed
 
-var dialogue_manager : DialogueManager
+
+var dialogue_manager = "res://addons/dialogue_manager/"
 var quest1_done = false
 var quest1_active = false
 var test_quest = 0
@@ -38,3 +39,7 @@ func _process(delta: float) -> void:
 func quest_start():
 	main_quest = true
 	print("uh oh")
+
+
+func finished_quest() -> void:
+	State.state_quest = "done"
