@@ -1,20 +1,27 @@
 ~ start
+
 if State.state_quest == "has"
-	Do you have it?
+	NPC: Do you have it?
 	- Yeah here you go 
 		set State.state_quest = "done"
-if State.state_quest == "done"
-	NPC: OMG OMGOMGOMGOKGWjfiowEHFIOWEHFEIWFHJIOWEFJWEIOFHJEWUIFJHEWUIFJHWEIUFHEWUIFHEWUIFHEW
-Npc: [[Hi|Hello|Howdy]], this is some dialogue.
- - I hate you 
-	Npc: Yes 
- - cool
-	Npc: i know right now do this quest for me
-	 - ok fine
-		Npc: cool lets go! 
-		set State.state_quest = "in progress"
-	 - no 
-		Npc: jeez ok
+		NPC: OMG THANK YOU FOR DOING THIS 
+		set State.state_quest = "finished"
+
+if State.state_quest == "finished"
+	NPC: HI THANKS AGAIN FOR TESTING THIS OUT 
+	=> END 
+
+else
+	 Npc: [[Hi|Hello|Howdy]], this is some dialogue.
+  	 - I hate you 
+		Npc: Yes 
+  	 - cool
+		Npc: i know right now do this quest for me
+		 - ok fine
+			Npc: cool lets go! [do! on_yes_choice()]
+			set State.state_quest = "in progress"
+		 - no 
+			Npc: jeez ok
 => END
 
 ~ done_quest_1

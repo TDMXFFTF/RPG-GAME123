@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://d0d4cbqlwh4sa"]
+[gd_scene load_steps=7 format=3 uid="uid://d0d4cbqlwh4sa"]
 
 [ext_resource type="Script" path="res://npc.gd" id="1_il6n7"]
 [ext_resource type="Texture2D" uid="uid://c8qfwscqsg0vs" path="res://icon.svg" id="1_rjl26"]
 [ext_resource type="PackedScene" uid="uid://gbqarcgrupfv" path="res://dialogue/actionable.tscn" id="3_5ho6m"]
+[ext_resource type="Resource" uid="uid://bfi3xcvyymyre" path="res://main.dialogue" id="4_pjdlt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r3m1k"]
 radius = 58.0775
@@ -22,6 +23,7 @@ texture = ExtResource("1_rjl26")
 shape = SubResource("CircleShape2D_r3m1k")
 
 [node name="actionable" parent="." instance=ExtResource("3_5ho6m")]
+dialogue_resource = ExtResource("4_pjdlt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="actionable"]
 shape = SubResource("CircleShape2D_jc0i8")
