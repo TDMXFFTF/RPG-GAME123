@@ -1,17 +1,11 @@
 extends Mob
 
 @export var projectile_scene: PackedScene
-@export var detection_scale: float = 2.0
 @onready var projectile_detection: Area2D = %ProjectileDetection
 @onready var _projectile_timer: Timer = Timer.new()
 
 func _ready() -> void:
 	super._ready()
-	var shape = %Detection.get_node("CollisionShape2D").shape
-	if shape is CircleShape2D:
-		shape.radius *= detection_scale
-	elif shape is RectangleShape2D:
-		shape.extents *= Vector2(detection_scale, detection_scale)
 	add_child(_projectile_timer)
 	_projectile_timer.wait_time = 2.0
 	_projectile_timer.one_shot = false
