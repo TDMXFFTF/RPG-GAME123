@@ -9,7 +9,7 @@ height = 156.587
 
 [node name="SecondSword" instance=ExtResource("1_svolb")]
 damage = 2.0
-attack_speed = 1.75
+attack_speed = 1.4
 
 [node name="Sprite2D" parent="Marker2D" index="0"]
 texture = ExtResource("2_pynth")

@@ -12,7 +12,7 @@ var health := max_health: set = set_health
 @onready var _hit_box: Area2D = %HitBox
 @onready var _damage_timer: Timer = %DamageTimer
 @onready var _health_bar: ProgressBar = %HealthBar
-@onready var projectile_detection = %ProjectileDetection
+
 
 
 func _ready() -> void:
@@ -24,18 +24,6 @@ func _ready() -> void:
 		if body is Player:
 			_player = null
 	)
-
-	if has_node("%ProjectileDetection"):
-		projectile_detection = %ProjectileDetection
-		projectile_detection.body_entered.connect(func (body: Node) -> void:
-			if body is Player:
-				_player = body
-		)
-		projectile_detection.body_exited.connect(func (body: Node) -> void:
-			if body is Player:
-				_player = null
-		)
-
 	_hit_box.body_entered.connect(func (body: Node) -> void:
 		if body is Player:
 			body.health -= damage
@@ -78,11 +66,3 @@ func set_health(new_health: int) -> void:
 	if health == 0:
 		queue_free()
 	_health_bar.health = health
-
-
-func _on_projectile_detection_body_entered(body):
-	pass # Replace with function body.
-
-
-func _on_projectile_detection_body_exited(body):
-	pass # Replace with function body.

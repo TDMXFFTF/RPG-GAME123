@@ -8,7 +8,7 @@ radius = 29.0526
 height = 145.83
 
 [node name="BasicSword" instance=ExtResource("1_iyjs5")]
-attack_speed = 1.2
+attack_speed = 1.1
 
 [node name="Sprite2D" parent="Marker2D" index="0"]
 texture = ExtResource("2_r106c")

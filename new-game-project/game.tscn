@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="1_oj6ds"]
 [ext_resource type="PackedScene" uid="uid://s1qekke3u7nt" path="res://mob.tscn" id="2_pnsiy"]
 [ext_resource type="PackedScene" uid="uid://cjc22y46c01ct" path="res://inventory.tscn" id="2_pwy1j"]
-[ext_resource type="PackedScene" path="res://potionitem.tscn" id="4_s0lcu"]
+[ext_resource type="PackedScene" uid="uid://ccd3rlst8r1uo" path="res://potionitem.tscn" id="4_s0lcu"]
 
 [node name="Game" type="Node2D"]
 

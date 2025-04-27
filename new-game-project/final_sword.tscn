@@ -9,7 +9,7 @@ height = 162.874
 
 [node name="FinalSword" instance=ExtResource("1_8vu4c")]
 damage = 3.0
-attack_speed = 2.0
+attack_speed = 1.8
 
 [node name="Sprite2D" parent="Marker2D" index="0"]
 texture = ExtResource("2_br7hy")
