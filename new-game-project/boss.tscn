@@ -32,14 +32,17 @@ scale = Vector2(1.5, 1.5)
 texture = SubResource("CompressedTexture2D_a3m83")
 
 [node name="CollisionShape2D" parent="." index="1"]
+visible = true
 scale = Vector2(1.5, 1.5)
 shape = SubResource("CircleShape2D_04pg6")
 
 [node name="CollisionShape2D" parent="Detection" index="0"]
+visible = true
 scale = Vector2(3, 3)
 shape = SubResource("CircleShape2D_n2ekc")
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
+visible = true
 scale = Vector2(1.5, 1.5)
 shape = SubResource("CircleShape2D_67j5v")
 
@@ -48,3 +51,9 @@ unique_name_in_owner = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ProjectileDetection" index="0"]
 shape = SubResource("CircleShape2D_d8erk")
+
+[node name="HealthBar" parent="." index="6"]
+offset_top = -140.0
+offset_bottom = -113.0
+
+[editable path="HealthBar"]
