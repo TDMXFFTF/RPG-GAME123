@@ -44,7 +44,16 @@ offset_right = -0.176025
 offset_bottom = 0.0479736
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 90
+theme_override_font_sizes/font_size = 30
 text = "Retry"
 
+[node name="Quit" type="Button" parent="."]
+offset_left = 463.0
+offset_top = 497.0
+offset_right = 706.0
+offset_bottom = 598.0
+theme_override_font_sizes/font_size = 20
+text = "Leave your soul behind"
+
 [connection signal="pressed" from="Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

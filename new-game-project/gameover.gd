@@ -13,3 +13,7 @@ func _on_retry_pressed() -> void:
 func game_over():
 	get_tree().paused = true
 	self.show()
+
+
+func _on_quit_pressed() -> void:
+	get_tree().quit()
