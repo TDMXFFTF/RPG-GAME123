@@ -48,10 +48,15 @@ theme_override_font_sizes/font_size = 30
 text = "Retry"
 
 [node name="Quit" type="Button" parent="."]
-offset_left = 463.0
-offset_top = 497.0
-offset_right = 706.0
-offset_bottom = 598.0
+anchors_preset = -1
+anchor_left = 0.402
+anchor_top = 0.767
+anchor_right = 0.613
+anchor_bottom = 0.923
+offset_left = -0.104004
+offset_top = -0.0160217
+offset_right = -0.176025
+offset_bottom = -0.104004
 theme_override_font_sizes/font_size = 20
 text = "Leave your soul behind"
 
