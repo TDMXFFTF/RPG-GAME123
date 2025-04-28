@@ -3,10 +3,9 @@
 if State.state_quest == "has"
 	NPC: Do you have it?
 	- Yeah here you go 
-		set State.state_quest = "done"
 		NPC: OMG THANK YOU FOR DOING THIS 
 		set State.state_quest = "finished"
-
+		=> END
 if State.state_quest == "finished"
 	NPC: HI THANKS AGAIN FOR TESTING THIS OUT 
 	=> END 
