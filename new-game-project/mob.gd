@@ -5,6 +5,7 @@ class_name Mob extends CharacterBody2D
 @export var acceleration := 450.0
 @export var drag_factor := 1.5
 @export var max_health := 3
+@export var damage := 1
 var _player: Player = null
 var health := max_health: set = set_health
 @onready var _detection: Area2D = %Detection
@@ -13,8 +14,8 @@ var health := max_health: set = set_health
 @onready var _health_bar: ProgressBar = %HealthBar
 
 
+
 func _ready() -> void:
-	const damage = 1.0
 	_detection.body_entered.connect(func (body: Node) -> void:
 		if body is Player:
 			_player = body
@@ -35,6 +36,7 @@ func _ready() -> void:
 	_damage_timer.timeout.connect(func () -> void:
 		_player.health -= damage
 	)
+	health = max_health
 	_health_bar.max_value = max_health
 	_health_bar.value = health
 	_health_bar.init_health(health)

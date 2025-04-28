@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://ddd0s2jv7gwqy"]
 
-[ext_resource type="PackedScene" uid="uid://byiadojpflj2h" path="res://weapon.tscn" id="1_iyjs5"]
+[ext_resource type="PackedScene" uid="uid://mylx3immypbg" path="res://weapon.tscn" id="1_iyjs5"]
 [ext_resource type="Texture2D" uid="uid://c6g5br8ov8hku" path="res://basic sword.png" id="2_r106c"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_csuhc"]
@@ -8,7 +8,7 @@ radius = 29.0526
 height = 145.83
 
 [node name="BasicSword" instance=ExtResource("1_iyjs5")]
-attack_speed = 1.2
+attack_speed = 1.1
 
 [node name="Sprite2D" parent="Marker2D" index="0"]
 texture = ExtResource("2_r106c")
