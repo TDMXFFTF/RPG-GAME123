@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://csqmejwn4b0wk"]
 
 [ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="1_k4dwh"]
-[ext_resource type="PackedScene" path="res://mob_spawn.tscn" id="2_lu27u"]
+[ext_resource type="PackedScene" uid="uid://d08nm7rh8ljdv" path="res://mob_spawn.tscn" id="2_lu27u"]
 [ext_resource type="Texture2D" uid="uid://csyd1ormvbcp8" path="res://Artwork/Background.png" id="2_o5502"]
-[ext_resource type="PackedScene" path="res://Trees.tscn" id="3_777vs"]
+[ext_resource type="PackedScene" uid="uid://dp7xndstmbxy" path="res://Trees.tscn" id="3_777vs"]
 [ext_resource type="PackedScene" uid="uid://cjc22y46c01ct" path="res://inventory.tscn" id="4_7mvyc"]
-[ext_resource type="PackedScene" path="res://potionitem.tscn" id="6_ryc51"]
+[ext_resource type="PackedScene" uid="uid://ccd3rlst8r1uo" path="res://potionitem.tscn" id="6_ryc51"]
 [ext_resource type="PackedScene" uid="uid://gup05nn1rwjg" path="res://boss.tscn" id="7_ifmyl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8n6v7"]
@@ -58,4 +58,4 @@ shape = SubResource("RectangleShape2D_t1ybu")
 position = Vector2(656, 57)
 
 [node name="Boss" parent="." instance=ExtResource("7_ifmyl")]
-position = Vector2(996, 106)
+position = Vector2(1200, -26)

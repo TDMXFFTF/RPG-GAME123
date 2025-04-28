@@ -32,17 +32,14 @@ scale = Vector2(1.5, 1.5)
 texture = SubResource("CompressedTexture2D_a3m83")
 
 [node name="CollisionShape2D" parent="." index="1"]
-visible = true
 scale = Vector2(1.5, 1.5)
 shape = SubResource("CircleShape2D_04pg6")
 
 [node name="CollisionShape2D" parent="Detection" index="0"]
-visible = true
 scale = Vector2(3, 3)
 shape = SubResource("CircleShape2D_n2ekc")
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
-visible = true
 scale = Vector2(1.5, 1.5)
 shape = SubResource("CircleShape2D_67j5v")
 
