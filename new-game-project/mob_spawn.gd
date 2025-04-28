@@ -1,10 +1,10 @@
 class_name MobSpawn extends Node2D
 
 @export var mob_scene: PackedScene = preload("res://mob.tscn")
-@export var spawn_area: Rect2 = Rect2(Vector2.ZERO, Vector2(400, 300))
+@export var spawn_area: Rect2 = Rect2(Vector2.ZERO, Vector2(1000, 1000))
 @export var spawn_interval: float = 1.0
 @export var stop_after: float = 5.0
-
+#edit size of rect2 for random mob spawn
 func spawn_all_mobs():
 	randomize()
 

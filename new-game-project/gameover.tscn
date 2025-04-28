@@ -1,63 +1,67 @@
-[gd_scene load_steps=2 format=3 uid="uid://t82p2gmp170e"]
+[gd_scene load_steps=3 format=3 uid="uid://t82p2gmp170e"]
 
 [ext_resource type="Script" path="res://gameover.gd" id="1_edgaf"]
+[ext_resource type="FontFile" uid="uid://b1p76i3ych1in" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/poco/Poco.ttf" id="2_fcqfg"]
 
 [node name="GamingIsOver" type="CanvasLayer"]
 process_mode = 3
 script = ExtResource("1_edgaf")
 
-[node name="Label" type="Label" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 222.0
-offset_top = 113.0
-offset_right = -208.0
-offset_bottom = -274.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 80
-text = "Gaming is over"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Panel" type="Panel" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 14.0
-offset_top = 20.0
-offset_right = -16.0
-offset_bottom = -22.0
+offset_left = 80.0
+offset_top = 60.0
+offset_right = -78.0
+offset_bottom = -71.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Retry" type="Button" parent="."]
-anchors_preset = -1
-anchor_left = 0.398
-anchor_top = 0.563
-anchor_right = 0.613
-anchor_bottom = 0.699
-offset_left = 0.503967
-offset_top = 0.175995
-offset_right = -0.176025
-offset_bottom = 0.0479736
+[node name="Label" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 224.0
+offset_top = 34.0
+offset_right = -206.0
+offset_bottom = -353.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("2_fcqfg")
+theme_override_font_sizes/font_size = 70
+text = "Gaming is over"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Retry" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.365
+anchor_top = 0.551
+anchor_right = 0.641
+anchor_bottom = 0.687
+offset_left = 0.519989
+offset_top = -0.0480042
+offset_right = -0.432007
+offset_bottom = -0.176025
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_fcqfg")
+theme_override_font_sizes/font_size = 35
 text = "Retry"
 
 [node name="Quit" type="Button" parent="."]
 anchors_preset = -1
-anchor_left = 0.402
-anchor_top = 0.767
-anchor_right = 0.613
-anchor_bottom = 0.923
-offset_left = -0.104004
-offset_top = -0.0160217
-offset_right = -0.176025
-offset_bottom = -0.104004
-theme_override_font_sizes/font_size = 20
+anchor_left = 0.365
+anchor_top = 0.715
+anchor_right = 0.641
+anchor_bottom = 0.867
+offset_left = 0.519989
+offset_top = -2.32001
+offset_right = -0.432007
+offset_bottom = 0.18396
+theme_override_fonts/font = ExtResource("2_fcqfg")
+theme_override_font_sizes/font_size = 30
 text = "Leave your soul behind"
 
 [connection signal="pressed" from="Retry" to="." method="_on_retry_pressed"]

@@ -23,6 +23,10 @@ PotionManager="*res://potion_manager.tscn"
 "<<<<<<<HEAD[editor_plugins]enabled"=PackedStringArray()
 State="*res://dialogue/state.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
