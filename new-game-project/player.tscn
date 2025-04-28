@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ddd0s2jv7gwqy" path="res://basic_sword.tscn" id="8_pgj2x"]
 [ext_resource type="PackedScene" uid="uid://cp7i5vyjqhoqq" path="res://second_sword.tscn" id="9_ypp2m"]
 [ext_resource type="PackedScene" uid="uid://dvufsgtn1au7x" path="res://final_sword.tscn" id="10_nr24y"]
-[ext_resource type="PackedScene" path="res://gameover.tscn" id="10_pw3wm"]
+[ext_resource type="PackedScene" uid="uid://t82p2gmp170e" path="res://gameover.tscn" id="10_pw3wm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jjb6k"]
 radius = 66.2722
