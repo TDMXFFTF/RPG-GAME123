@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="1_h2w22"]
 [ext_resource type="Script" path="res://test.gd" id="1_pkjkl"]
 [ext_resource type="PackedScene" uid="uid://d0d4cbqlwh4sa" path="res://npc.tscn" id="2_7qxhd"]
-[ext_resource type="Resource" uid="uid://bfi3xcvyymyre" path="res://main.dialogue" id="4_3eoi0"]
+[ext_resource type="Resource" uid="uid://csfba0ddcllmr" path="res://actual_main.dialogue" id="4_vdhuo"]
 [ext_resource type="PackedScene" uid="uid://bq0u6boedlnpr" path="res://side_quest_npc_1.tscn" id="6_mnvb5"]
 
 [node name="Test" type="Node2D"]
@@ -13,6 +13,6 @@ script = ExtResource("1_pkjkl")
 
 [node name="NPC" parent="." instance=ExtResource("2_7qxhd")]
 position = Vector2(501, 171)
-first_dialog = ExtResource("4_3eoi0")
+first_dialog = ExtResource("4_vdhuo")
 
 [node name="SideQuestNpc1" parent="." instance=ExtResource("6_mnvb5")]

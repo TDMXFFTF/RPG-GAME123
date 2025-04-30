@@ -7,7 +7,7 @@ class_name Mob extends CharacterBody2D
 @export var max_health := 3
 @export var damage := 1
 var _player: Player = null
-var health := max_health
+var health := max_health: set = set_health
 @onready var _detection: Area2D = %Detection
 @onready var _hit_box: Area2D = %HitBox
 @onready var _damage_timer: Timer = %DamageTimer

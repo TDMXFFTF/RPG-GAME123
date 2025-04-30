@@ -7,7 +7,7 @@ class_name MobSpawn extends Node2D
 @export var stop_after: float = 5.0
 
 func _ready():
-	randomize()
+	#randomize()
 
 	if $SpawnTimer and $StopTimer:
 		$SpawnTimer.wait_time = spawn_interval

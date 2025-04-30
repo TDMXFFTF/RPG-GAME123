@@ -1,6 +1,6 @@
 ~ start
 
-if State.state_quest == "done"
+if State.state_quest == "done1"
 	NPC1: YOU BETTER HAVE WHAT I NEED
 	- Yeah here you go
 		NPC1: THANK YOU SIR HERES A KEY

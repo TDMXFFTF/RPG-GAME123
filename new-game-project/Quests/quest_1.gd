@@ -15,4 +15,4 @@ func stick_collected() -> void:
 	pickup += 1
 	if pickup >= 3:
 		print("compledt!")
-		State.state_quest = "has"
+		State.state_quest = "done1"

@@ -1,12 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://dtcly4mn3vlxk"]
+[gd_scene load_steps=11 format=3 uid="uid://dtcly4mn3vlxk"]
 
 [ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="1_k4dwh"]
-[ext_resource type="PackedScene" uid="uid://65ipyhi7j24h" path="res://mob_spawn.tscn" id="2_lu27u"]
 [ext_resource type="Texture2D" uid="uid://csyd1ormvbcp8" path="res://Artwork/Background.png" id="2_o5502"]
-[ext_resource type="PackedScene" uid="uid://dp7xndstmbxy" path="res://Trees.tscn" id="3_777vs"]
+[ext_resource type="PackedScene" path="res://Trees.tscn" id="3_777vs"]
 [ext_resource type="PackedScene" uid="uid://cjc22y46c01ct" path="res://inventory.tscn" id="4_7mvyc"]
-[ext_resource type="PackedScene" uid="uid://ccd3rlst8r1uo" path="res://potionitem.tscn" id="6_ryc51"]
+[ext_resource type="PackedScene" path="res://potionitem.tscn" id="6_ryc51"]
 [ext_resource type="PackedScene" uid="uid://bex1i2tpeixw7" path="res://boss.tscn" id="7_4oqe5"]
+[ext_resource type="PackedScene" uid="uid://d0d4cbqlwh4sa" path="res://npc.tscn" id="8_7usrd"]
+[ext_resource type="Resource" uid="uid://csfba0ddcllmr" path="res://actual_main.dialogue" id="9_4t1tq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8n6v7"]
 size = Vector2(8741.5, 616)
@@ -19,11 +20,7 @@ size = Vector2(5404.84, 488.911)
 [node name="Player" parent="." instance=ExtResource("1_k4dwh")]
 top_level = true
 
-[node name="MobSpawn" parent="." instance=ExtResource("2_lu27u")]
-position = Vector2(0, 7)
-
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0.17104, 0.171039, 0.17104, 1)
 
 [node name="Background" type="Sprite2D" parent="."]
@@ -60,3 +57,6 @@ position = Vector2(656, 57)
 
 [node name="Boss" parent="." instance=ExtResource("7_4oqe5")]
 position = Vector2(1210, -48)
+
+[node name="NPC" parent="." instance=ExtResource("8_7usrd")]
+first_dialog = ExtResource("9_4t1tq")
