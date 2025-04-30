@@ -3,9 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="1_k4dwh"]
 [ext_resource type="PackedScene" uid="uid://65ipyhi7j24h" path="res://mob_spawn.tscn" id="2_lu27u"]
 [ext_resource type="Texture2D" uid="uid://csyd1ormvbcp8" path="res://Artwork/Background.png" id="2_o5502"]
-[ext_resource type="PackedScene" path="res://Trees.tscn" id="3_777vs"]
+[ext_resource type="PackedScene" uid="uid://dp7xndstmbxy" path="res://Trees.tscn" id="3_777vs"]
 [ext_resource type="PackedScene" uid="uid://cjc22y46c01ct" path="res://inventory.tscn" id="4_7mvyc"]
-[ext_resource type="PackedScene" path="res://potionitem.tscn" id="6_ryc51"]
+[ext_resource type="PackedScene" uid="uid://ccd3rlst8r1uo" path="res://potionitem.tscn" id="6_ryc51"]
 [ext_resource type="PackedScene" uid="uid://bex1i2tpeixw7" path="res://boss.tscn" id="7_4oqe5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8n6v7"]
@@ -22,6 +22,7 @@ top_level = true
 [node name="MobSpawn" parent="." instance=ExtResource("2_lu27u")]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0.17104, 0.171039, 0.17104, 1)
 
 [node name="Background" type="Sprite2D" parent="."]

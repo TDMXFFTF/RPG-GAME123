@@ -1,22 +1,27 @@
 class_name MobSpawn extends Node2D
 
+
 @export var mob_scene: PackedScene = preload("res://mob.tscn")
 @export var spawn_area: Rect2 = Rect2(Vector2.ZERO, Vector2(1000, 1000))
 @export var spawn_interval: float = 1.0
 @export var stop_after: float = 5.0
-#edit size of rect2 for random mob spawn
-func spawn_all_mobs():
+
+func _ready():
 	randomize()
 
 	if $SpawnTimer and $StopTimer:
 		$SpawnTimer.wait_time = spawn_interval
-		$SpawnTimer.start()
+		$SpawnTimer.timeout.connect(_on_spawn_timer_timeout)
 
 		$StopTimer.wait_time = stop_after
 		$StopTimer.one_shot = true
-		$StopTimer.start()
+		$StopTimer.timeout.connect(_on_stop_timer_timeout)
 	else:
 		push_error("SpawnTimer or StopTimer is missing from the scene!")
+
+func spawn_all_mobs():
+	$SpawnTimer.start()
+	$StopTimer.start()
 
 func _on_spawn_timer_timeout() -> void:
 	spawn_mob()
@@ -36,6 +41,12 @@ func spawn_mob():
 	var spawn_y = randf_range(spawn_area.position.y, spawn_area.position.y + spawn_area.size.y)
 	mob.position = Vector2(spawn_x, spawn_y)
 
-	print("Spawning mob at:", mob.position)
+	# Assign the player to the mob
+	var player = get_tree().current_scene.get_node("Player")  # Adjust path if necessary
+	if player and mob.has_method("set_player"):
+		mob.set_player(player)
+	else:
+		print("Could not assign player to mob.")
 
+	print("Spawning mob at:", mob.position)
 	get_tree().current_scene.add_child(mob)
