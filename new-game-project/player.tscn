@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bjjy23482ltfb"]
+[gd_scene load_steps=17 format=3 uid="uid://bjjy23482ltfb"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_yqf8w"]
 [ext_resource type="Texture2D" uid="uid://c8qfwscqsg0vs" path="res://icon.svg" id="2_5llva"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cp7i5vyjqhoqq" path="res://second_sword.tscn" id="9_ypp2m"]
 [ext_resource type="PackedScene" uid="uid://dvufsgtn1au7x" path="res://final_sword.tscn" id="10_nr24y"]
 [ext_resource type="PackedScene" uid="uid://t82p2gmp170e" path="res://gameover.tscn" id="10_pw3wm"]
+[ext_resource type="PackedScene" uid="uid://by10p8dgljbh0" path="res://pause_boom.tscn" id="11_qptm0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jjb6k"]
 radius = 66.2722
@@ -113,3 +114,5 @@ collision_mask = 17
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/ActionableFinder"]
 shape = SubResource("CircleShape2D_1eggl")
+
+[node name="Pause" parent="." instance=ExtResource("11_qptm0")]

@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://by10p8dgljbh0"]
+
+[ext_resource type="FontFile" uid="uid://b1p76i3ych1in" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/poco/Poco.ttf" id="1_b8e11"]
+[ext_resource type="Script" path="res://pause_boom.gd" id="1_xx6mc"]
+
+[node name="Pause" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_xx6mc")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 80.0
+offset_top = 60.0
+offset_right = -78.0
+offset_bottom = -71.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 211.0
+offset_top = 55.0
+offset_right = -219.0
+offset_bottom = -332.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_b8e11")
+theme_override_font_sizes/font_size = 70
+text = "Pasued"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Resume" type="Button" parent="."]
+offset_left = 452.0
+offset_top = 348.0
+offset_right = 687.0
+offset_bottom = 398.0
+theme_override_fonts/font = ExtResource("1_b8e11")
+theme_override_font_sizes/font_size = 30
+text = "return to vessel"
+
+[node name="Quit NOWW" type="Button" parent="."]
+offset_left = 424.0
+offset_top = 435.0
+offset_right = 721.0
+offset_bottom = 485.0
+theme_override_fonts/font = ExtResource("1_b8e11")
+theme_override_font_sizes/font_size = 30
+text = "Leave vessel behind"
+
+[connection signal="pressed" from="Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Quit NOWW" to="." method="_on_quit_noww_pressed"]
