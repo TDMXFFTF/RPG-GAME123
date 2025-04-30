@@ -2,7 +2,7 @@ class_name MobSpawn extends Node2D
 
 
 @export var mob_scene: PackedScene = preload("res://mob.tscn")
-@export var spawn_area: Rect2 = Rect2(Vector2.ZERO, Vector2(1000, 1000))
+@export var spawn_area: Rect2 = Rect2(Vector2.ZERO, Vector2(42.263, 37.865))
 @export var spawn_interval: float = 1.0
 @export var stop_after: float = 5.0
 
