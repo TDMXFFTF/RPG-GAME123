@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dg21shkf5c6s1"]
+[gd_scene load_steps=8 format=3 uid="uid://dg21shkf5c6s1"]
 
 [ext_resource type="PackedScene" uid="uid://b81ck1ot24coo" path="res://Quests/stick.tscn" id="1_iw3oq"]
 [ext_resource type="Script" path="res://Quests/quest_1.gd" id="1_tmsm3"]
@@ -6,21 +6,27 @@
 [ext_resource type="Texture2D" uid="uid://csyd1ormvbcp8" path="res://Artwork/Background.png" id="3_ro2yp"]
 [ext_resource type="PackedScene" uid="uid://bq0u6boedlnpr" path="res://side_quest_npc_1.tscn" id="5_dvjg0"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oqddw"]
+size = Vector2(82, 2136)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4wi2g"]
+size = Vector2(4200, 202)
+
 [node name="quest_1" type="Node2D"]
 script = ExtResource("1_tmsm3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(832, 136)
-scale = Vector2(14.584, 11.6362)
+scale = Vector2(22.4299, 20.1934)
 texture = ExtResource("3_ro2yp")
 
 [node name="Stick" parent="." node_paths=PackedStringArray("quest") instance=ExtResource("1_iw3oq")]
-position = Vector2(-168, 16)
+position = Vector2(696, 32)
 scale = Vector2(0.270746, 0.270746)
 quest = NodePath("..")
 
 [node name="Stick2" parent="." node_paths=PackedStringArray("quest") instance=ExtResource("1_iw3oq")]
-position = Vector2(1456, 544)
+position = Vector2(1048, 632)
 scale = Vector2(0.270746, 0.270746)
 quest = NodePath("..")
 
@@ -32,8 +38,25 @@ quest = NodePath("..")
 [node name="Player" parent="." instance=ExtResource("2_78n2i")]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0.0584206, 0.0584206, 0.0584206, 1)
 
 [node name="SideQuestNpc1" parent="." instance=ExtResource("5_dvjg0")]
 position = Vector2(152, 304)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-729, 132)
+shape = SubResource("RectangleShape2D_oqddw")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2352, 224)
+shape = SubResource("RectangleShape2D_oqddw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(540, -403)
+shape = SubResource("RectangleShape2D_4wi2g")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(540, 1064)
+shape = SubResource("RectangleShape2D_4wi2g")
