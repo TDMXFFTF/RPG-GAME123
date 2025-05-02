@@ -50,7 +50,7 @@ offset_right = 721.0
 offset_bottom = 485.0
 theme_override_fonts/font = ExtResource("1_b8e11")
 theme_override_font_sizes/font_size = 30
-text = "Leave vessel behind"
+text = "Die"
 
 [connection signal="pressed" from="Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="Quit NOWW" to="." method="_on_quit_noww_pressed"]
