@@ -41,7 +41,7 @@ offset_right = 687.0
 offset_bottom = 398.0
 theme_override_fonts/font = ExtResource("1_b8e11")
 theme_override_font_sizes/font_size = 30
-text = "return to vessel"
+text = "Resume"
 
 [node name="Quit NOWW" type="Button" parent="."]
 offset_left = 424.0
