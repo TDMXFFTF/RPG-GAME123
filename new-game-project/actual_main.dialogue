@@ -3,15 +3,16 @@ if State.state_quest == "Main In Progress"
 	NPC: Good luck out there
 	=> END
 else
-	NPC: hello fellow traveller
+	Steve: hello fellow traveller
  	- Who are you?
-		NPC: I am the one and only NPC(put a name here)! Looked like you passed out back there, How are you feeling?
+		Steve: I.... am STEVE![wait=0.5] Looked like you passed out back there, How are you feeling?
 		- Where am I? 
-			NPC: You're in the Dark Forest my friend. We don't usually have visitors, What brings you here?
+			Steve: You're in the Dark Forest my friend. We don't usually have visitors, What brings you here?
 			- Im looking for someone
-				NPC: Come to think of it, I did see another stranger come by! They went to the Big Ginourmous Cool Cave!
+				Steve: Come to think of it, I did see another stranger come by! They went to the Big Ginourmous Cool Cave!
 				- Where is this cave?
-					NPC: Up ahead! But you need 3 keys to enter it, my 3 buddies over there have the keys! Go talk to them and good luck! 
+					Steve: Up ahead! But you need 3 keys to enter it, my 3 buddies over there have the keys! Go talk to them and good luck! 
 					set State.state_quest = "Main In Progress"
-			
+ 	- Goodbye 
+		NPC: Ok wtv
 => END
