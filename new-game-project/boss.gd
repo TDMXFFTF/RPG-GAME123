@@ -4,6 +4,7 @@ extends Mob
 @onready var projectile_detection: Area2D = %ProjectileDetection
 @onready var _projectile_timer: Timer = Timer.new()
 
+
 func _ready() -> void:
 	super._ready()
 	add_child(_projectile_timer)
@@ -18,11 +19,11 @@ func _ready() -> void:
 		if body is Player:
 			_projectile_timer.stop()
 	)
-
 	_projectile_timer.timeout.connect(_shoot_projectile)
+	
 
 func _shoot_projectile() -> void:
-	var player = get_tree().root.get_node("Background/Player") as Player
+	var player = get_tree().root.get_node("BossFight/Player") as Player
 	if player == null:
 		return
 
