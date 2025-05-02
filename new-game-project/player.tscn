@@ -106,6 +106,7 @@ libraries = {
 }
 
 [node name="GamingIsOver" parent="." instance=ExtResource("10_pw3wm")]
+visible = false
 
 [node name="Direction" type="Marker2D" parent="."]
 
@@ -113,6 +114,8 @@ libraries = {
 collision_mask = 17
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/ActionableFinder"]
+scale = Vector2(0.400961, 0.400961)
 shape = SubResource("CircleShape2D_1eggl")
 
 [node name="Pause" parent="." instance=ExtResource("11_qptm0")]
+visible = false

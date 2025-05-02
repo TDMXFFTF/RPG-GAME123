@@ -1,6 +1,7 @@
 class_name Player extends CharacterBody2D
 
 
+
 @onready var actionable_finder: Area2D = $Direction/ActionableFinder
 
 @export var speed := 400
@@ -28,7 +29,7 @@ func _ready() -> void:
 	_health_bar.max_value = max_health
 	_health_bar.value = health
 	_health_bar.init_health(health)
-	
+
 
 
 	current_weapon = weapons.get_child(0)
