@@ -15,6 +15,7 @@ var current_weapon: Node2D
 @onready var _health_bar: ProgressBar = %HealthBar
 
 @onready var weapons = %Weapons
+@onready var player_animation: AnimationPlayer = $PlayerAnimation
 
 
 @onready var animation_death: AnimationPlayer = $AnimationDeath
@@ -48,6 +49,8 @@ func _physics_process(delta: float) -> void:
 		velocity += steering * drag_factor * delta
 		var direction_discrete := move_direction.sign()
 		move_and_slide()
+		if Input.is_action_just_pressed("down"):
+			$PlayerAnimation.play("Down_Down")
 	#print(PotionManager.potions)
 	if Input.is_action_just_pressed("potion_use"):
 		if health < 10:
