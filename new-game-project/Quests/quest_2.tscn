@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8nbgokmnfkqg"]
+
+[ext_resource type="Texture2D" uid="uid://csyd1ormvbcp8" path="res://Artwork/Background.png" id="1_mgkg8"]
+[ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="1_wbiai"]
+[ext_resource type="PackedScene" uid="uid://65ipyhi7j24h" path="res://mob_spawn.tscn" id="2_arx06"]
+[ext_resource type="PackedScene" uid="uid://cjc22y46c01ct" path="res://inventory.tscn" id="3_p3wal"]
+
+[node name="Quest_2" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1320, 508)
+scale = Vector2(19.1933, 16.01)
+texture = ExtResource("1_mgkg8")
+
+[node name="Player" parent="." instance=ExtResource("1_wbiai")]
+
+[node name="MobSpawn" parent="." instance=ExtResource("2_arx06")]
+
+[node name="Inventory" parent="." instance=ExtResource("3_p3wal")]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.114897, 0.114897, 0.114897, 1)
