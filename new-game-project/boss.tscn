@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://s1qekke3u7nt" path="res://mob.tscn" id="1_1n0kb"]
 [ext_resource type="Script" path="res://boss.gd" id="2_2v0y1"]
-[ext_resource type="PackedScene" uid="uid://b0m5h05ml4adp" path="res://boss_projectile.tscn" id="3_6r6le"]
+[ext_resource type="PackedScene" path="res://boss_projectile.tscn" id="3_6r6le"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a3m83"]
 load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
@@ -10,21 +10,20 @@ load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.cte
 [sub_resource type="CircleShape2D" id="CircleShape2D_04pg6"]
 radius = 83.0241
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_n2ekc"]
-radius = 189.042
+[sub_resource type="CircleShape2D" id="CircleShape2D_i6cly"]
+radius = 186.431
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_67j5v"]
 radius = 84.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_d8erk"]
-radius = 596.041
+[sub_resource type="CircleShape2D" id="CircleShape2D_3rb53"]
+radius = 600.001
 
 [node name="Boss" instance=ExtResource("1_1n0kb")]
 script = ExtResource("2_2v0y1")
 projectile_scene = ExtResource("3_6r6le")
-SPEED = 0.0
-acceleration = 0.0
-drag_factor = 0.0
+SPEED = 315.0
+acceleration = 500.0
 max_health = 75
 damage = 7
 
@@ -38,7 +37,7 @@ shape = SubResource("CircleShape2D_04pg6")
 
 [node name="CollisionShape2D" parent="Detection" index="0"]
 scale = Vector2(3, 3)
-shape = SubResource("CircleShape2D_n2ekc")
+shape = SubResource("CircleShape2D_i6cly")
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 scale = Vector2(1.5, 1.5)
@@ -48,7 +47,7 @@ shape = SubResource("CircleShape2D_67j5v")
 unique_name_in_owner = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ProjectileDetection" index="0"]
-shape = SubResource("CircleShape2D_d8erk")
+shape = SubResource("CircleShape2D_3rb53")
 
 [node name="HealthBar" parent="." index="6"]
 offset_top = -140.0

@@ -8,36 +8,36 @@ class_name Mob extends CharacterBody2D
 @export var damage := 1
 var _player: Player = null
 var health := max_health: set = set_health
-@onready var _detection: Area2D = %Detection
-@onready var _hit_box: Area2D = %HitBox
-@onready var _damage_timer: Timer = %DamageTimer
-@onready var _health_bar: ProgressBar = %HealthBar
+@onready var detection: Area2D = %Detection
+@onready var hit_box: Area2D = %HitBox
+@onready var damage_timer: Timer = %DamageTimer
+@onready var health_bar: ProgressBar = %HealthBar
 
 func _ready() -> void:
-	_detection.body_entered.connect(func (body: Node) -> void:
+	detection.body_entered.connect(func (body: Node) -> void:
 		if body is Player:
 			_player = body
 	)
-	_detection.body_exited.connect(func (body: Node) -> void:
+	detection.body_exited.connect(func (body: Node) -> void:
 		if body is Player:
 			_player = null
 	)
-	_hit_box.body_entered.connect(func (body: Node) -> void:
+	hit_box.body_entered.connect(func (body: Node) -> void:
 		if body is Player:
 			body.health -= damage
-			_damage_timer.start()
+			damage_timer.start()
 	)
-	_hit_box.body_exited.connect(func (body: Node) -> void:
+	hit_box.body_exited.connect(func (body: Node) -> void:
 		if body is Player:
-			_damage_timer.stop()
+			damage_timer.stop()
 	)
-	_damage_timer.timeout.connect(func () -> void:
+	damage_timer.timeout.connect(func () -> void:
 		_player.health -= damage
 	)
 	health = max_health
-	_health_bar.max_value = max_health
-	_health_bar.value = health
-	_health_bar.init_health(health)
+	health_bar.max_value = max_health
+	health_bar.value = health
+	health_bar.init_health(health)
 
 # Set the player reference from the MobSpawner
 func set_player(player: Player) -> void:
@@ -68,7 +68,7 @@ func take_damage(amount: float) -> void:
 func set_health(new_health: int) -> void:
 	var previous_health := health
 	health = clampi(new_health, 0, max_health)
-	_health_bar.value = health
+	health_bar.value = health
 	if health == 0:
 		queue_free()
-	_health_bar.health = health
+	health_bar.health = health
