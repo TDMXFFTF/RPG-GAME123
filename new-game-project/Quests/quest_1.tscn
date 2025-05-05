@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b81ck1ot24coo" path="res://Quests/stick.tscn" id="1_iw3oq"]
 [ext_resource type="Script" path="res://Quests/quest_1.gd" id="1_tmsm3"]
-[ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="2_78n2i"]
+[ext_resource type="PackedScene" uid="uid://6xqawwdgucd8" path="res://player.tscn" id="2_78n2i"]
 [ext_resource type="Texture2D" uid="uid://csyd1ormvbcp8" path="res://Artwork/Background.png" id="3_ro2yp"]
 [ext_resource type="PackedScene" uid="uid://bq0u6boedlnpr" path="res://side_quest_npc_1.tscn" id="5_dvjg0"]
 

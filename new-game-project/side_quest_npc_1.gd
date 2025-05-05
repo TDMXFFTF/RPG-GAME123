@@ -25,6 +25,7 @@ func on_yes_choice():
 func on_no_choice():
 	print("No clicked!") 
 	
+
 func _process(delta: float) -> void:
 	if quest1_active == true:
 		if Input.is_action_just_pressed("test"):

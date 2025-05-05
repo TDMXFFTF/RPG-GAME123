@@ -22,6 +22,7 @@ else
 			- Jeez ok
 				Rodian: THERE SHOULD BE 3 OF THEM. ILL GIVE YOU SOMETHING WHEN YOU FINISH 
 				set State.state_quest = "in_progress1"
+				set State.func_call = get_tree().change_scene_to_file("res://Quests/quest_1.tscn")
 			- No thanks
 				Rodian: THIS WON'T BE THE LAST OF ME
 	- Goodbye
