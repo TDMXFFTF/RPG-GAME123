@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://s1qekke3u7nt" path="res://mob.tscn" id="1_1n0kb"]
 [ext_resource type="Script" path="res://boss.gd" id="2_2v0y1"]
-[ext_resource type="PackedScene" uid="uid://b0m5h05ml4adp" path="res://boss_projectile.tscn" id="3_6r6le"]
+[ext_resource type="PackedScene" path="res://boss_projectile.tscn" id="3_6r6le"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a3m83"]
 load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
