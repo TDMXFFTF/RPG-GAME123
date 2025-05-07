@@ -1,14 +1,14 @@
 [gd_scene load_steps=12 format=3 uid="uid://dtcly4mn3vlxk"]
 
-[ext_resource type="Script" path="res://background.gd" id="1_ebgm0"]
 [ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="1_k4dwh"]
 [ext_resource type="Texture2D" uid="uid://csyd1ormvbcp8" path="res://Artwork/Background.png" id="2_o5502"]
-[ext_resource type="PackedScene" path="res://Trees.tscn" id="3_777vs"]
+[ext_resource type="PackedScene" uid="uid://cvcapcaotr341" path="res://Trees.tscn" id="3_777vs"]
 [ext_resource type="PackedScene" uid="uid://cjc22y46c01ct" path="res://inventory.tscn" id="4_7mvyc"]
 [ext_resource type="PackedScene" path="res://potionitem.tscn" id="6_ryc51"]
 [ext_resource type="PackedScene" uid="uid://d0d4cbqlwh4sa" path="res://npc.tscn" id="8_7usrd"]
 [ext_resource type="PackedScene" uid="uid://bq0u6boedlnpr" path="res://side_quest_npc_1.tscn" id="8_b3bmq"]
 [ext_resource type="Resource" uid="uid://csfba0ddcllmr" path="res://actual_main.dialogue" id="9_4t1tq"]
+[ext_resource type="PackedScene" uid="uid://degj8pt524dby" path="res://Quests/sidequest_npc_2.tscn" id="9_j8o1o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8n6v7"]
 size = Vector2(8741.5, 616)
@@ -17,7 +17,6 @@ size = Vector2(8741.5, 616)
 size = Vector2(5404.84, 488.911)
 
 [node name="Background" type="Node2D"]
-script = ExtResource("1_ebgm0")
 
 [node name="Player" parent="." instance=ExtResource("1_k4dwh")]
 top_level = true
@@ -62,3 +61,8 @@ first_dialog = ExtResource("9_4t1tq")
 
 [node name="SideQuestNpc1" parent="." instance=ExtResource("8_b3bmq")]
 position = Vector2(328, 76)
+scale = Vector2(0.81624, 0.81624)
+
+[node name="sidequest_npc2" parent="." instance=ExtResource("9_j8o1o")]
+position = Vector2(424, -80)
+scale = Vector2(0.81624, 0.81624)
