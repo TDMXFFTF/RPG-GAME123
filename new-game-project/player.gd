@@ -104,6 +104,5 @@ func _unhandled_input(event: InputEvent) -> void:
 		if actionables.size() > 0:
 			actionables[0].action()
 			return
-			
-#func updated_animations(input_axis):
+
 	
