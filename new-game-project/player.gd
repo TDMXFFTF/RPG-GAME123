@@ -40,8 +40,6 @@ func _ready() -> void:
 	await get_tree().process_frame 
 
 	inventory = get_tree().get_current_scene().get_node("Manager/Inventory")
-	await get_tree().process_frame
-	State.try_give_pending_item()
 
 func _physics_process(delta: float) -> void:
 	if death == false:

@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
-Inventory="*res://inventory.gd"
 IdontKnowingly="*res://PotionManager.gd"
 PotionManager="*res://potion_manager.tscn"
 "<<<<<<<HEAD[editor_plugins]enabled"=PackedStringArray()
