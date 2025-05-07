@@ -9,9 +9,11 @@ var test_quest = 0
 var main_quest = false
 var main_quest_done = false 
 
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+
 
 func _ready() -> void:
-	pass
+	animated_sprite_2d.play("idle")
 	
 func test():
 	test_quest += 1
