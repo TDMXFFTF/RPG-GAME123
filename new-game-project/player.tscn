@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://bjjy23482ltfb"]
+[gd_scene load_steps=69 format=3 uid="uid://6xqawwdgucd8"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_yqf8w"]
 [ext_resource type="Texture2D" uid="uid://c8qfwscqsg0vs" path="res://icon.svg" id="2_5llva"]
@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ddd0s2jv7gwqy" path="res://basic_sword.tscn" id="8_pgj2x"]
 [ext_resource type="PackedScene" uid="uid://cp7i5vyjqhoqq" path="res://second_sword.tscn" id="9_ypp2m"]
 [ext_resource type="PackedScene" uid="uid://dvufsgtn1au7x" path="res://final_sword.tscn" id="10_nr24y"]
-[ext_resource type="PackedScene" uid="uid://t82p2gmp170e" path="res://gameover.tscn" id="10_pw3wm"]
+[ext_resource type="PackedScene" path="res://gameover.tscn" id="10_pw3wm"]
 [ext_resource type="PackedScene" uid="uid://by10p8dgljbh0" path="res://pause_boom.tscn" id="11_qptm0"]
 [ext_resource type="Texture2D" uid="uid://nxnxhm2w33gq" path="res://Character1_Idle copy-Sheet.png" id="12_563u1"]
 [ext_resource type="Texture2D" uid="uid://bmjyr03mf6mnc" path="res://Character1_BackWalk-Sheet.png" id="13_kkbp5"]
@@ -62,6 +62,35 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_1eggl"]
 radius = 194.258
 
+[sub_resource type="Animation" id="Animation_cfjd6"]
+resource_name = "Down_Down"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"down_walk"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
 [sub_resource type="Animation" id="Animation_unrar"]
 resource_name = "Down_Idle"
 length = 0.6
@@ -103,35 +132,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [1]
-}
-
-[sub_resource type="Animation" id="Animation_cfjd6"]
-resource_name = "Down_Down"
-length = 0.3
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"down_walk"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5]
 }
 
 [sub_resource type="Animation" id="Animation_k3n7t"]
@@ -619,15 +619,12 @@ offset_right = 125.0
 offset_bottom = -78.0
 
 [node name="Node2D" type="Node2D" parent="."]
-visible = false
 script = ExtResource("3_dbr1r")
 
 [node name="Marker2D" type="Marker2D" parent="Node2D"]
-visible = false
 position = Vector2(570, 0)
 
 [node name="PointLight2D" type="PointLight2D" parent="Node2D/Marker2D"]
-visible = false
 position = Vector2(-344, 0.00134182)
 rotation = 4.71238
 scale = Vector2(1.27925, -1.64738)
@@ -635,21 +632,16 @@ range_z_min = 0
 texture = ExtResource("5_0jh5k")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-visible = false
 texture = ExtResource("5_58ulv")
 
 [node name="Weapons" type="Node2D" parent="."]
 unique_name_in_owner = true
-visible = false
 
 [node name="BasicSword" parent="Weapons" instance=ExtResource("8_pgj2x")]
-visible = false
 
 [node name="SecondSword" parent="Weapons" instance=ExtResource("9_ypp2m")]
-visible = false
 
 [node name="FinalSword" parent="Weapons" instance=ExtResource("10_nr24y")]
-visible = false
 
 [node name="AnimationDeath" type="AnimationPlayer" parent="."]
 libraries = {
