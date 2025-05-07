@@ -1,15 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://b8nbgokmnfkqg"]
+[gd_scene load_steps=6 format=3 uid="uid://b8nbgokmnfkqg"]
 
 [ext_resource type="Texture2D" uid="uid://csyd1ormvbcp8" path="res://Artwork/Background.png" id="1_mgkg8"]
 [ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="1_wbiai"]
 [ext_resource type="PackedScene" uid="uid://65ipyhi7j24h" path="res://mob_spawn.tscn" id="2_arx06"]
 [ext_resource type="PackedScene" uid="uid://cjc22y46c01ct" path="res://inventory.tscn" id="3_p3wal"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yvych"]
+size = Vector2(62.9716, 22.8556)
+
 [node name="Quest_2" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1320, 508)
-scale = Vector2(19.1933, 16.01)
+position = Vector2(1247, 508)
+scale = Vector2(30.0537, 25.0692)
 texture = ExtResource("1_mgkg8")
 
 [node name="Player" parent="." instance=ExtResource("1_wbiai")]
@@ -19,4 +22,31 @@ texture = ExtResource("1_mgkg8")
 [node name="Inventory" parent="." instance=ExtResource("3_p3wal")]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0.114897, 0.114897, 0.114897, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1036.41, 644.397)
+rotation = 3.14159
+scale = Vector2(5.418, 299.479)
+shape = SubResource("RectangleShape2D_yvych")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(3641, 653)
+rotation = 3.14159
+scale = Vector2(5.418, 299.479)
+shape = SubResource("RectangleShape2D_yvych")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-491, -800)
+rotation = 3.14159
+scale = Vector2(2399.78, -12.0917)
+shape = SubResource("RectangleShape2D_yvych")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-845, 1679)
+rotation = 3.14159
+scale = Vector2(2399.78, -12.0917)
+shape = SubResource("RectangleShape2D_yvych")

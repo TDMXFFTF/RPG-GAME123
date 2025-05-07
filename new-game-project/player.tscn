@@ -1,7 +1,6 @@
-[gd_scene load_steps=69 format=3 uid="uid://6xqawwdgucd8"]
+[gd_scene load_steps=68 format=3 uid="uid://bjjy23482ltfb"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_yqf8w"]
-[ext_resource type="Texture2D" uid="uid://c8qfwscqsg0vs" path="res://icon.svg" id="2_5llva"]
 [ext_resource type="PackedScene" uid="uid://bv6fyy7icqkqb" path="res://health_bar.tscn" id="3_352dy"]
 [ext_resource type="Script" path="res://node_2d.gd" id="3_dbr1r"]
 [ext_resource type="Texture2D" uid="uid://dfonsrnjvnn7e" path="res://Light_Prb.png" id="5_0jh5k"]
@@ -9,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ddd0s2jv7gwqy" path="res://basic_sword.tscn" id="8_pgj2x"]
 [ext_resource type="PackedScene" uid="uid://cp7i5vyjqhoqq" path="res://second_sword.tscn" id="9_ypp2m"]
 [ext_resource type="PackedScene" uid="uid://dvufsgtn1au7x" path="res://final_sword.tscn" id="10_nr24y"]
-[ext_resource type="PackedScene" path="res://gameover.tscn" id="10_pw3wm"]
+[ext_resource type="PackedScene" uid="uid://t82p2gmp170e" path="res://gameover.tscn" id="10_pw3wm"]
 [ext_resource type="PackedScene" uid="uid://by10p8dgljbh0" path="res://pause_boom.tscn" id="11_qptm0"]
 [ext_resource type="Texture2D" uid="uid://nxnxhm2w33gq" path="res://Character1_Idle copy-Sheet.png" id="12_563u1"]
 [ext_resource type="Texture2D" uid="uid://bmjyr03mf6mnc" path="res://Character1_BackWalk-Sheet.png" id="13_kkbp5"]
@@ -600,19 +599,14 @@ motion_mode = 1
 script = ExtResource("1_yqf8w")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
-texture = ExtResource("2_5llva")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource("CircleShape2D_jjb6k")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-visible = false
 
 [node name="HealthBar" parent="." instance=ExtResource("3_352dy")]
 unique_name_in_owner = true
-visible = false
 offset_left = -115.0
 offset_top = -105.0
 offset_right = 125.0
@@ -649,22 +643,17 @@ libraries = {
 }
 
 [node name="GamingIsOver" parent="." instance=ExtResource("10_pw3wm")]
-visible = false
 
 [node name="Direction" type="Marker2D" parent="."]
-visible = false
 
 [node name="ActionableFinder" type="Area2D" parent="Direction"]
-visible = false
 collision_mask = 17
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/ActionableFinder"]
-visible = false
 scale = Vector2(0.400961, 0.400961)
 shape = SubResource("CircleShape2D_1eggl")
 
 [node name="Pause" parent="." instance=ExtResource("11_qptm0")]
-visible = false
 
 [node name="PlayerAnimation" type="AnimationPlayer" parent="."]
 root_node = NodePath("../AnimatedSprite2D")

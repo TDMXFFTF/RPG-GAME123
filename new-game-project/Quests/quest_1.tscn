@@ -18,7 +18,7 @@ script = ExtResource("1_tmsm3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(832, 136)
-scale = Vector2(22.4299, 20.1934)
+scale = Vector2(15.803, 14.1491)
 texture = ExtResource("3_ro2yp")
 
 [node name="Stick" parent="." node_paths=PackedStringArray("quest") instance=ExtResource("1_iw3oq")]
