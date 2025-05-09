@@ -7,12 +7,13 @@ Patricia: PLEASE HELP
 		 - I could do that
 			Patricia: You Can????? If you do I'll give you this really cool key 
 			set State.state_quest = "begin_2"
+			set State.func_call = "change_to_quest2"
 	 - How can you grow stuff when theres no sunlight?
 		Patricia: Look can you just help me take them out?
 		- Sure why not
 			Patricia: THANK YOU!! If you survive ill give you a key!
 			set State.state_quest = "begin_2"
-			
+			set State.func_call = "change_to_quest2"
  - No
 	Patricia: Fine be that way
 

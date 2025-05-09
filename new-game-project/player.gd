@@ -29,17 +29,24 @@ func _ready() -> void:
 	_health_bar.max_value = max_health
 	_health_bar.value = health
 	_health_bar.init_health(health)
-	
-
 
 	current_weapon = weapons.get_child(0)
 	for weapon in %Weapons.get_children():
 		weapon.hide()
 		weapon.set_process(false)
 
-	await get_tree().process_frame 
+	await get_tree().process_frame
 
-	inventory = get_tree().get_current_scene().get_node("Manager/Inventory")
+	inventory = InventoryUI.get_node("Manager/Inventory")
+
+	if inventory:
+		inventory.load_inventory()
+	else:
+		print("Inventory not found in Autoload")
+
+
+func _on_inventory_ready():
+	State.inventory.load_inventory()
 
 func _physics_process(delta: float) -> void:
 	if death == false:
@@ -78,11 +85,6 @@ func _physics_process(delta: float) -> void:
 			if PotionManager.potions > 0:
 				health += 3.3
 				PotionManager.potions -= 1
-
-
-
-
-
 
 
 
@@ -125,6 +127,3 @@ func _unhandled_input(event: InputEvent) -> void:
 		if actionables.size() > 0:
 			actionables[0].action()
 			return
-			
-#func updated_animations(input_axis):
-	
