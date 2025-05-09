@@ -5,8 +5,8 @@ if State.state_quest == "done1"
 	- Yeah here you go
 		Rodian: THANK YOU SIR HERES A KEY
 		set State.state_quest = "finished1"
-		set State.func_call = "give_sword_and_change"
-		set State.func_call = get_tree().change_scene_to_file("res://Background.tscn")
+		set State.func_call = "change_to_background"
+		set State.func_call = "give_sword1"
 		=> END
 if State.state_quest == "finished1"
 	Rodian: HEY THANKS AGAIN. WHAT CAN I HELP YOU WITH??
@@ -24,7 +24,7 @@ else
 			- Jeez ok
 				Rodian: THERE SHOULD BE 3 OF THEM. ILL GIVE YOU SOMETHING WHEN YOU FINISH 
 				set State.state_quest = "in_progress1"
-				set State.func_call = get_tree().change_scene_to_file("res://Quests/quest_1.tscn")
+				set State.func_call = "change_to_quest1"
 			- No thanks
 				Rodian: THIS WON'T BE THE LAST OF ME
 	- Goodbye
