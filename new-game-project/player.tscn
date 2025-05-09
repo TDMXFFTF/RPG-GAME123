@@ -268,7 +268,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"left_walk",
-"speed": 10.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -305,7 +305,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"right_walk",
-"speed": 10.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -401,4 +401,4 @@ shape = SubResource("CircleShape2D_1eggl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_hcnkc")
-animation = &"down_idle"
+animation = &"left_walk"
