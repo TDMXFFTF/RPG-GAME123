@@ -1,7 +1,6 @@
-[gd_scene load_steps=59 format=3 uid="uid://bjjy23482ltfb"]
+[gd_scene load_steps=58 format=3 uid="uid://bjjy23482ltfb"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_yqf8w"]
-[ext_resource type="Texture2D" uid="uid://c8qfwscqsg0vs" path="res://icon.svg" id="2_5llva"]
 [ext_resource type="PackedScene" uid="uid://bv6fyy7icqkqb" path="res://health_bar.tscn" id="3_352dy"]
 [ext_resource type="Script" path="res://node_2d.gd" id="3_dbr1r"]
 [ext_resource type="Texture2D" uid="uid://dfonsrnjvnn7e" path="res://Light_Prb.png" id="5_0jh5k"]
@@ -340,9 +339,6 @@ animations = [{
 position = Vector2(574, 326)
 motion_mode = 1
 script = ExtResource("1_yqf8w")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_5llva")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_jjb6k")
