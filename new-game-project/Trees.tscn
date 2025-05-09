@@ -22,7 +22,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_4ffva")
 }],
 "loop": true,
-"name": &"leaf3",
+"name": &"leaf",
 "speed": 5.0
 }]
 
@@ -55,22 +55,66 @@ animations = [{
 script = ExtResource("1_ndk26")
 
 [node name="Tree1" type="AnimatedSprite2D" parent="."]
-unique_name_in_owner = true
 position = Vector2(-1207.59, -550.688)
 scale = Vector2(8.37239, 7.84624)
 sprite_frames = SubResource("SpriteFrames_ck31j")
-animation = &"leaf3"
-frame_progress = 0.245681
+animation = &"leaf"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Tree1"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tree1/StaticBody2D"]
 position = Vector2(-2.44855, 32.1173)
-scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_s233w")
+
+[node name="Tree24" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2860, -1521)
+scale = Vector2(8.37239, 7.84624)
+sprite_frames = SubResource("SpriteFrames_ck31j")
+animation = &"leaf"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tree24"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree24/StaticBody2D"]
+position = Vector2(-2.44855, 32.1173)
+shape = SubResource("RectangleShape2D_s233w")
+
+[node name="Tree11" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1316, 1144)
+scale = Vector2(8.37239, 7.84624)
+sprite_frames = SubResource("SpriteFrames_ck31j")
+animation = &"leaf"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tree11"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree11/StaticBody2D"]
+position = Vector2(-2.44855, 32.1173)
+shape = SubResource("RectangleShape2D_s233w")
+
+[node name="Tree16" type="AnimatedSprite2D" parent="."]
+position = Vector2(1804, -1808)
+scale = Vector2(8.37239, 7.84624)
+sprite_frames = SubResource("SpriteFrames_ck31j")
+animation = &"leaf"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tree16"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree16/StaticBody2D"]
+position = Vector2(-2.44855, 32.1173)
+shape = SubResource("RectangleShape2D_s233w")
+
+[node name="Tree25" type="AnimatedSprite2D" parent="."]
+position = Vector2(3360, -1848)
+scale = Vector2(8.37239, 7.84624)
+sprite_frames = SubResource("SpriteFrames_ck31j")
+animation = &"leaf"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tree25"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree25/StaticBody2D"]
+position = Vector2(-2.44855, 32.1173)
 shape = SubResource("RectangleShape2D_s233w")
 
 [node name="Tree2" type="AnimatedSprite2D" parent="."]
-unique_name_in_owner = true
 position = Vector2(-198.594, -140.688)
 scale = Vector2(5.4375, 5.25)
 sprite_frames = SubResource("SpriteFrames_dbg60")
@@ -81,5 +125,319 @@ frame_progress = 0.230515
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tree2/StaticBody2D"]
 position = Vector2(-1.4794, 41.0476)
-scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_s233w")
+
+[node name="Tree5" type="AnimatedSprite2D" parent="."]
+position = Vector2(1109, -911)
+scale = Vector2(5.4375, 5.25)
+sprite_frames = SubResource("SpriteFrames_dbg60")
+animation = &"move"
+frame_progress = 0.230515
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tree5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree5/StaticBody2D"]
+position = Vector2(-1.4794, 41.0476)
+shape = SubResource("RectangleShape2D_s233w")
+
+[node name="Tree17" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1883, -1112)
+scale = Vector2(5.4375, 5.25)
+sprite_frames = SubResource("SpriteFrames_dbg60")
+animation = &"move"
+frame_progress = 0.230515
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tree17"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree17/StaticBody2D"]
+position = Vector2(-1.4794, 41.0476)
+shape = SubResource("RectangleShape2D_s233w")
+
+[node name="Tree23" type="AnimatedSprite2D" parent="."]
+position = Vector2(-3006, 139)
+scale = Vector2(5.4375, 5.25)
+sprite_frames = SubResource("SpriteFrames_dbg60")
+animation = &"move"
+frame_progress = 0.230515
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tree23"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree23/StaticBody2D"]
+position = Vector2(-1.4794, 41.0476)
+shape = SubResource("RectangleShape2D_s233w")
+
+[node name="Tree27" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2966, 1238)
+scale = Vector2(5.4375, 5.25)
+sprite_frames = SubResource("SpriteFrames_dbg60")
+animation = &"move"
+frame_progress = 0.230515
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tree27"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree27/StaticBody2D"]
+position = Vector2(-1.4794, 41.0476)
+shape = SubResource("RectangleShape2D_s233w")
+
+[node name="Tree21" type="AnimatedSprite2D" parent="."]
+position = Vector2(3186, -960)
+scale = Vector2(5.4375, 5.25)
+sprite_frames = SubResource("SpriteFrames_dbg60")
+animation = &"move"
+frame_progress = 0.230515
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tree21"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree21/StaticBody2D"]
+position = Vector2(-1.4794, 41.0476)
+shape = SubResource("RectangleShape2D_s233w")
+
+[node name="Tree28" type="AnimatedSprite2D" parent="."]
+position = Vector2(-985, 2312)
+scale = Vector2(5.4375, 5.25)
+sprite_frames = SubResource("SpriteFrames_dbg60")
+animation = &"move"
+frame_progress = 0.230515
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tree28"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree28/StaticBody2D"]
+position = Vector2(-1.4794, 41.0476)
+shape = SubResource("RectangleShape2D_s233w")
+
+[node name="Tree18" type="AnimatedSprite2D" parent="."]
+position = Vector2(-800, -1649)
+scale = Vector2(5.4375, 5.25)
+sprite_frames = SubResource("SpriteFrames_dbg60")
+animation = &"move"
+frame_progress = 0.230515
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tree18"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree18/StaticBody2D"]
+position = Vector2(-1.4794, 41.0476)
+shape = SubResource("RectangleShape2D_s233w")
+
+[node name="Tree20" type="AnimatedSprite2D" parent="."]
+position = Vector2(539, -1817)
+scale = Vector2(5.4375, 5.25)
+sprite_frames = SubResource("SpriteFrames_dbg60")
+animation = &"move"
+frame_progress = 0.230515
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tree20"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree20/StaticBody2D"]
+position = Vector2(-1.4794, 41.0476)
+shape = SubResource("RectangleShape2D_s233w")
+
+[node name="Tree15" type="AnimatedSprite2D" parent="."]
+position = Vector2(3267, 388)
+scale = Vector2(5.4375, 5.25)
+sprite_frames = SubResource("SpriteFrames_dbg60")
+animation = &"move"
+frame_progress = 0.230515
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tree15"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree15/StaticBody2D"]
+position = Vector2(-1.4794, 41.0476)
+shape = SubResource("RectangleShape2D_s233w")
+
+[node name="Tree29" type="AnimatedSprite2D" parent="."]
+position = Vector2(3861, 1679)
+scale = Vector2(5.4375, 5.25)
+sprite_frames = SubResource("SpriteFrames_dbg60")
+animation = &"move"
+frame_progress = 0.230515
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tree29"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree29/StaticBody2D"]
+position = Vector2(-1.4794, 41.0476)
+shape = SubResource("RectangleShape2D_s233w")
+
+[node name="Tree31" type="AnimatedSprite2D" parent="."]
+position = Vector2(2690, 3059)
+scale = Vector2(5.4375, 5.25)
+sprite_frames = SubResource("SpriteFrames_dbg60")
+animation = &"move"
+frame_progress = 0.230515
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tree31"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree31/StaticBody2D"]
+position = Vector2(-1.4794, 41.0476)
+shape = SubResource("RectangleShape2D_s233w")
+
+[node name="Tree13" type="AnimatedSprite2D" parent="."]
+position = Vector2(83, 1670)
+scale = Vector2(5.4375, 5.25)
+sprite_frames = SubResource("SpriteFrames_dbg60")
+animation = &"move"
+frame_progress = 0.230515
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tree13"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree13/StaticBody2D"]
+position = Vector2(-1.4794, 41.0476)
+shape = SubResource("RectangleShape2D_s233w")
+
+[node name="Tree10" type="AnimatedSprite2D" parent="."]
+position = Vector2(1389, 1118)
+scale = Vector2(5.4375, 5.25)
+sprite_frames = SubResource("SpriteFrames_dbg60")
+animation = &"move"
+frame_progress = 0.230515
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tree10"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree10/StaticBody2D"]
+position = Vector2(-1.4794, 41.0476)
+shape = SubResource("RectangleShape2D_s233w")
+
+[node name="Tree8" type="AnimatedSprite2D" parent="."]
+position = Vector2(2070, 201)
+scale = Vector2(5.4375, 5.25)
+sprite_frames = SubResource("SpriteFrames_dbg60")
+animation = &"move"
+frame_progress = 0.230515
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tree8"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree8/StaticBody2D"]
+position = Vector2(-1.4794, 41.0476)
+shape = SubResource("RectangleShape2D_s233w")
+
+[node name="Tree6" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1116, 328)
+scale = Vector2(5.4375, 5.25)
+sprite_frames = SubResource("SpriteFrames_dbg60")
+animation = &"move"
+frame_progress = 0.230515
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tree6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree6/StaticBody2D"]
+position = Vector2(-1.4794, 41.0476)
+shape = SubResource("RectangleShape2D_s233w")
+
+[node name="Tree3" type="AnimatedSprite2D" parent="."]
+position = Vector2(779, 34)
+scale = Vector2(8.37239, 7.84624)
+sprite_frames = SubResource("SpriteFrames_ck31j")
+animation = &"leaf"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tree3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree3/StaticBody2D"]
+position = Vector2(-2.44855, 32.1173)
+shape = SubResource("RectangleShape2D_s233w")
+
+[node name="Tree9" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2074, 275)
+scale = Vector2(8.37239, 7.84624)
+sprite_frames = SubResource("SpriteFrames_ck31j")
+animation = &"leaf"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tree9"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree9/StaticBody2D"]
+position = Vector2(-2.44855, 32.1173)
+shape = SubResource("RectangleShape2D_s233w")
+
+[node name="Tree30" type="AnimatedSprite2D" parent="."]
+position = Vector2(-3253, 2489)
+scale = Vector2(8.37239, 7.84624)
+sprite_frames = SubResource("SpriteFrames_ck31j")
+animation = &"leaf"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tree30"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree30/StaticBody2D"]
+position = Vector2(-2.44855, 32.1173)
+shape = SubResource("RectangleShape2D_s233w")
+
+[node name="Tree4" type="AnimatedSprite2D" parent="."]
+position = Vector2(8.00012, -1055)
+scale = Vector2(8.37239, 7.84624)
+sprite_frames = SubResource("SpriteFrames_ck31j")
+animation = &"leaf"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tree4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree4/StaticBody2D"]
+position = Vector2(-2.44855, 32.1173)
+shape = SubResource("RectangleShape2D_s233w")
+
+[node name="Tree7" type="AnimatedSprite2D" parent="."]
+position = Vector2(-55, 689)
+scale = Vector2(8.37239, 7.84624)
+sprite_frames = SubResource("SpriteFrames_ck31j")
+animation = &"leaf"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tree7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree7/StaticBody2D"]
+position = Vector2(-2.44855, 32.1173)
+shape = SubResource("RectangleShape2D_s233w")
+
+[node name="Tree12" type="AnimatedSprite2D" parent="."]
+position = Vector2(2231, -796)
+scale = Vector2(8.37239, 7.84624)
+sprite_frames = SubResource("SpriteFrames_ck31j")
+animation = &"leaf"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tree12"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree12/StaticBody2D"]
+position = Vector2(-2.44855, 32.1173)
+shape = SubResource("RectangleShape2D_s233w")
+
+[node name="Tree14" type="AnimatedSprite2D" parent="."]
+position = Vector2(2640, 1650)
+scale = Vector2(8.37239, 7.84624)
+sprite_frames = SubResource("SpriteFrames_ck31j")
+animation = &"leaf"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tree14"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree14/StaticBody2D"]
+position = Vector2(-2.44855, 32.1173)
+shape = SubResource("RectangleShape2D_s233w")
+
+[node name="Tree22" type="AnimatedSprite2D" parent="."]
+position = Vector2(4124, -331)
+scale = Vector2(8.37239, 7.84624)
+sprite_frames = SubResource("SpriteFrames_ck31j")
+animation = &"leaf"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tree22"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree22/StaticBody2D"]
+position = Vector2(-2.44855, 32.1173)
+shape = SubResource("RectangleShape2D_s233w")
+
+[node name="Tree19" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2020, 1802)
+scale = Vector2(8.37239, 7.84624)
+sprite_frames = SubResource("SpriteFrames_ck31j")
+animation = &"leaf"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tree19"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree19/StaticBody2D"]
+position = Vector2(-2.44855, 32.1173)
+shape = SubResource("RectangleShape2D_s233w")
+
+[node name="Tree26" type="AnimatedSprite2D" parent="."]
+position = Vector2(1180, 2363)
+scale = Vector2(8.37239, 7.84624)
+sprite_frames = SubResource("SpriteFrames_ck31j")
+animation = &"leaf"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tree26"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree26/StaticBody2D"]
+position = Vector2(-2.44855, 32.1173)
 shape = SubResource("RectangleShape2D_s233w")
