@@ -15,9 +15,9 @@ var current_weapon: Node2D
 @onready var _health_bar: ProgressBar = %HealthBar
 
 @onready var weapons = %Weapons
-@onready var player_animation: AnimationPlayer = $PlayerAnimation
 
 
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var animation_death: AnimationPlayer = $AnimationDeath
 
 
@@ -56,8 +56,29 @@ func _physics_process(delta: float) -> void:
 		velocity += steering * drag_factor * delta
 		var direction_discrete := move_direction.sign()
 		move_and_slide()
-		if Input.is_action_just_pressed("down"):
-			$PlayerAnimation.play("Down_Down")
+
+		if Input.is_action_pressed("down"):
+			$AnimatedSprite2D.play("down_walk")
+		if Input.is_action_just_released("down"):
+			$AnimatedSprite2D.play("down_idle")
+
+		if Input.is_action_pressed("up"):
+			$AnimatedSprite2D.play("up_walk")
+		if Input.is_action_just_released("down"):
+			$AnimatedSprite2D.play("up_idle")
+
+		if Input.is_action_pressed("left"):
+			$AnimatedSprite2D.play("left_walk")
+		if Input.is_action_just_released("left"):
+			$AnimatedSprite2D.play("left_walk")
+
+		if Input.is_action_pressed("right"):
+			$AnimatedSprite2D.play("right_walk")
+		if Input.is_action_just_released("right"):
+			$AnimatedSprite2D.play("right_walk")
+
+
+
 	#print(PotionManager.potions)
 	if Input.is_action_just_pressed("potion_use"):
 		if health < 10:
