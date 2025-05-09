@@ -24,7 +24,6 @@ data = PackedByteArray("SUQzBAAAAAABAFRYWFgAAAASAAADbWFqb3JfYnJhbmQAbXA0MgBUWFhY
 top_level = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0.17104, 0.171039, 0.17104, 1)
 
 [node name="Background" type="Sprite2D" parent="."]
