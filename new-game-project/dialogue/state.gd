@@ -19,5 +19,7 @@ var func_call:
 				get_tree().change_scene_to_file("res://Background.tscn")
 			"change_to_quest1":
 				get_tree().change_scene_to_file("res://Quests/quest_1.tscn")
+			"change_to_quest2":
+				get_tree().change_scene_to_file("res://Quests/quest_2.tscn")
 			_:
 				print("Unknown func_call:", value)
