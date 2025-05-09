@@ -22,7 +22,6 @@ texture = ExtResource("1_mgkg8")
 [node name="Inventory" parent="." instance=ExtResource("3_p3wal")]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0.114897, 0.114897, 0.114897, 1)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
