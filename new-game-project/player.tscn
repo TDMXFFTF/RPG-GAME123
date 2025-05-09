@@ -342,34 +342,27 @@ motion_mode = 1
 script = ExtResource("1_yqf8w")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
 texture = ExtResource("2_5llva")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource("CircleShape2D_jjb6k")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-visible = false
 
 [node name="HealthBar" parent="." instance=ExtResource("3_352dy")]
 unique_name_in_owner = true
-visible = false
 offset_left = -115.0
 offset_top = -105.0
 offset_right = 125.0
 offset_bottom = -78.0
 
 [node name="Node2D" type="Node2D" parent="."]
-visible = false
 script = ExtResource("3_dbr1r")
 
 [node name="Marker2D" type="Marker2D" parent="Node2D"]
-visible = false
 position = Vector2(570, 0)
 
 [node name="PointLight2D" type="PointLight2D" parent="Node2D/Marker2D"]
-visible = false
 position = Vector2(-344, 0.00134182)
 rotation = 4.71238
 scale = Vector2(1.27925, -1.64738)
@@ -377,21 +370,16 @@ range_z_min = 0
 texture = ExtResource("5_0jh5k")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-visible = false
 texture = ExtResource("5_58ulv")
 
 [node name="Weapons" type="Node2D" parent="."]
 unique_name_in_owner = true
-visible = false
 
 [node name="BasicSword" parent="Weapons" instance=ExtResource("8_pgj2x")]
-visible = false
 
 [node name="SecondSword" parent="Weapons" instance=ExtResource("9_ypp2m")]
-visible = false
 
 [node name="FinalSword" parent="Weapons" instance=ExtResource("10_nr24y")]
-visible = false
 
 [node name="AnimationDeath" type="AnimationPlayer" parent="."]
 libraries = {
@@ -399,22 +387,17 @@ libraries = {
 }
 
 [node name="GamingIsOver" parent="." instance=ExtResource("10_pw3wm")]
-visible = false
 
 [node name="Direction" type="Marker2D" parent="."]
-visible = false
 
 [node name="ActionableFinder" type="Area2D" parent="Direction"]
-visible = false
 collision_mask = 17
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/ActionableFinder"]
-visible = false
 scale = Vector2(0.400961, 0.400961)
 shape = SubResource("CircleShape2D_1eggl")
 
 [node name="Pause" parent="." instance=ExtResource("11_qptm0")]
-visible = false
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_hcnkc")
