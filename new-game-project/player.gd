@@ -39,6 +39,8 @@ func _ready() -> void:
 
 	inventory = InventoryUI.get_node("Manager/Inventory")
 
+	$AnimatedSprite2D.play("down_idle")
+
 	if inventory:
 		inventory.load_inventory()
 	else:

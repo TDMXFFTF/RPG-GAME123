@@ -37,10 +37,22 @@ tracks/0/keys = {
 "update": 1,
 "values": [&"deah"]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
 [sub_resource type="Animation" id="Animation_jmyrx"]
 resource_name = "dying"
-length = 0.01
+length = 0.02
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -48,10 +60,22 @@ tracks/0/path = NodePath("AnimatedSprite2D:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
 "update": 1,
-"values": [&"deah"]
+"values": []
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.02),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bm5md"]
@@ -62,10 +86,6 @@ _data = {
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1eggl"]
 radius = 194.258
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yf1sa"]
-atlas = ExtResource("11_qd38x")
-region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2xv3"]
 atlas = ExtResource("12_563u1")
@@ -199,16 +219,12 @@ region = Rect2(128, 0, 128, 160)
 atlas = ExtResource("19_eutpm")
 region = Rect2(256, 0, 128, 160)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_yf1sa"]
+atlas = ExtResource("11_qd38x")
+region = Rect2(0, 0, 128, 128)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_hcnkc"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yf1sa")
-}],
-"loop": true,
-"name": &"deah",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_g2xv3")
@@ -347,6 +363,14 @@ animations = [{
 "loop": true,
 "name": &"up_walk",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yf1sa")
+}],
+"loop": true,
+"name": &"yes_dead",
+"speed": 5.0
 }]
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
