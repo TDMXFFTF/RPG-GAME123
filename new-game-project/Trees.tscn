@@ -184,7 +184,8 @@ position = Vector2(3186, -960)
 scale = Vector2(5.4375, 5.25)
 sprite_frames = SubResource("SpriteFrames_dbg60")
 animation = &"move"
-frame_progress = 0.230515
+frame = 1
+frame_progress = 0.184781
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Tree21"]
 
