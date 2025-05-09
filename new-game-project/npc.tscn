@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://d0d4cbqlwh4sa"]
+[gd_scene load_steps=12 format=3 uid="uid://d0d4cbqlwh4sa"]
 
 [ext_resource type="Script" path="res://npc.gd" id="1_il6n7"]
-[ext_resource type="Texture2D" uid="uid://c8qfwscqsg0vs" path="res://icon.svg" id="1_rjl26"]
 [ext_resource type="PackedScene" uid="uid://gbqarcgrupfv" path="res://dialogue/actionable.tscn" id="3_5ho6m"]
+[ext_resource type="Texture2D" uid="uid://bswykf3myyh3a" path="res://Quests/Frog-Sheet.png" id="3_cfpuo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r3m1k"]
 radius = 58.0775
@@ -10,13 +10,52 @@ radius = 58.0775
 [sub_resource type="CircleShape2D" id="CircleShape2D_jc0i8"]
 radius = 75.06
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8sb5"]
+atlas = ExtResource("3_cfpuo")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_773h2"]
+atlas = ExtResource("3_cfpuo")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qxko1"]
+atlas = ExtResource("3_cfpuo")
+region = Rect2(512, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qtw2o"]
+atlas = ExtResource("3_cfpuo")
+region = Rect2(768, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pu4k4"]
+atlas = ExtResource("3_cfpuo")
+region = Rect2(1024, 0, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8anj2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b8sb5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_773h2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qxko1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qtw2o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pu4k4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
 [node name="NPC" type="StaticBody2D"]
 position = Vector2(499, 306)
 script = ExtResource("1_il6n7")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(1, 0.28125)
-texture = ExtResource("1_rjl26")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_r3m1k")
@@ -25,3 +64,8 @@ shape = SubResource("CircleShape2D_r3m1k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="actionable"]
 shape = SubResource("CircleShape2D_jc0i8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(13, 14)
+sprite_frames = SubResource("SpriteFrames_8anj2")
+frame_progress = 0.162813
