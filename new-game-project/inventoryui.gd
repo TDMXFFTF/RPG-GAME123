@@ -1,13 +1,9 @@
 extends CanvasLayer
 
 
-var active := true
-
+# Called when the node enters the scene tree for the first time.
 func _ready():
-	var current_scene = get_tree().current_scene
-	if current_scene and current_scene.name == "MainMenu":
-		active = false
-
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

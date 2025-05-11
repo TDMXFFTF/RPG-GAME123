@@ -3,16 +3,11 @@ extends GridContainer
 @onready var slots = get_children()
 @onready var character = $"../Character"
 
-var active := true
-
 func toggle_visibility():
 	get_tree().get_root().get_node("InventoryUI").visible = !visible
 
 func _ready():
 	State.inventory = self
-	var current_scene = get_tree().current_scene
-	if current_scene and current_scene.name == "MainMenu":
-		active = false
 
 func add_item(item: Item):
 	if item.resource_path != "":
