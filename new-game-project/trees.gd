@@ -10,5 +10,4 @@ func _ready() -> void:
 	# Play animation on all AnimatedSprite2D children
 	for child in get_children():
 		if child is AnimatedSprite2D:
-			child.play("leaf")
-			child.play("move")
+			child.play()

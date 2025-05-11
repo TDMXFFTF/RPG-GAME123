@@ -24,14 +24,14 @@ func get_preview():
 	
 	return preview
 
-func _get_drag_data(at_position):
+func _get_drag_data(_Vector2):
 	set_drag_preview(get_preview())
 	return self
 
 func _can_drop_data(_pos, data):
 	return data is Slot
 
-func _drop_data(at_position, data):
+func _drop_data(_Vector2, data):
 	if data.item != null:
 		var temp = item
 		item = data.item

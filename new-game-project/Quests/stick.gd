@@ -8,12 +8,12 @@ func _ready() -> void:
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if pickup == 3:
 		print("WWAWDOWFOIEWJOEJGOIWEJG")
 
 
-func _on_area_entered(area: Area2D) -> void:
+func _on_area_entered(_area: Area2D) -> void:
 	quest.stick_collected()
 	queue_free()
 	

@@ -56,7 +56,7 @@ func _physics_process(delta: float) -> void:
 		var desired_velocity := speed * move_direction
 		var steering := desired_velocity - velocity
 		velocity += steering * drag_factor * delta
-		var direction_discrete := move_direction.sign()
+		var _direction_discrete := move_direction.sign()
 		move_and_slide()
 
 		if Input.is_action_pressed("down"):
@@ -85,7 +85,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("potion_use"):
 		if health < 10:
 			if PotionManager.potions > 0:
-				health += 3.3
+				health += 3
 				PotionManager.potions -= 1
 
 
@@ -111,7 +111,7 @@ func equip(item: Item):
 
 
 func set_health(new_health: int) -> void:
-	var previous_health := health
+	var _previous_health := health
 	if death == false:
 		health = clampi(new_health, 0, max_health)
 		_health_bar.value = health
@@ -123,7 +123,7 @@ func set_health(new_health: int) -> void:
 		get_node("GamingIsOver").game_over()
 
 
-func _unhandled_input(event: InputEvent) -> void:
+func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		var actionables = actionable_finder.get_overlapping_areas()
 		if actionables.size() > 0:

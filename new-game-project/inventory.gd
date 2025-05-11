@@ -2,14 +2,12 @@ extends GridContainer
 
 @onready var slots = get_children()
 @onready var character = $"../Character"
-signal inventory_ready
 
 func toggle_visibility():
 	get_tree().get_root().get_node("InventoryUI").visible = !visible
 
 func _ready():
 	State.inventory = self
-	emit_signal("inventory_ready")
 
 func add_item(item: Item):
 	if item.resource_path != "":

@@ -11,11 +11,9 @@ func _ready():
 
 	if $SpawnTimer and $StopTimer:
 		$SpawnTimer.wait_time = spawn_interval
-		$SpawnTimer.timeout.connect(_on_spawn_timer_timeout)
 
 		$StopTimer.wait_time = stop_after
 		$StopTimer.one_shot = true
-		$StopTimer.timeout.connect(_on_stop_timer_timeout)
 	else:
 		push_error("SpawnTimer or StopTimer is missing from the scene!")
 

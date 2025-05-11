@@ -7,7 +7,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var aim_direction := Vector2.ZERO
 	aim_direction = global_position.direction_to(get_global_mouse_position())
 	if aim_direction.length() > 0.1:
