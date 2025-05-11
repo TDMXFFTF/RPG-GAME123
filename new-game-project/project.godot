@@ -18,7 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
-InventoryUI="*res://inventory.tscn"
+InventoryUI="*res://inventoryui.tscn"
 Inventory="*res://inventory.gd"
 Character="*res://character.gd"
 PotionManager="*res://potion_manager.tscn"

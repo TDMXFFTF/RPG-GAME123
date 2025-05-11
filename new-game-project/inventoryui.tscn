@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://cjc22y46c01ct"]
+[gd_scene load_steps=10 format=3 uid="uid://cjc22y46c01ct"]
 
+[ext_resource type="Script" path="res://inventoryui.gd" id="1_1begm"]
 [ext_resource type="Script" path="res://manager.gd" id="1_psobt"]
 [ext_resource type="Script" path="res://inventory.gd" id="2_1ynk3"]
 [ext_resource type="PackedScene" uid="uid://bdyybb7gpk05w" path="res://slot.tscn" id="3_b2hdj"]
@@ -33,7 +34,8 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[node name="Inventory" type="CanvasLayer"]
+[node name="InventoryUI" type="CanvasLayer"]
+script = ExtResource("1_1begm")
 
 [node name="Manager" type="Panel" parent="."]
 visible = false
