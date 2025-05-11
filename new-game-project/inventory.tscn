@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://manager.gd" id="1_psobt"]
 [ext_resource type="Script" path="res://inventory.gd" id="2_1ynk3"]
-[ext_resource type="PackedScene" path="res://slot.tscn" id="3_b2hdj"]
+[ext_resource type="PackedScene" uid="uid://bdyybb7gpk05w" path="res://slot.tscn" id="3_b2hdj"]
 [ext_resource type="Script" path="res://character.gd" id="4_6tnjj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rpsfm"]

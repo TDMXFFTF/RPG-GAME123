@@ -1,6 +1,7 @@
 extends GridContainer
 
 @onready var slots = get_children()
+@onready var character = $"../Character"
 signal inventory_ready
 
 func toggle_visibility():
@@ -43,6 +44,7 @@ func remove_item(item: Item):
 
 func load_inventory():
 	clear_inventory()
+	character.clear_character()
 	for path in Global.inventory_items:
 		var item = load(path)
 		if item:

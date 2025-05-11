@@ -21,6 +21,7 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 IdontKnowingly="*res://PotionManager.gd"
 InventoryUI="*res://inventory.tscn"
 Inventory="*res://inventory.gd"
+Character="*res://character.gd"
 PotionManager="*res://potion_manager.tscn"
 "<<<<<<<HEAD[editor_plugins]enabled"=PackedStringArray()
 State="*res://dialogue/state.gd"
