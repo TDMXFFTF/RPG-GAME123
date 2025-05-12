@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://c4rpgynysv3yj"]
 
 [ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="1_h2w22"]
-[ext_resource type="Script" path="res://test.gd" id="1_pkjkl"]
+[ext_resource type="Script" uid="uid://b8l8a6kbpbdfs" path="res://test.gd" id="1_pkjkl"]
 [ext_resource type="PackedScene" uid="uid://d0d4cbqlwh4sa" path="res://npc.tscn" id="2_7qxhd"]
 [ext_resource type="Resource" uid="uid://csfba0ddcllmr" path="res://actual_main.dialogue" id="4_vdhuo"]
 [ext_resource type="PackedScene" uid="uid://bq0u6boedlnpr" path="res://side_quest_npc_1.tscn" id="6_mnvb5"]

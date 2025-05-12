@@ -67,8 +67,7 @@ scale = Vector2(0.81624, 0.81624)
 
 [node name="Bambam" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamMP3_c8q6d")
-volume_db = -9.177
-autoplay = true
+volume_db = -20.177
 
 [node name="sidequest_npc2" parent="." instance=ExtResource("9_j8o1o")]
 position = Vector2(400, -192)
