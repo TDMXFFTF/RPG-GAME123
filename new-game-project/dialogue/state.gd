@@ -11,12 +11,12 @@ var func_call:
 		match value:
 			"give_sword1":
 				if state_quest == "finished1" and inventory:
-					await "change_to_background"
+					"change_to_background"
 					inventory.add_item(load("res://Basic Sword.tres"))
 				else:
 					print("Quest not completed yet.")
 			"change_to_background":
-				get_tree().change_scene_to_file("res://Background.tscn")
+				get_tree().change_scene_to_file("res://background.tscn")
 			"change_to_quest1":
 				get_tree().change_scene_to_file("res://Quests/quest_1.tscn")
 			"change_to_quest2":

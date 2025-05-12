@@ -66,7 +66,7 @@ func take_damage(amount: float) -> void:
 	health -= amount
 
 func set_health(new_health: int) -> void:
-	var previous_health := health
+	var _previous_health := health
 	health = clampi(new_health, 0, max_health)
 	health_bar.value = health
 	if health == 0:

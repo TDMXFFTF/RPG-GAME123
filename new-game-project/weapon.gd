@@ -10,7 +10,6 @@ var attack_active := false
 var hit_mobs: Array = []
 
 func _ready() -> void:
-	hit_box.body_entered.connect(_on_hit_box_body_entered)
 	animation_player.animation_finished.connect(_on_attack_finished)
 
 func _process(_delta: float) -> void:
@@ -52,7 +51,7 @@ func check_hits():
 			if body.has_method("take_damage"):
 				body.take_damage(damage)
 
-func _on_attack_finished(anim_name: String) -> void:
+func _on_attack_finished(_anim_name: String) -> void:
 	attack_active = false
 	hit_mobs.clear()
 	update_weapon_direction()
