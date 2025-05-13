@@ -1,8 +1,8 @@
 [gd_scene load_steps=60 format=3 uid="uid://bjjy23482ltfb"]
 
-[ext_resource type="Script" uid="uid://c5oh1asmcj0hc" path="res://player.gd" id="1_yqf8w"]
+[ext_resource type="Script" path="res://player.gd" id="1_yqf8w"]
 [ext_resource type="PackedScene" uid="uid://bv6fyy7icqkqb" path="res://health_bar.tscn" id="3_352dy"]
-[ext_resource type="Script" uid="uid://dq74kajw4jti2" path="res://node_2d.gd" id="3_dbr1r"]
+[ext_resource type="Script" path="res://node_2d.gd" id="3_dbr1r"]
 [ext_resource type="Texture2D" uid="uid://dfonsrnjvnn7e" path="res://Light_Prb.png" id="5_0jh5k"]
 [ext_resource type="Texture2D" uid="uid://wqlh7tq13qi5" path="res://light (1).png" id="5_58ulv"]
 [ext_resource type="PackedScene" uid="uid://ddd0s2jv7gwqy" path="res://basic_sword.tscn" id="8_pgj2x"]
@@ -80,8 +80,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bm5md"]
 _data = {
-&"RESET": SubResource("Animation_gu0xq"),
-&"dying": SubResource("Animation_jmyrx")
+"RESET": SubResource("Animation_gu0xq"),
+"dying": SubResource("Animation_jmyrx")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1eggl"]
@@ -417,7 +417,7 @@ unique_name_in_owner = true
 
 [node name="AnimationDeath" type="AnimationPlayer" parent="."]
 libraries = {
-&"": SubResource("AnimationLibrary_bm5md")
+"": SubResource("AnimationLibrary_bm5md")
 }
 
 [node name="GamingIsOver" parent="." instance=ExtResource("10_pw3wm")]
