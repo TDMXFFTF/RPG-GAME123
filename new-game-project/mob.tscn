@@ -5,13 +5,13 @@
 [ext_resource type="PackedScene" uid="uid://bv6fyy7icqkqb" path="res://health_bar.tscn" id="3_74l6n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_52nya"]
-radius = 83.0241
+radius = 40.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6vt1h"]
-radius = 189.042
+radius = 763.403
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oam0v"]
-radius = 84.0
+radius = 40.7922
 
 [node name="Mob" type="CharacterBody2D"]
 motion_mode = 1
@@ -22,6 +22,7 @@ unique_name_in_owner = true
 texture = ExtResource("2_wfkvr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -16)
 shape = SubResource("CircleShape2D_52nya")
 
 [node name="Detection" type="Area2D" parent="."]
@@ -34,6 +35,7 @@ shape = SubResource("CircleShape2D_6vt1h")
 unique_name_in_owner = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(0, -16)
 shape = SubResource("CircleShape2D_oam0v")
 
 [node name="DamageTimer" type="Timer" parent="."]

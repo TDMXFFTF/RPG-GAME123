@@ -1,19 +1,36 @@
-~ start
-Patricia: PLEASE HELP
- - Whats wrong?
-	Patricia: These stupid monsters! They keep ruining my Garden!
-	 - Oh no!
-		Patricia: I know! If only I could get rid of them!
-		 - I could do that
-			Patricia: You Can????? If you do I'll give you this really cool key 
-			set State.state_quest = "begin_2"
-			set State.func_call = "change_to_quest2"
-	 - How can you grow stuff when theres no sunlight?
-		Patricia: Look can you just help me take them out?
-		- Sure why not
-			Patricia: THANK YOU!! If you survive ill give you a key!
-			set State.state_quest = "begin_2"
-			set State.func_call = "change_to_quest2"
- - No
-	Patricia: Fine be that way
+~ start_2
+if State.state_quest == "begin_2"
+	Patricia: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+if State.state_quest == "done2"
+	Patricia: Is it Over??? Are They finally gone????
+	- Yes
+		Patricia: OMG THANK YOU HERES A KEY 
+		set State.state_quest = "completed2"
+	- No
+		Patricia: NOOOOOOOOOOOOOOOOOOO
+if State.state_quest == "completed2"
+	Patricia: HI!! Thanks again for helping what can I do for you?
+	- Why did the forest suddenly go dark?
+		Patricia: You see the forest was powered by this gigantic orb, and it was what generated light for this forest. But one day, someone stole it! Now this is what the forest has become. 
+	- So what DO you actually grow in a place this dark?
+		Patricia: don't ask questions you dont want answers to.......
+else
+	Patricia: PLEASE HELP
+ 	- Whats wrong?
+		Patricia: These stupid monsters! They keep ruining my Garden!
+		 - Oh no!
+			Patricia: I know! If only I could get rid of them!
+			 - I could do that
+				Patricia: You Can????? If you do I'll give you this really cool key 
+				set State.state_quest = "begin_2"
+				set State.func_call = "change_to_quest2"
+			 - How can you grow stuff when theres no sunlight?
+				Patricia: Look can you just help me take them out?
+				 - Sure why not
+					Patricia: THANK YOU!! If you survive ill give you a key!
+					set State.state_quest = "begin_2"
+					set State.func_call = "change_to_quest2"
+ 	- No
+		Patricia: Fine be that way
 

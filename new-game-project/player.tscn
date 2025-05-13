@@ -404,6 +404,7 @@ range_z_min = 0
 texture = ExtResource("5_0jh5k")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0.239347, 0.239347, 0.239347, 1)
 texture = ExtResource("5_58ulv")
 
 [node name="Weapons" type="Node2D" parent="."]

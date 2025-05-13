@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dtcly4mn3vlxk"]
+[gd_scene load_steps=12 format=3 uid="uid://dtcly4mn3vlxk"]
 
 [ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="1_k4dwh"]
 [ext_resource type="Texture2D" uid="uid://csyd1ormvbcp8" path="res://Artwork/Background.png" id="2_o5502"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bq0u6boedlnpr" path="res://side_quest_npc_1.tscn" id="8_b3bmq"]
 [ext_resource type="Resource" uid="uid://csfba0ddcllmr" path="res://actual_main.dialogue" id="9_4t1tq"]
 [ext_resource type="PackedScene" uid="uid://degj8pt524dby" path="res://Quests/sidequest_npc_2.tscn" id="9_j8o1o"]
+[ext_resource type="AudioStream" uid="uid://cegff6mvbodvr" path="res://Bittersweet.mp3" id="9_yyag2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8n6v7"]
 size = Vector2(8741.5, 616)
@@ -21,7 +22,7 @@ size = Vector2(5404.84, 488.911)
 top_level = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.17104, 0.171039, 0.17104, 1)
+color = Color(0.0807837, 0.0807831, 0.0807837, 1)
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(1042.5, 346)
@@ -68,3 +69,7 @@ volume_db = -20.177
 [node name="sidequest_npc2" parent="." instance=ExtResource("9_j8o1o")]
 position = Vector2(400, -192)
 scale = Vector2(0.81624, 0.81624)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_yyag2")
+autoplay = true

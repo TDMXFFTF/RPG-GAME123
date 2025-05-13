@@ -22,6 +22,7 @@ var current_weapon: Node2D
 
 
 
+
 var death = false
 var health := max_health: set = set_health
 

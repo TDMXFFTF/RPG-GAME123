@@ -1,23 +1,26 @@
-[gd_scene load_steps=5 format=3 uid="uid://b8nbgokmnfkqg"]
+[gd_scene load_steps=7 format=3 uid="uid://b8nbgokmnfkqg"]
 
-[ext_resource type="Texture2D" uid="uid://cn1vbusao5giw" path="res://farm.png" id="1_ssq2r"]
+[ext_resource type="Script" path="res://Quests/quest_2.gd" id="1_6v7p8"]
+[ext_resource type="Texture2D" uid="uid://cpqxydtven0kl" path="res://farm.png" id="1_ssq2r"]
 [ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="1_wbiai"]
 [ext_resource type="PackedScene" uid="uid://s1qekke3u7nt" path="res://mob.tscn" id="3_4wen6"]
+[ext_resource type="PackedScene" uid="uid://degj8pt524dby" path="res://Quests/sidequest_npc_2.tscn" id="4_ptn1r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yvych"]
 size = Vector2(62.9716, 22.8556)
 
 [node name="Quest_2" type="Node2D"]
+script = ExtResource("1_6v7p8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1031.81, 508)
-scale = Vector2(27.9018, 25.0692)
+position = Vector2(998.37, 533.933)
+scale = Vector2(17.374, 15.6102)
 texture = ExtResource("1_ssq2r")
 
-[node name="Player" parent="." instance=ExtResource("1_wbiai")]
+[node name="sidequest_npc2" parent="." instance=ExtResource("4_ptn1r")]
+position = Vector2(545, 544)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0.114897, 0.114897, 0.114897, 1)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -76,3 +79,8 @@ position = Vector2(1096, 976)
 
 [node name="Mob10" parent="mob" instance=ExtResource("3_4wen6")]
 position = Vector2(354, 1156)
+
+[node name="Mob11" parent="mob" instance=ExtResource("3_4wen6")]
+position = Vector2(-139, 638)
+
+[node name="Player" parent="." instance=ExtResource("1_wbiai")]
