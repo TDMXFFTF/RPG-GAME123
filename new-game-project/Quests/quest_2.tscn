@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://b8nbgokmnfkqg"]
 
-[ext_resource type="Texture2D" uid="uid://csyd1ormvbcp8" path="res://Artwork/Background.png" id="1_mgkg8"]
+[ext_resource type="Texture2D" uid="uid://cn1vbusao5giw" path="res://farm.png" id="1_ssq2r"]
 [ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="1_wbiai"]
-[ext_resource type="PackedScene" uid="uid://65ipyhi7j24h" path="res://mob_spawn.tscn" id="2_arx06"]
+[ext_resource type="PackedScene" uid="uid://s1qekke3u7nt" path="res://mob.tscn" id="3_4wen6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yvych"]
 size = Vector2(62.9716, 22.8556)
@@ -10,15 +10,14 @@ size = Vector2(62.9716, 22.8556)
 [node name="Quest_2" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1247, 508)
-scale = Vector2(30.0537, 25.0692)
-texture = ExtResource("1_mgkg8")
+position = Vector2(1031.81, 508)
+scale = Vector2(27.9018, 25.0692)
+texture = ExtResource("1_ssq2r")
 
 [node name="Player" parent="." instance=ExtResource("1_wbiai")]
 
-[node name="MobSpawn" parent="." instance=ExtResource("2_arx06")]
-
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0.114897, 0.114897, 0.114897, 1)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -30,19 +29,50 @@ scale = Vector2(5.418, 299.479)
 shape = SubResource("RectangleShape2D_yvych")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(3641, 653)
+position = Vector2(3118, 633)
 rotation = 3.14159
 scale = Vector2(5.418, 299.479)
 shape = SubResource("RectangleShape2D_yvych")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-491, -800)
+position = Vector2(-491, -663)
 rotation = 3.14159
 scale = Vector2(2399.78, -12.0917)
 shape = SubResource("RectangleShape2D_yvych")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-845, 1679)
+position = Vector2(-855, 1630)
 rotation = 3.14159
 scale = Vector2(2399.78, -12.0917)
 shape = SubResource("RectangleShape2D_yvych")
+
+[node name="mob" type="Node2D" parent="."]
+
+[node name="Mob" parent="mob" instance=ExtResource("3_4wen6")]
+
+[node name="Mob2" parent="mob" instance=ExtResource("3_4wen6")]
+position = Vector2(1695, -9)
+
+[node name="Mob3" parent="mob" instance=ExtResource("3_4wen6")]
+position = Vector2(1152, -211)
+
+[node name="Mob4" parent="mob" instance=ExtResource("3_4wen6")]
+position = Vector2(2254, -63)
+
+[node name="Mob5" parent="mob" instance=ExtResource("3_4wen6")]
+position = Vector2(2604, 401)
+
+[node name="Mob6" parent="mob" instance=ExtResource("3_4wen6")]
+position = Vector2(2377, 1269)
+
+[node name="Mob7" parent="mob" instance=ExtResource("3_4wen6")]
+position = Vector2(1667, 1231)
+
+[node name="Mob8" parent="mob" instance=ExtResource("3_4wen6")]
+position = Vector2(1844, 698)
+
+[node name="Mob9" parent="mob" instance=ExtResource("3_4wen6")]
+position = Vector2(1096, 976)
+
+[node name="Mob10" parent="mob" instance=ExtResource("3_4wen6")]
+position = Vector2(354, 1156)
