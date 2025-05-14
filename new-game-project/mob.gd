@@ -12,6 +12,7 @@ var health := max_health: set = set_health
 @onready var hit_box: Area2D = %HitBox
 @onready var damage_timer: Timer = %DamageTimer
 @onready var health_bar: ProgressBar = %HealthBar
+var kil = 0
 
 func _ready() -> void:
 	detection.body_entered.connect(func (body: Node) -> void:
@@ -69,7 +70,8 @@ func set_health(new_health: int) -> void:
 	var _previous_health := health
 	health = clampi(new_health, 0, max_health)
 	health_bar.value = health
-	if health == 0:
-		
+	if health <= 0:
+		kil += 1
+		print("ouch")
 		queue_free()
 	health_bar.health = health
