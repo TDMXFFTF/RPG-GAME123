@@ -25,6 +25,6 @@ var func_call:
 				print("Unknown func_call:", value)
 
 func change_scene_with_loading(scene_path: String):
-	var loading_scene = load("res://LoadingScreen.tscn").instantiate()
+	var loading_scene = load("res://loading_screen.tscn").instantiate()
 	loading_scene.next_scene_path = scene_path
 	get_tree().root.add_child(loading_scene)
