@@ -1,7 +1,7 @@
 ~ start_2
 if State.state_quest == "begin_2"
 	Patricia: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-
+	=> END
 if State.state_quest == "done2"
 	Patricia: Is it Over??? Are They finally gone????
 	- Yes
@@ -9,12 +9,14 @@ if State.state_quest == "done2"
 		set State.state_quest = "completed2"
 	- No
 		Patricia: NOOOOOOOOOOOOOOOOOOO
+	=> END
 if State.state_quest == "completed2"
 	Patricia: HI!! Thanks again for helping what can I do for you?
 	- Why did the forest suddenly go dark?
 		Patricia: You see the forest was powered by this gigantic orb, and it was what generated light for this forest. But one day, someone stole it! Now this is what the forest has become. 
 	- So what DO you actually grow in a place this dark?
 		Patricia: don't ask questions you dont want answers to.......
+	=> END
 else
 	Patricia: PLEASE HELP
  	- Whats wrong?
@@ -31,6 +33,8 @@ else
 					Patricia: THANK YOU!! If you survive ill give you a key!
 					set State.state_quest = "begin_2"
 					set State.func_call = "change_to_quest2"
+	=> END
  	- No
 		Patricia: Fine be that way
+	=> END
 
