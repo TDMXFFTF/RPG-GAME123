@@ -16,10 +16,15 @@ var func_call:
 				else:
 					print("Quest not completed yet.")
 			"change_to_background":
-				get_tree().change_scene_to_file("res://background.tscn")
+				change_scene_with_loading("res://background.tscn")
 			"change_to_quest1":
-				get_tree().change_scene_to_file("res://Quests/quest_1.tscn")
+				change_scene_with_loading("res://Quests/quest_1.tscn")
 			"change_to_quest2":
-				get_tree().change_scene_to_file("res://Quests/quest_2.tscn")
+				change_scene_with_loading("res://Quests/quest_2.tscn")
 			_:
 				print("Unknown func_call:", value)
+
+func change_scene_with_loading(scene_path: String):
+	var loading_scene = load("res://LoadingScreen.tscn").instantiate()
+	loading_scene.next_scene_path = scene_path
+	get_tree().root.add_child(loading_scene)

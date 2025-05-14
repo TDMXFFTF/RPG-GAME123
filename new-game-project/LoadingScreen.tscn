@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://df3arsgbr3wg4"]
+
+[ext_resource type="Script" path="res://LoadingScreen.gd" id="1_ls7hp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0qekq"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="LoadingScreen" type="CanvasLayer"]
+script = ExtResource("1_ls7hp")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0qekq")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -134.0
+offset_top = -120.0
+offset_right = 134.0
+offset_bottom = -51.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "LOADING..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Tips" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -159.5
+offset_top = 67.0
+offset_right = 159.5
+offset_bottom = 136.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1

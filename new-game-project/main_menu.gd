@@ -12,7 +12,7 @@ func _process(_delta):
 
 
 func _on_start_pressed():
-	get_tree().change_scene_to_file("res://background.tscn")
+	State.change_scene_with_loading("res://background.tscn")
 
 
 func _on_quit_pressed():
