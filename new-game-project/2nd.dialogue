@@ -5,10 +5,9 @@ if State.state_quest == "begin_2"
 if State.state_quest == "done2"
 	Patricia: Is it Over??? Are They finally gone????
 	- Yes
-		Patricia: OMG THANK YOU HERES A KEY
-		set State.func_call = "change_to_background"
+		Patricia: OMG THANK YOU HERES A KEY 
 		set State.state_quest = "completed2"
-		set State.func_call = "give_sword2"
+		
 	- No
 		Patricia: NOOOOOOOOOOOOOOOOOOO
 	=> END
