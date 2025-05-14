@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://mylx3immypbg"]
+[gd_scene load_steps=6 format=3 uid="uid://mylx3immypbg"]
 
 [ext_resource type="Script" path="res://weapon.gd" id="1_piwpx"]
+[ext_resource type="AudioStream" uid="uid://uw2yfpkts6a" path="res://Quests/Roblox Sword Equip - Sound Effect [Free No Copyright].wav" id="2_vt4g5"]
 
 [sub_resource type="Animation" id="Animation_u5m4a"]
 length = 0.001
@@ -152,6 +153,9 @@ unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_3bdbl")
 }
+
+[node name="sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_vt4g5")
 
 [node name="DamageTimer" type="Timer" parent="."]
 unique_name_in_owner = true

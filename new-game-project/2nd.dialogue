@@ -7,6 +7,7 @@ if State.state_quest == "done2"
 	- Yes
 		Patricia: OMG THANK YOU HERES A KEY 
 		set State.state_quest = "completed2"
+		
 	- No
 		Patricia: NOOOOOOOOOOOOOOOOOOO
 	=> END

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cjl58lad5bym5"
+path="res://.godot/imported/Roblox Sword Equip - Sound Effect [Free No Copyright].mp3-e7827557217163c4f3966c80773f6c32.mp3str"
+
+[deps]
+
+source_file="res://Quests/Roblox Sword Equip - Sound Effect [Free No Copyright].mp3"
+dest_files=["res://.godot/imported/Roblox Sword Equip - Sound Effect [Free No Copyright].mp3-e7827557217163c4f3966c80773f6c32.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://bjjy23482ltfb"]
+[gd_scene load_steps=57 format=3 uid="uid://bjjy23482ltfb"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_yqf8w"]
 [ext_resource type="PackedScene" uid="uid://bv6fyy7icqkqb" path="res://health_bar.tscn" id="3_352dy"]
@@ -22,67 +22,6 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jjb6k"]
 radius = 66.2722
-
-[sub_resource type="Animation" id="Animation_gu0xq"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"deah"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_jmyrx"]
-resource_name = "dying"
-length = 0.02
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 1,
-"values": []
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.02),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [1, 0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_bm5md"]
-_data = {
-"RESET": SubResource("Animation_gu0xq"),
-"dying": SubResource("Animation_jmyrx")
-}
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1eggl"]
 radius = 194.258
@@ -416,11 +355,6 @@ unique_name_in_owner = true
 
 [node name="FinalSword" parent="Weapons" instance=ExtResource("10_nr24y")]
 
-[node name="AnimationDeath" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_bm5md")
-}
-
 [node name="GamingIsOver" parent="." instance=ExtResource("10_pw3wm")]
 visible = false
 
@@ -439,4 +373,4 @@ visible = false
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(6, 15)
 sprite_frames = SubResource("SpriteFrames_hcnkc")
-animation = &"deah"
+animation = &"yes_dead"

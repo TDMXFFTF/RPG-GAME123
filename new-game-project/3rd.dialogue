@@ -1,0 +1,13 @@
+~ start
+Kayle: Hello there
+- Hi!
+	Kayle: I heard you're looking for the final key.
+	- Yes! What do you need me to do?
+		Kayle: The boss inside of the cave is pretty strong, and I don't want you dying in the cave, So I've created a trial for you to see if you are ready! 
+		Kayle: If you complete it, you are worthy enough of this key. How does that sound?
+		 - I'm ready!
+			Kayle: Perfect lets get started!
+			set State.state_quest = "start3"
+- Why is your name "Kale"
+	Kayle: I hate you
+
