@@ -15,6 +15,12 @@ var func_call:
 					inventory.add_item(load("res://Basic Sword.tres"))
 				else:
 					print("Quest not completed yet.")
+			"give_sword2":
+				if state_quest == "completed2" and inventory:
+					"change_to_background"
+					inventory.add_item(load("res://Second Sword.tres"))
+				else:
+					print("Quest not completed yet.")
 			"change_to_background":
 				change_scene_with_loading("res://background.tscn")
 			"change_to_quest1":
