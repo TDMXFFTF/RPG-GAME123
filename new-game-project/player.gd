@@ -119,8 +119,8 @@ func set_health(new_health: int) -> void:
 		_health_bar.health = health
 	if health == 0:
 		death = true
-		$AnimationDeath.play("dying")
-		await animation_death.animation_finished
+		$AnimatedSprite2D.play("yes_dead")
+		
 		get_node("GamingIsOver").game_over()
 
 
