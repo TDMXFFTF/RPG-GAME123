@@ -5,6 +5,7 @@ class_name Weapon
 @export var attack_speed := 1.0
 @onready var animation_player = %AnimationPlayer
 @onready var hit_box = %HitBox
+@onready var sound: AudioStreamPlayer = $sound
 
 var attack_active := false
 var hit_mobs: Array = []
@@ -37,6 +38,7 @@ func start_attack():
 	animation_player.speed_scale = attack_speed
 	animation_player.play("sword")
 	hit_mobs.clear()
+	$sound.play()
 
 	await get_tree().create_timer(1.0 / attack_speed).timeout
 	attack_active = false
