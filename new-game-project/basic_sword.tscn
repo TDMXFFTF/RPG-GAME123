@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://c6g5br8ov8hku" path="res://basic sword.png" id="2_r106c"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_csuhc"]
-radius = 29.0526
-height = 145.83
+radius = 37.5748
+height = 154.619
 
 [node name="BasicSword" instance=ExtResource("1_iyjs5")]
 attack_speed = 1.1

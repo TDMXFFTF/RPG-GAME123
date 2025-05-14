@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://7ff5tqvoxqre" path="res://final sword.png" id="2_br7hy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h5b44"]
-radius = 27.7267
-height = 162.874
+radius = 37.0081
+height = 170.83
 
 [node name="FinalSword" instance=ExtResource("1_8vu4c")]
 damage = 3.0

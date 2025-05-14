@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://mta8c28c735n" path="res://second sword.png" id="2_pynth"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kvib0"]
-radius = 28.2185
-height = 156.587
+radius = 38.4837
+height = 173.631
 
 [node name="SecondSword" instance=ExtResource("1_svolb")]
 damage = 2.0

@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://d0d4cbqlwh4sa"]
 
-[ext_resource type="Script" uid="uid://bdd5dobr2amje" path="res://npc.gd" id="1_il6n7"]
+[ext_resource type="Script" path="res://npc.gd" id="1_il6n7"]
 [ext_resource type="PackedScene" uid="uid://gbqarcgrupfv" path="res://dialogue/actionable.tscn" id="3_5ho6m"]
 [ext_resource type="Texture2D" uid="uid://bswykf3myyh3a" path="res://Quests/Frog-Sheet.png" id="3_cfpuo"]
 
