@@ -74,4 +74,7 @@ func set_health(new_health: int) -> void:
 		kil += 1
 		print("ouch")
 		queue_free()
+		if kil == 10:
+			print("ok")
+			State.state_quest = "done2"
 	health_bar.health = health
