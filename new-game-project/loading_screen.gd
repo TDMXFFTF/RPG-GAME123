@@ -10,9 +10,11 @@ func _ready():
 	]
 	var random_tip = tips[randi() % tips.size()]
 	$Tips.text = random_tip
+	get_tree().paused = true
 	await get_tree().create_timer(1.5).timeout
 	var new_scene = load(next_scene_path).instantiate()
 	get_tree().root.add_child(new_scene)
 	get_tree().current_scene.free()
 	get_tree().current_scene = new_scene
+	get_tree().paused = false
 	queue_free()

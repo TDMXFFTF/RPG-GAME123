@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dqh81q452veo5"
+path="res://.godot/imported/Grim Idol.mp3-d130c4b30e82241ac1d96c700f606147.mp3str"
+
+[deps]
+
+source_file="res://Grim Idol.mp3"
+dest_files=["res://.godot/imported/Grim Idol.mp3-d130c4b30e82241ac1d96c700f606147.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

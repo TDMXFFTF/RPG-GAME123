@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://b8nbgokmnfkqg"]
+[gd_scene load_steps=8 format=3 uid="uid://b8nbgokmnfkqg"]
 
 [ext_resource type="Script" path="res://Quests/quest_2.gd" id="1_6v7p8"]
 [ext_resource type="Texture2D" uid="uid://cpqxydtven0kl" path="res://farm.png" id="1_ssq2r"]
 [ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="1_wbiai"]
 [ext_resource type="PackedScene" uid="uid://s1qekke3u7nt" path="res://mob.tscn" id="3_4wen6"]
 [ext_resource type="PackedScene" uid="uid://degj8pt524dby" path="res://Quests/sidequest_npc_2.tscn" id="4_ptn1r"]
+[ext_resource type="AudioStream" uid="uid://dqh81q452veo5" path="res://Grim Idol.mp3" id="6_g1qtp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yvych"]
 size = Vector2(62.9716, 22.8556)
@@ -49,38 +50,41 @@ rotation = 3.14159
 scale = Vector2(2399.78, -12.0917)
 shape = SubResource("RectangleShape2D_yvych")
 
-[node name="mob" type="Node2D" parent="."]
-
-[node name="Mob" parent="mob" instance=ExtResource("3_4wen6")]
-
-[node name="Mob2" parent="mob" instance=ExtResource("3_4wen6")]
-position = Vector2(1695, -9)
-
-[node name="Mob3" parent="mob" instance=ExtResource("3_4wen6")]
-position = Vector2(1152, -211)
-
-[node name="Mob4" parent="mob" instance=ExtResource("3_4wen6")]
-position = Vector2(2254, -63)
-
-[node name="Mob5" parent="mob" instance=ExtResource("3_4wen6")]
-position = Vector2(2604, 401)
-
-[node name="Mob6" parent="mob" instance=ExtResource("3_4wen6")]
-position = Vector2(2377, 1269)
-
-[node name="Mob7" parent="mob" instance=ExtResource("3_4wen6")]
-position = Vector2(1667, 1231)
-
-[node name="Mob8" parent="mob" instance=ExtResource("3_4wen6")]
-position = Vector2(1844, 698)
-
-[node name="Mob9" parent="mob" instance=ExtResource("3_4wen6")]
-position = Vector2(1096, 976)
-
-[node name="Mob10" parent="mob" instance=ExtResource("3_4wen6")]
-position = Vector2(354, 1156)
-
-[node name="Mob11" parent="mob" instance=ExtResource("3_4wen6")]
-position = Vector2(-139, 638)
-
 [node name="Player" parent="." instance=ExtResource("1_wbiai")]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Mob" parent="Node2D" instance=ExtResource("3_4wen6")]
+position = Vector2(-439, -101)
+
+[node name="Mob2" parent="Node2D" instance=ExtResource("3_4wen6")]
+position = Vector2(260, -168)
+
+[node name="Mob3" parent="Node2D" instance=ExtResource("3_4wen6")]
+position = Vector2(1110, -165)
+
+[node name="Mob4" parent="Node2D" instance=ExtResource("3_4wen6")]
+position = Vector2(1993, -162)
+
+[node name="Mob5" parent="Node2D" instance=ExtResource("3_4wen6")]
+position = Vector2(2443, 249)
+
+[node name="Mob6" parent="Node2D" instance=ExtResource("3_4wen6")]
+position = Vector2(2395, 959)
+
+[node name="Mob7" parent="Node2D" instance=ExtResource("3_4wen6")]
+position = Vector2(1719, 1085)
+
+[node name="Mob8" parent="Node2D" instance=ExtResource("3_4wen6")]
+position = Vector2(939, 1163)
+
+[node name="Mob9" parent="Node2D" instance=ExtResource("3_4wen6")]
+position = Vector2(162, 1194)
+
+[node name="Mob10" parent="Node2D" instance=ExtResource("3_4wen6")]
+position = Vector2(-623, 1099)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_g1qtp")
+volume_db = 0.5
+autoplay = true
