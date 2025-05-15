@@ -1,0 +1,12 @@
+~ start
+if State.state_quest == "Main In Progress"
+	Aziel: I don't have enough keys yet. I need 3 keys to enter the cave
+if State.state_quest == "completed!"
+	Aziel: Am I ACTUALLY ready to do this?
+	- Yes
+		Aziel: Ok here goes nothing
+		set State.state_quest == "Final Boss"
+	- No
+else
+	Aziel: This place looks too scary. I won't go in there yet
+=> END

@@ -18,7 +18,7 @@ if State.state_quest == "completed2"
 	- So what DO you actually grow in a place this dark?
 		Patricia: don't ask questions you dont want answers to.......
 	=> END
-else
+if State.state_quest == "done1"
 	Patricia: PLEASE HELP
  	- Whats wrong?
 		Patricia: These stupid monsters! They keep ruining my Garden!
@@ -39,3 +39,5 @@ else
 		Patricia: Fine be that way
 	=> END
 
+else
+	Patricia: Bro who are you get away from me
