@@ -1,6 +1,5 @@
 ~ start
-if State.state_quest == "begin"
-	Steve: hello fellow traveller
+Steve: hello fellow traveller
  	- Who are you?
 		Steve: I.... am STEVE![wait=0.5] Looked like you passed out back there, How are you feeling?
 		- Where am I? 
