@@ -30,6 +30,7 @@ var death = false
 var health := max_health: set = set_health
 
 func _ready() -> void:
+	State.state_quest = "begin"
 	_health_bar.max_value = max_health
 	_health_bar.value = health
 	_health_bar.init_health(health)
