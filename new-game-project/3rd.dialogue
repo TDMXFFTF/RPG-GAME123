@@ -4,16 +4,23 @@ if State.state_quest == "completed2"
 	- Hi!
 		Kayle: I heard you're looking for the final key.
 		- Yes! What do you need me to do?
-			Kayle: The boss inside of the cave is pretty strong, and I don't want you dying in the cave, So I've created a trial for you to see if you are ready!
+			Kayle: That monster in the cave is going to tear you up, and I don't want you dying in the cave, So I've created a trial for you to see if you are ready!
 			Kayle: If you complete it, you are worthy enough of this key. How does that sound?
 			- I'm ready!
 				Kayle: Perfect lets get started!
 				set State.state_quest = "start3"
 				set State.func_call = "change_to_quest3"
-	=> END
+		=> END
 	- Why is your name "Kale"
 		Kayle: I hate you
 	=> END
-
+if State.state_quest == "finished3"
+	Kayle: Looks like you've killed all of them. Good job. You truely are worthy. Take this key and this sword. Good luck in the cave.
+	set State.state_quest = "completed!"
+if State.state_quest == "completed!"
+	Kayle: Welcome back. What would you like to know?
+	 - Can I do the trial again?
+		Kayle: Sure why not. If you complete this one, I'll give you another sword
+	 -  
 else
 	Kayle: You are not worthy yet
