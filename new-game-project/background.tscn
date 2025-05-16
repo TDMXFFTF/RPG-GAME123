@@ -27,7 +27,6 @@ top_level = true
 position = Vector2(1344, 648)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0.0807837, 0.0807831, 0.0807837, 1)
 
 [node name="Background" type="Sprite2D" parent="."]
