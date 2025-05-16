@@ -1,3 +1,14 @@
-[gd_scene format=3 uid="uid://dj5elsdssb7ue"]
+[gd_scene load_steps=4 format=3 uid="uid://dj5elsdssb7ue"]
 
-[node name="quest_3" type="Node2D"]
+[ext_resource type="Script" path="res://quest_3.gd" id="1_gfiax"]
+[ext_resource type="PackedScene" uid="uid://3on7pcbooorp" path="res://mob_2.tscn" id="2_coc81"]
+[ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="3_gxvgf"]
+
+[node name="quest_3" type="StaticBody2D"]
+script = ExtResource("1_gfiax")
+
+[node name="Mob2" parent="." instance=ExtResource("2_coc81")]
+SPEED = 400.0
+damage = 2
+
+[node name="Player" parent="." instance=ExtResource("3_gxvgf")]

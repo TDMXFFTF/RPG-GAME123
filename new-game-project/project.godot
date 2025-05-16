@@ -24,6 +24,8 @@ State="*res://dialogue/state.gd"
 InventoryUI="*res://inventoryui.tscn"
 Character="*res://character.gd"
 Global="*res://global.gd"
+IdontKnowingly="*res://PotionManager.gd"
+"<<<<<<<HEAD[editor_plugins]enabled"=PackedStringArray()
 
 [display]
 
