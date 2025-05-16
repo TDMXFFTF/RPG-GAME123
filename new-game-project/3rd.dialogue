@@ -16,6 +16,9 @@ if State.state_quest == "completed2"
 	=> END
 if State.state_quest == "finished3"
 	Kayle: Looks like you've killed all of them. Good job. You truely are worthy. Take this key and this sword. Good luck in the cave.
+	set State.func_call = "change_to_background"
+	set State.state_quest = "completed!"
+	set State.func_call = "give_sword2"
 	set State.state_quest = "completed!"
 if State.state_quest == "completed!"
 	Kayle: Welcome back. What would you like to know?
