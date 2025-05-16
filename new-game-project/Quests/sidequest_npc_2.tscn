@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://degj8pt524dby"]
+[gd_scene load_steps=9 format=3 uid="uid://degj8pt524dby"]
 
-[ext_resource type="Texture2D" uid="uid://c8qfwscqsg0vs" path="res://icon.svg" id="1_td7df"]
 [ext_resource type="PackedScene" uid="uid://gbqarcgrupfv" path="res://dialogue/actionable.tscn" id="2_c8nxc"]
+[ext_resource type="Texture2D" uid="uid://n77pjxtw2dyx" path="res://Artwork/npc3?1.png" id="3_1vnds"]
 [ext_resource type="Resource" uid="uid://dcd38oae1ylm8" path="res://2nd.dialogue" id="3_2mfat"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w4ob1"]
@@ -9,6 +9,42 @@ radius = 73.7564
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a8w6o"]
 radius = 88.0
+
+[sub_resource type="Animation" id="Animation_iagrr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_1vnds")]
+}
+
+[sub_resource type="Animation" id="Animation_qj2ow"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_1vnds")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v3dr8"]
+_data = {
+"RESET": SubResource("Animation_iagrr"),
+"idle": SubResource("Animation_qj2ow")
+}
 
 [node name="sidequest_npc2" type="Area2D"]
 
@@ -23,4 +59,9 @@ dialogue_start = "start_2"
 shape = SubResource("CircleShape2D_a8w6o")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_td7df")
+texture = ExtResource("3_1vnds")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_v3dr8")
+}

@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3 uid="uid://80bmmo5iewj6"]
+
+[ext_resource type="Texture2D" uid="uid://dbo3ak5770nvl" path="res://Artwork/Cave2 copy.png" id="1_acfk5"]
+[ext_resource type="PackedScene" uid="uid://gbqarcgrupfv" path="res://dialogue/actionable.tscn" id="2_61guw"]
+[ext_resource type="Resource" uid="uid://cnl0oj6txcufd" path="res://cave.dialogue" id="3_uqds3"]
+[ext_resource type="Texture2D" uid="uid://dfonsrnjvnn7e" path="res://Light_Prb.png" id="4_yab3a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ql2u3"]
+size = Vector2(41.8794, 27.8385)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hhjyb"]
+radius = 56.5685
+
+[node name="Cave" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_acfk5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, -10.727)
+scale = Vector2(1.71922, 1.34541)
+shape = SubResource("RectangleShape2D_ql2u3")
+
+[node name="actionable" parent="." instance=ExtResource("2_61guw")]
+dialogue_resource = ExtResource("3_uqds3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="actionable"]
+shape = SubResource("CircleShape2D_hhjyb")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0.757534, 0.753784, 7.70092e-07, 1)
+texture = ExtResource("4_yab3a")

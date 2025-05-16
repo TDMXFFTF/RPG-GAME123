@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0sqc032qs63l"]
+
+[ext_resource type="Texture2D" uid="uid://cfin45ywi4cbq" path="res://Artwork/Hut2.png" id="1_uruai"]
+[ext_resource type="Texture2D" uid="uid://dfonsrnjvnn7e" path="res://Light_Prb.png" id="2_bnqsq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6a7xb"]
+size = Vector2(56, 80)
+
+[node name="Hut" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_uruai")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_6a7xb")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0.641353, 0.586054, 0.211771, 1)
+texture = ExtResource("2_bnqsq")

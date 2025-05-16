@@ -6,8 +6,8 @@ if State.state_quest == "done2"
 	Patricia: Is it Over??? Are They finally gone????
 	- Yes
 		Patricia: OMG THANK YOU HERES A KEY 
+		set State.func_call = "change_to_background"
 		set State.state_quest = "completed2"
-		
 	- No
 		Patricia: NOOOOOOOOOOOOOOOOOOO
 	=> END
@@ -18,7 +18,7 @@ if State.state_quest == "completed2"
 	- So what DO you actually grow in a place this dark?
 		Patricia: don't ask questions you dont want answers to.......
 	=> END
-else
+if State.state_quest == "finished1"
 	Patricia: PLEASE HELP
  	- Whats wrong?
 		Patricia: These stupid monsters! They keep ruining my Garden!
@@ -35,7 +35,9 @@ else
 					set State.state_quest = "begin_2"
 					set State.func_call = "change_to_quest2"
 	=> END
- 	- No
+	- No
 		Patricia: Fine be that way
 	=> END
 
+else
+	Patricia: Bro who are you get away from me

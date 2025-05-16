@@ -2,6 +2,9 @@ class_name Player extends CharacterBody2D
 
 
 @onready var actionable_finder: Area2D = $Direction/ActionableFinder
+@onready var explosion_sound_effects: AudioStreamPlayer = $ExplosionSoundEffects
+@onready var timer: Timer = $Timer
+
 
 @export var speed := 400
 @export var drag_factor := 12.0
@@ -117,11 +120,20 @@ func set_health(new_health: int) -> void:
 		health = clampi(new_health, 0, max_health)
 		_health_bar.value = health
 		_health_bar.health = health
-	if health == 0:
+	if health <= 0:
 		death = true
-		$AnimationDeath.play("dying")
-		await animation_death.animation_finished
-		get_node("GamingIsOver").game_over()
+		$AnimatedSprite2D.play("yes_dead")
+		timer.start()
+		explosion_sound_effects.play()
+		print("oops")
+		
+		
+
+
+
+
+func _on_timer_timeout():
+	get_node("GamingIsOver").game_over()
 
 
 func _unhandled_input(_event: InputEvent) -> void:
@@ -131,5 +143,3 @@ func _unhandled_input(_event: InputEvent) -> void:
 			for actionable in actionables:
 				if (actionable is Actionable):
 					actionable.action()
-			#actionables[0].action()
-			#return

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://3on7pcbooorp"]
+
+[ext_resource type="PackedScene" uid="uid://s1qekke3u7nt" path="res://mob.tscn" id="1_khyga"]
+[ext_resource type="Texture2D" uid="uid://cnjstucufqsg3" path="res://MOB222222222.png" id="1_owevk"]
+
+[node name="Mob2" instance=ExtResource("1_khyga")]
+SPEED = 350.0
+acceleration = 500.0
+max_health = 10
+damage = 3
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(4, -12)
+scale = Vector2(1.1875, 1.1875)
+texture = ExtResource("1_owevk")

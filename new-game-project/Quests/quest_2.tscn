@@ -54,35 +54,45 @@ shape = SubResource("RectangleShape2D_yvych")
 
 [node name="Node2D" type="Node2D" parent="."]
 
-[node name="Mob" parent="Node2D" instance=ExtResource("3_4wen6")]
+[node name="Mob" parent="Node2D" node_paths=PackedStringArray("quest_2") instance=ExtResource("3_4wen6")]
 position = Vector2(-439, -101)
+quest_2 = NodePath("../..")
 
-[node name="Mob2" parent="Node2D" instance=ExtResource("3_4wen6")]
+[node name="Mob2" parent="Node2D" node_paths=PackedStringArray("quest_2") instance=ExtResource("3_4wen6")]
 position = Vector2(260, -168)
+quest_2 = NodePath("../..")
 
-[node name="Mob3" parent="Node2D" instance=ExtResource("3_4wen6")]
+[node name="Mob3" parent="Node2D" node_paths=PackedStringArray("quest_2") instance=ExtResource("3_4wen6")]
 position = Vector2(1110, -165)
+quest_2 = NodePath("../..")
 
-[node name="Mob4" parent="Node2D" instance=ExtResource("3_4wen6")]
+[node name="Mob4" parent="Node2D" node_paths=PackedStringArray("quest_2") instance=ExtResource("3_4wen6")]
 position = Vector2(1993, -162)
+quest_2 = NodePath("../..")
 
-[node name="Mob5" parent="Node2D" instance=ExtResource("3_4wen6")]
+[node name="Mob5" parent="Node2D" node_paths=PackedStringArray("quest_2") instance=ExtResource("3_4wen6")]
 position = Vector2(2443, 249)
+quest_2 = NodePath("../..")
 
-[node name="Mob6" parent="Node2D" instance=ExtResource("3_4wen6")]
+[node name="Mob6" parent="Node2D" node_paths=PackedStringArray("quest_2") instance=ExtResource("3_4wen6")]
 position = Vector2(2395, 959)
+quest_2 = NodePath("../..")
 
-[node name="Mob7" parent="Node2D" instance=ExtResource("3_4wen6")]
+[node name="Mob7" parent="Node2D" node_paths=PackedStringArray("quest_2") instance=ExtResource("3_4wen6")]
 position = Vector2(1719, 1085)
+quest_2 = NodePath("../..")
 
-[node name="Mob8" parent="Node2D" instance=ExtResource("3_4wen6")]
+[node name="Mob8" parent="Node2D" node_paths=PackedStringArray("quest_2") instance=ExtResource("3_4wen6")]
 position = Vector2(939, 1163)
+quest_2 = NodePath("../..")
 
-[node name="Mob9" parent="Node2D" instance=ExtResource("3_4wen6")]
+[node name="Mob9" parent="Node2D" node_paths=PackedStringArray("quest_2") instance=ExtResource("3_4wen6")]
 position = Vector2(162, 1194)
+quest_2 = NodePath("../..")
 
-[node name="Mob10" parent="Node2D" instance=ExtResource("3_4wen6")]
+[node name="Mob10" parent="Node2D" node_paths=PackedStringArray("quest_2") instance=ExtResource("3_4wen6")]
 position = Vector2(-623, 1099)
+quest_2 = NodePath("../..")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_g1qtp")
