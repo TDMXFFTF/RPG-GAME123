@@ -236,7 +236,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"left_walk",
-"speed": 20.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -273,7 +273,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"right_walk",
-"speed": 20.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -378,8 +378,7 @@ visible = false
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(6, 15)
 sprite_frames = SubResource("SpriteFrames_hcnkc")
-animation = &"right_walk"
-frame_progress = 0.408221
+animation = &"left_walk"
 
 [node name="Timer" type="Timer" parent="."]
 unique_name_in_owner = true

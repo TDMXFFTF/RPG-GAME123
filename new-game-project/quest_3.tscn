@@ -1,11 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://dj5elsdssb7ue"]
+[gd_scene load_steps=6 format=3 uid="uid://dj5elsdssb7ue"]
 
 [ext_resource type="Script" path="res://quest_3.gd" id="1_gfiax"]
 [ext_resource type="PackedScene" uid="uid://3on7pcbooorp" path="res://mob_2.tscn" id="2_coc81"]
+[ext_resource type="Texture2D" uid="uid://bf2imuesangr3" path="res://lvl3background.png" id="2_gexyu"]
 [ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="3_gxvgf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bmapg"]
+size = Vector2(226, 3528)
 
 [node name="quest_3" type="StaticBody2D"]
 script = ExtResource("1_gfiax")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(672, 936)
+scale = Vector2(25.1833, 24.7567)
+texture = ExtResource("2_gexyu")
 
 [node name="Player" parent="." instance=ExtResource("3_gxvgf")]
 
@@ -105,3 +114,21 @@ damage = 2
 position = Vector2(-432, 1440)
 SPEED = 400.0
 damage = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-976, 916)
+shape = SubResource("RectangleShape2D_bmapg")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(2360, 916)
+shape = SubResource("RectangleShape2D_bmapg")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(1120, 3088)
+scale = Vector2(48.6638, 0.354985)
+shape = SubResource("RectangleShape2D_bmapg")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(1416, -1304)
+scale = Vector2(48.6638, 0.354985)
+shape = SubResource("RectangleShape2D_bmapg")
