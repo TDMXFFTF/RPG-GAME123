@@ -120,11 +120,13 @@ func set_health(new_health: int) -> void:
 		health = clampi(new_health, 0, max_health)
 		_health_bar.value = health
 		_health_bar.health = health
-	if health == 0:
+	if health <= 0:
 		death = true
 		$AnimatedSprite2D.play("yes_dead")
 		timer.start()
 		explosion_sound_effects.play()
+		print("oops")
+		
 		
 
 

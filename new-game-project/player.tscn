@@ -383,6 +383,7 @@ animation = &"yes_dead"
 [node name="Timer" type="Timer" parent="."]
 unique_name_in_owner = true
 wait_time = 0.62
+one_shot = true
 
 [node name="ExplosionSoundEffects" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamWAV_dtqcq")
