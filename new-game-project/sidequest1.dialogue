@@ -3,7 +3,7 @@
 if State.state_quest == "done1"
 	Rodian: YOU BETTER HAVE WHAT I NEED
 	- Yeah here you go
-		Rodian: THANK YOU SIR HERES A KEY AND A SWORD. PRESS TAB TO ACCESS YOUR SWORDS.
+		Rodian: THANK YOU SIR HERES A KEY AND A SWORD.
 		set State.func_call = "change_to_background"
 		set State.state_quest = "finished1"
 		set State.func_call = "give_sword1"
