@@ -26,8 +26,7 @@ var func_call:
 			"change_to_quest2":
 				change_scene_with_loading("res://Quests/quest_2.tscn")
 			"change_to_quest3":
-				pass
-				print("kayden make the third quest pls")
+				change_scene_with_loading("res://quest_3.tscn")
 			_:
 				print("Unknown func_call:", value)
 
