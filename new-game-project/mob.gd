@@ -71,10 +71,8 @@ func set_health(new_health: int) -> void:
 	health = clampi(new_health, 0, max_health)
 	health_bar.value = health
 	if health <= 0:
-		kil += 1
-		print("ouch")
-		queue_free()
-		if kil == 10:
-			print("ok")
+		if quest_2:
 			quest_2.mob_killed()
+		queue_free()
+		print("ouch")
 	health_bar.health = health

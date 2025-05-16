@@ -11,34 +11,6 @@
 size = Vector2(62.9716, 22.8556)
 
 [node name="Quest_2" type="Node2D"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-visible = true
-modulate = Color(1, 1, 1, 1)
-self_modulate = Color(1, 1, 1, 1)
-show_behind_parent = false
-top_level = false
-clip_children = 0
-light_mask = 1
-visibility_layer = 1
-z_index = 0
-z_as_relative = true
-y_sort_enabled = false
-texture_filter = 0
-texture_repeat = 0
-material = null
-use_parent_material = false
-position = Vector2(0, 0)
-rotation = 0.0
-scale = Vector2(1, 1)
-skew = 0.0
 script = ExtResource("1_6v7p8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -81,65 +53,46 @@ shape = SubResource("RectangleShape2D_yvych")
 [node name="Player" parent="." instance=ExtResource("1_wbiai")]
 
 [node name="Node2D" type="Node2D" parent="."]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-visible = true
-modulate = Color(1, 1, 1, 1)
-self_modulate = Color(1, 1, 1, 1)
-show_behind_parent = false
-top_level = false
-clip_children = 0
-light_mask = 1
-visibility_layer = 1
-z_index = 0
-z_as_relative = true
-y_sort_enabled = false
-texture_filter = 0
-texture_repeat = 0
-material = null
-use_parent_material = false
-position = Vector2(0, 0)
-rotation = 0.0
-scale = Vector2(1, 1)
-skew = 0.0
-script = null
 
-[node name="Mob" parent="Node2D" instance=ExtResource("3_4wen6")]
+[node name="Mob" parent="Node2D" node_paths=PackedStringArray("quest_2") instance=ExtResource("3_4wen6")]
 position = Vector2(-439, -101)
+quest_2 = NodePath("../..")
 
-[node name="Mob2" parent="Node2D" instance=ExtResource("3_4wen6")]
+[node name="Mob2" parent="Node2D" node_paths=PackedStringArray("quest_2") instance=ExtResource("3_4wen6")]
 position = Vector2(260, -168)
+quest_2 = NodePath("../..")
 
-[node name="Mob3" parent="Node2D" instance=ExtResource("3_4wen6")]
+[node name="Mob3" parent="Node2D" node_paths=PackedStringArray("quest_2") instance=ExtResource("3_4wen6")]
 position = Vector2(1110, -165)
+quest_2 = NodePath("../..")
 
-[node name="Mob4" parent="Node2D" instance=ExtResource("3_4wen6")]
+[node name="Mob4" parent="Node2D" node_paths=PackedStringArray("quest_2") instance=ExtResource("3_4wen6")]
 position = Vector2(1993, -162)
+quest_2 = NodePath("../..")
 
-[node name="Mob5" parent="Node2D" instance=ExtResource("3_4wen6")]
+[node name="Mob5" parent="Node2D" node_paths=PackedStringArray("quest_2") instance=ExtResource("3_4wen6")]
 position = Vector2(2443, 249)
+quest_2 = NodePath("../..")
 
-[node name="Mob6" parent="Node2D" instance=ExtResource("3_4wen6")]
+[node name="Mob6" parent="Node2D" node_paths=PackedStringArray("quest_2") instance=ExtResource("3_4wen6")]
 position = Vector2(2395, 959)
+quest_2 = NodePath("../..")
 
-[node name="Mob7" parent="Node2D" instance=ExtResource("3_4wen6")]
+[node name="Mob7" parent="Node2D" node_paths=PackedStringArray("quest_2") instance=ExtResource("3_4wen6")]
 position = Vector2(1719, 1085)
+quest_2 = NodePath("../..")
 
-[node name="Mob8" parent="Node2D" instance=ExtResource("3_4wen6")]
+[node name="Mob8" parent="Node2D" node_paths=PackedStringArray("quest_2") instance=ExtResource("3_4wen6")]
 position = Vector2(939, 1163)
+quest_2 = NodePath("../..")
 
-[node name="Mob9" parent="Node2D" instance=ExtResource("3_4wen6")]
+[node name="Mob9" parent="Node2D" node_paths=PackedStringArray("quest_2") instance=ExtResource("3_4wen6")]
 position = Vector2(162, 1194)
+quest_2 = NodePath("../..")
 
-[node name="Mob10" parent="Node2D" instance=ExtResource("3_4wen6")]
+[node name="Mob10" parent="Node2D" node_paths=PackedStringArray("quest_2") instance=ExtResource("3_4wen6")]
 position = Vector2(-623, 1099)
+quest_2 = NodePath("../..")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_g1qtp")
