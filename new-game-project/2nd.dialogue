@@ -18,7 +18,7 @@ if State.state_quest == "completed2"
 	- So what DO you actually grow in a place this dark?
 		Patricia: don't ask questions you dont want answers to.......
 	=> END
-if State.state_quest == "done1"
+if State.state_quest == "finished1"
 	Patricia: PLEASE HELP
  	- Whats wrong?
 		Patricia: These stupid monsters! They keep ruining my Garden!

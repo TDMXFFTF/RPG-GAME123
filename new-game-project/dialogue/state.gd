@@ -11,13 +11,11 @@ var func_call:
 		match value:
 			"give_sword1":
 				if state_quest == "finished1" and inventory:
-					"change_to_background"
 					inventory.add_item(load("res://Basic Sword.tres"))
 				else:
 					print("Quest not completed yet.")
 			"give_sword2":
 				if state_quest == "completed2" and inventory:
-					"change_to_background"
 					inventory.add_item(load("res://Second Sword.tres"))
 				else:
 					print("Quest not completed yet.")
