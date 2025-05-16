@@ -15,7 +15,7 @@ var func_call:
 				else:
 					print("Quest not completed yet.")
 			"give_sword2":
-				if state_quest == "completed2" and inventory:
+				if state_quest == "completed!" and inventory:
 					inventory.add_item(load("res://Second Sword.tres"))
 				else:
 					print("Quest not completed yet.")
