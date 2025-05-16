@@ -37,7 +37,7 @@ if State.state_quest == "finished1"
 					set State.state_quest = "begin_2"
 					set State.func_call = "change_to_quest2"
 	=> END
- 	- No
+	- No
 		Patricia: Fine be that way
 	=> END
 
