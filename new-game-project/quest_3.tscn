@@ -9,7 +9,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bmapg"]
 size = Vector2(226, 3528)
 
-[node name="quest_3" type="StaticBody2D"]
+[node name="quest_3" type="Node2D"]
 script = ExtResource("1_gfiax")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -134,6 +134,9 @@ position = Vector2(-432, 1440)
 quest_3 = NodePath("../..")
 SPEED = 400.0
 damage = 2
+
+[node name="Mob21" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
+quest_3 = NodePath("../..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-976, 916)

@@ -77,5 +77,4 @@ func set_health(new_health: int) -> void:
 		if quest_3:
 			quest_3.mob_killed()
 		queue_free()
-		print("ouch")
 	health_bar.health = health
