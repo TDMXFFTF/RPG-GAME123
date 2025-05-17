@@ -20,8 +20,8 @@
 [ext_resource type="Texture2D" uid="uid://5dfkwfc3kkk7" path="res://Character1_BackIdle-Sheet-export.png" id="18_3owig"]
 [ext_resource type="Texture2D" uid="uid://brcphwa1x2gqd" path="res://Character1_FowardWalk-Sheet.png" id="19_eutpm"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_jjb6k"]
-radius = 66.2722
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k0rft"]
+size = Vector2(65, 148)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1eggl"]
 radius = 194.258
@@ -323,7 +323,8 @@ motion_mode = 1
 script = ExtResource("1_yqf8w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_jjb6k")
+position = Vector2(0.5, 8)
+shape = SubResource("RectangleShape2D_k0rft")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
