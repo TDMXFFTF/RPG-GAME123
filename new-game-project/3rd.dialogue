@@ -27,3 +27,6 @@ if State.state_quest == "completed!"
 	 -  
 else
 	Kayle: You are not worthy yet
+if State.state_quest == "start3"
+	Kayle: Prove yourself
+	=> END

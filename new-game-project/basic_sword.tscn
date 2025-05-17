@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://c6g5br8ov8hku" path="res://basic sword.png" id="2_r106c"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_csuhc"]
-radius = 37.5748
-height = 154.619
+radius = 44.7711
+height = 195.53
 
 [node name="BasicSword" instance=ExtResource("1_iyjs5")]
 attack_speed = 1.1
@@ -14,4 +14,5 @@ attack_speed = 1.1
 texture = ExtResource("2_r106c")
 
 [node name="CollisionShape2D" parent="Marker2D/Sprite2D/HitBox" index="0"]
+position = Vector2(-1.02658, -9.4311)
 shape = SubResource("CapsuleShape2D_csuhc")

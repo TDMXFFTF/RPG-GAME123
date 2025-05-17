@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dj5elsdssb7ue"]
+[gd_scene load_steps=7 format=3 uid="uid://dj5elsdssb7ue"]
 
 [ext_resource type="Script" path="res://quest_3.gd" id="1_gfiax"]
 [ext_resource type="PackedScene" uid="uid://3on7pcbooorp" path="res://mob_2.tscn" id="2_coc81"]
 [ext_resource type="Texture2D" uid="uid://bf2imuesangr3" path="res://lvl3background.png" id="2_gexyu"]
 [ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="3_gxvgf"]
+[ext_resource type="PackedScene" uid="uid://bien7vapc4nm3" path="res://sidequest_npc_3.tscn" id="5_pkkyt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bmapg"]
 size = Vector2(226, 3528)
@@ -20,98 +21,117 @@ texture = ExtResource("2_gexyu")
 
 [node name="Mob" type="Node2D" parent="."]
 
-[node name="Mob2" parent="Mob" instance=ExtResource("2_coc81")]
+[node name="Mob2" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
 position = Vector2(-32, -208)
+quest_3 = NodePath("../..")
 SPEED = 400.0
 damage = 2
 
-[node name="Mob3" parent="Mob" instance=ExtResource("2_coc81")]
+[node name="Mob3" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
 position = Vector2(160, -200)
+quest_3 = NodePath("../..")
 SPEED = 400.0
 damage = 2
 
-[node name="Mob4" parent="Mob" instance=ExtResource("2_coc81")]
+[node name="Mob4" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
 position = Vector2(420, -200)
+quest_3 = NodePath("../..")
 SPEED = 400.0
 damage = 2
 
-[node name="Mob5" parent="Mob" instance=ExtResource("2_coc81")]
+[node name="Mob5" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
 position = Vector2(632, -200)
+quest_3 = NodePath("../..")
 SPEED = 400.0
 damage = 2
 
-[node name="Mob6" parent="Mob" instance=ExtResource("2_coc81")]
+[node name="Mob6" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
 position = Vector2(856, -200)
+quest_3 = NodePath("../..")
 SPEED = 400.0
 damage = 2
 
-[node name="Mob7" parent="Mob" instance=ExtResource("2_coc81")]
+[node name="Mob7" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
 position = Vector2(1056, -200)
+quest_3 = NodePath("../..")
 SPEED = 400.0
 damage = 2
 
-[node name="Mob8" parent="Mob" instance=ExtResource("2_coc81")]
+[node name="Mob8" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
 position = Vector2(1288, -200)
+quest_3 = NodePath("../..")
 SPEED = 400.0
 damage = 2
 
-[node name="Mob9" parent="Mob" instance=ExtResource("2_coc81")]
+[node name="Mob9" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
 position = Vector2(1568, -192)
+quest_3 = NodePath("../..")
 SPEED = 400.0
 damage = 2
 
-[node name="Mob10" parent="Mob" instance=ExtResource("2_coc81")]
+[node name="Mob10" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
 position = Vector2(1736, -80)
+quest_3 = NodePath("../..")
 SPEED = 400.0
 damage = 2
 
-[node name="Mob11" parent="Mob" instance=ExtResource("2_coc81")]
+[node name="Mob11" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
 position = Vector2(1776, 360)
+quest_3 = NodePath("../..")
 SPEED = 400.0
 damage = 2
 
-[node name="Mob12" parent="Mob" instance=ExtResource("2_coc81")]
+[node name="Mob12" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
 position = Vector2(1840, 592)
+quest_3 = NodePath("../..")
 SPEED = 400.0
 damage = 2
 
-[node name="Mob13" parent="Mob" instance=ExtResource("2_coc81")]
+[node name="Mob13" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
 position = Vector2(1624, 864)
+quest_3 = NodePath("../..")
 SPEED = 400.0
 damage = 2
 
-[node name="Mob14" parent="Mob" instance=ExtResource("2_coc81")]
+[node name="Mob14" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
 position = Vector2(1480, 1532)
+quest_3 = NodePath("../..")
 SPEED = 400.0
 damage = 2
 
-[node name="Mob15" parent="Mob" instance=ExtResource("2_coc81")]
+[node name="Mob15" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
 position = Vector2(1224, 1532)
+quest_3 = NodePath("../..")
 SPEED = 400.0
 damage = 2
 
-[node name="Mob16" parent="Mob" instance=ExtResource("2_coc81")]
+[node name="Mob16" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
 position = Vector2(872, 1540)
+quest_3 = NodePath("../..")
 SPEED = 400.0
 damage = 2
 
-[node name="Mob17" parent="Mob" instance=ExtResource("2_coc81")]
+[node name="Mob17" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
 position = Vector2(576, 1548)
+quest_3 = NodePath("../..")
 SPEED = 400.0
 damage = 2
 
-[node name="Mob18" parent="Mob" instance=ExtResource("2_coc81")]
+[node name="Mob18" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
 position = Vector2(296, 1540)
+quest_3 = NodePath("../..")
 SPEED = 400.0
 damage = 2
 
-[node name="Mob19" parent="Mob" instance=ExtResource("2_coc81")]
+[node name="Mob19" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
 position = Vector2(8, 1540)
+quest_3 = NodePath("../..")
 SPEED = 400.0
 damage = 2
 
-[node name="Mob20" parent="Mob" instance=ExtResource("2_coc81")]
+[node name="Mob20" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
 position = Vector2(-432, 1440)
+quest_3 = NodePath("../..")
 SPEED = 400.0
 damage = 2
 
@@ -132,3 +152,6 @@ shape = SubResource("RectangleShape2D_bmapg")
 position = Vector2(1416, -1304)
 scale = Vector2(48.6638, 0.354985)
 shape = SubResource("RectangleShape2D_bmapg")
+
+[node name="sidequest_npc3" parent="." instance=ExtResource("5_pkkyt")]
+position = Vector2(-642, 512)

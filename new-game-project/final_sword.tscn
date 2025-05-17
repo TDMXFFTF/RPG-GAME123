@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://7ff5tqvoxqre" path="res://final sword.png" id="2_br7hy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h5b44"]
-radius = 37.0081
-height = 170.83
+radius = 45.8726
+height = 206.587
 
 [node name="FinalSword" instance=ExtResource("1_8vu4c")]
 damage = 3.0
@@ -15,5 +15,5 @@ attack_speed = 1.8
 texture = ExtResource("2_br7hy")
 
 [node name="CollisionShape2D" parent="Marker2D/Sprite2D/HitBox" index="0"]
-position = Vector2(-10.6183, -30.3356)
+position = Vector2(-9.17464, -19.9956)
 shape = SubResource("CapsuleShape2D_h5b44")

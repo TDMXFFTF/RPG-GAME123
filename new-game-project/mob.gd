@@ -1,6 +1,7 @@
 class_name Mob extends CharacterBody2D
 
 @export var quest_2 : Quest_2
+@export var quest_3 : Quest_3
 @export var SPEED := 250.0
 @export var acceleration := 450.0
 @export var drag_factor := 1.5
@@ -73,6 +74,8 @@ func set_health(new_health: int) -> void:
 	if health <= 0:
 		if quest_2:
 			quest_2.mob_killed()
+		if quest_3:
+			quest_3.mob_killed()
 		queue_free()
 		print("ouch")
 	health_bar.health = health
