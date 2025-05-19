@@ -122,3 +122,5 @@ shape = SubResource("RectangleShape2D_bmapg")
 
 [node name="sidequest_npc3" parent="." instance=ExtResource("5_pkkyt")]
 position = Vector2(-642, 512)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

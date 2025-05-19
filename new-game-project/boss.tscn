@@ -1,9 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bex1i2tpeixw7"]
+[gd_scene load_steps=13 format=3 uid="uid://bex1i2tpeixw7"]
 
 [ext_resource type="PackedScene" uid="uid://s1qekke3u7nt" path="res://mob.tscn" id="1_1n0kb"]
 [ext_resource type="Script" path="res://boss.gd" id="2_2v0y1"]
 [ext_resource type="PackedScene" uid="uid://b0m5h05ml4adp" path="res://boss_projectile.tscn" id="3_6r6le"]
-[ext_resource type="Texture2D" uid="uid://5xo5midpkpox" path="res://Monster 2 copy1.png" id="4_ckp7r"]
+[ext_resource type="Texture2D" uid="uid://b44nb7nvikhip" path="res://MONSTERS MOVING-Sheet.png" id="4_hlv5s"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_04pg6"]
 radius = 83.0241
@@ -17,6 +17,35 @@ radius = 84.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_3rb53"]
 radius = 600.001
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_b10by"]
+atlas = ExtResource("4_hlv5s")
+region = Rect2(0, 0, 126, 126)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ca7a"]
+atlas = ExtResource("4_hlv5s")
+region = Rect2(126, 0, 126, 126)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jolgw"]
+atlas = ExtResource("4_hlv5s")
+region = Rect2(252, 0, 126, 126)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oxytu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b10by")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ca7a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jolgw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Boss" instance=ExtResource("1_1n0kb")]
 script = ExtResource("2_2v0y1")
 projectile_scene = ExtResource("3_6r6le")
@@ -28,7 +57,7 @@ damage = 7
 [node name="Sprite2D" parent="." index="0"]
 position = Vector2(408, 0)
 scale = Vector2(3.01102, 3.01102)
-texture = ExtResource("4_ckp7r")
+texture = null
 
 [node name="CollisionShape2D" parent="." index="1"]
 scale = Vector2(1.5, 1.5)
@@ -39,6 +68,7 @@ scale = Vector2(3, 3)
 shape = SubResource("CircleShape2D_i6cly")
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 16)
 scale = Vector2(1.5, 1.5)
 shape = SubResource("CircleShape2D_67j5v")
 
@@ -51,5 +81,11 @@ shape = SubResource("CircleShape2D_3rb53")
 [node name="HealthBar" parent="." index="6"]
 offset_top = -140.0
 offset_bottom = -113.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="7"]
+scale = Vector2(4.4625, 4.4625)
+sprite_frames = SubResource("SpriteFrames_oxytu")
+frame = 1
+frame_progress = 0.581681
 
 [editable path="HealthBar"]
