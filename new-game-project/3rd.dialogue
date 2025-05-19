@@ -1,10 +1,4 @@
 ~ start
-if State.state_quest == "start3"
-	Kayle: Prove yourself.
-	=> END
-if State.state_quest == "start4"
-	Kayle: The trial is not finished.
-	=> END
 if State.state_quest == "completed2"
 	Kayle: Hello there
 	- Hi!
@@ -21,32 +15,15 @@ if State.state_quest == "completed2"
 		Kayle: I hate you
 	=> END
 if State.state_quest == "finished3"
-	Kayle: Looks like you've killed all of them. Good job. You truly are worthy. Take this key and this sword. Good luck in the cave.
+	Kayle: Looks like you've killed all of them. Good job. You truely are worthy. Take this key and this sword. Good luck in the cave.
 	set State.func_call = "change_to_background"
 	set State.state_quest = "completed!"
 	set State.func_call = "give_sword2"
 	set State.state_quest = "completed!"
-	=> END
-if State.state_quest == "finished4"
-	Kayle: Amazing, you've finished the last trial. This sword will prove to be useful in your final fight. I wish you the best in the cave.
-	set State.func_call = "change_to_background"
-	set State.state_quest = "completed!2"
-	set State.func_call = "give_sword3"
-	set State.state_quest = "completed!2"
-	=> END
 if State.state_quest == "completed!"
 	Kayle: Welcome back. What would you like to know?
 	 - Can I do the trial again?
-		Kayle: Sure why not. It will be much more difficult, but if you complete this one, I'll give you the best sword there is.
-		- Say less
-			Kayle: Perfect lets get moving!
-			set State.state_quest = "start4"
-			set State.func_call = "change_to_quest4"
-	=> END
-if State.state_quest == "completed!2"
-	Kayle: I have nothing more to give you, it is now up to you to enter the cave and defeat the monster.
-	=> END
-
-else
-	Kayle: Get the other keys before talking to me.
-	=> END
+		Kayle: Sure why not. If you complete this one, I'll give you another sword
+	 -  Tell me about the monster in the cave
+		Kayle: The "monster" in the cave is really the great protector of this forest! He's watched over us and made sure we can get through these tough times! I only call him a "monster" because it's not really friendly to visitors, as some visitors get eaten!
+	Kayle: You are not worthy yet
