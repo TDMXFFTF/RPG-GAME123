@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dj5elsdssb7ue"]
+[gd_scene load_steps=8 format=3 uid="uid://dj5elsdssb7ue"]
 
 [ext_resource type="Script" path="res://quest_3.gd" id="1_gfiax"]
 [ext_resource type="PackedScene" uid="uid://3on7pcbooorp" path="res://mob_2.tscn" id="2_coc81"]
 [ext_resource type="Texture2D" uid="uid://bf2imuesangr3" path="res://lvl3background.png" id="2_gexyu"]
 [ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="3_gxvgf"]
 [ext_resource type="PackedScene" uid="uid://bien7vapc4nm3" path="res://sidequest_npc_3.tscn" id="5_pkkyt"]
+[ext_resource type="AudioStream" uid="uid://l21o1iiybr0r" path="res://Malicious.mp3" id="6_3hfo0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bmapg"]
 size = Vector2(226, 3528)
@@ -39,7 +40,7 @@ position = Vector2(1011, 254)
 quest_3 = NodePath("../..")
 
 [node name="Mob6" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
-position = Vector2(336, 1633)
+position = Vector2(848, 1535)
 quest_3 = NodePath("../..")
 
 [node name="Mob7" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
@@ -62,44 +63,20 @@ quest_3 = NodePath("../..")
 position = Vector2(1181, 544)
 quest_3 = NodePath("../..")
 
-[node name="Mob12" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
-position = Vector2(67, 759)
-quest_3 = NodePath("../..")
-
 [node name="Mob13" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
-position = Vector2(756, 967)
-quest_3 = NodePath("../..")
-
-[node name="Mob14" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
-position = Vector2(1059, 875)
+position = Vector2(1608, 1616)
 quest_3 = NodePath("../..")
 
 [node name="Mob15" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
 position = Vector2(-363, 666)
 quest_3 = NodePath("../..")
 
-[node name="Mob16" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
-position = Vector2(-258, 1169)
-quest_3 = NodePath("../..")
-
 [node name="Mob17" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
-position = Vector2(288, 1174)
-quest_3 = NodePath("../..")
-
-[node name="Mob18" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
-position = Vector2(693, 1259)
+position = Vector2(1384, 1952)
 quest_3 = NodePath("../..")
 
 [node name="Mob19" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
 position = Vector2(1548, 734)
-quest_3 = NodePath("../..")
-
-[node name="Mob20" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
-position = Vector2(915, -8)
-quest_3 = NodePath("../..")
-
-[node name="Mob21" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
-position = Vector2(68, 60)
 quest_3 = NodePath("../..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -124,3 +101,11 @@ shape = SubResource("RectangleShape2D_bmapg")
 position = Vector2(-642, 512)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-24, 0)
+stream = ExtResource("6_3hfo0")
+volume_db = 5.0
+autoplay = true
+max_distance = 1e+06
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.114897, 0.114897, 0.114897, 1)
