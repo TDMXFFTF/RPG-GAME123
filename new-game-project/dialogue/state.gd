@@ -19,6 +19,11 @@ var func_call:
 					inventory.add_item(load("res://Second Sword.tres"))
 				else:
 					print("Quest not completed yet.")
+			"give_sword3":
+				if state_quest == "completed!2" and inventory:
+					inventory.add_item(load("res://Final Sword.tres"))
+				else:
+					print("Quest not completed yet.")
 			"change_to_background":
 				change_scene_with_loading("res://background.tscn")
 			"change_to_quest1":
@@ -27,6 +32,8 @@ var func_call:
 				change_scene_with_loading("res://Quests/quest_2.tscn")
 			"change_to_quest3":
 				change_scene_with_loading("res://quest_3.tscn")
+			"change_to_quest4":
+				change_scene_with_loading("res://quest_4.tscn")
 			_:
 				print("Unknown func_call:", value)
 

@@ -1,0 +1,126 @@
+[gd_scene load_steps=7 format=3 uid="uid://b41vk60ub2x8l"]
+
+[ext_resource type="Script" path="res://quest_4.gd" id="1_ees1u"]
+[ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="1_inleu"]
+[ext_resource type="PackedScene" uid="uid://bien7vapc4nm3" path="res://sidequest_npc_3.tscn" id="2_bisa5"]
+[ext_resource type="Texture2D" uid="uid://bf2imuesangr3" path="res://lvl3background.png" id="2_e6275"]
+[ext_resource type="PackedScene" uid="uid://dkede6xx5h552" path="res://mob_3.tscn" id="4_2dtqf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tjwya"]
+size = Vector2(472, 6118.5)
+
+[node name="quest_4" type="Node2D"]
+script = ExtResource("1_ees1u")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(654, 594)
+scale = Vector2(32.9333, 30.5733)
+texture = ExtResource("2_e6275")
+
+[node name="Player" parent="." instance=ExtResource("1_inleu")]
+
+[node name="sidequest_npc3" parent="." instance=ExtResource("2_bisa5")]
+position = Vector2(-1153, 576)
+
+[node name="Mob" type="Node2D" parent="."]
+position = Vector2(554, -816)
+
+[node name="Mob3" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
+position = Vector2(1773, -141)
+quest_4 = NodePath("../..")
+
+[node name="Mob4" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
+position = Vector2(492, -271)
+quest_4 = NodePath("../..")
+
+[node name="Mob5" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
+position = Vector2(-765, -273)
+quest_4 = NodePath("../..")
+
+[node name="Mob6" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
+position = Vector2(-1609, 338)
+quest_4 = NodePath("../..")
+
+[node name="Mob7" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
+position = Vector2(-1753, 1166)
+quest_4 = NodePath("../..")
+
+[node name="Mob8" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
+position = Vector2(-1718, 2289)
+quest_4 = NodePath("../..")
+
+[node name="Mob9" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
+position = Vector2(-1094, 3019)
+quest_4 = NodePath("../..")
+
+[node name="Mob10" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
+position = Vector2(-314, 3028)
+quest_4 = NodePath("../..")
+
+[node name="Mob11" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
+position = Vector2(904, 2959)
+quest_4 = NodePath("../..")
+
+[node name="Mob12" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
+position = Vector2(1851, 2455)
+quest_4 = NodePath("../..")
+
+[node name="Mob13" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
+position = Vector2(1786, 1597)
+quest_4 = NodePath("../..")
+
+[node name="Mob14" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
+position = Vector2(1858, 541)
+quest_4 = NodePath("../..")
+
+[node name="Mob15" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
+position = Vector2(-860, 1036)
+quest_4 = NodePath("../..")
+
+[node name="Mob16" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
+position = Vector2(-841, 2004)
+quest_4 = NodePath("../..")
+
+[node name="Mob17" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
+position = Vector2(241, 2244)
+quest_4 = NodePath("../..")
+
+[node name="Mob18" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
+position = Vector2(1247, 1605)
+quest_4 = NodePath("../..")
+
+[node name="Mob19" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
+position = Vector2(883, 595)
+quest_4 = NodePath("../..")
+
+[node name="Mob20" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
+position = Vector2(105, 479)
+quest_4 = NodePath("../..")
+
+[node name="Mob21" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
+position = Vector2(-420, 1386)
+quest_4 = NodePath("../..")
+
+[node name="Mob22" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
+position = Vector2(467, 1238)
+quest_4 = NodePath("../..")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1580, 688)
+shape = SubResource("RectangleShape2D_tjwya")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(830, -1536)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_tjwya")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2901, 1080)
+shape = SubResource("RectangleShape2D_tjwya")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(680, 2688)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_tjwya")

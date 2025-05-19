@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dtcly4mn3vlxk"]
+[gd_scene load_steps=17 format=3 uid="uid://dtcly4mn3vlxk"]
 
 [ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="1_k4dwh"]
 [ext_resource type="Texture2D" uid="uid://csyd1ormvbcp8" path="res://Artwork/Background.png" id="2_o5502"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bien7vapc4nm3" path="res://sidequest_npc_3.tscn" id="10_m4yhs"]
 [ext_resource type="PackedScene" uid="uid://bchf7r533dbvw" path="res://hut_2.tscn" id="11_knja1"]
 [ext_resource type="PackedScene" uid="uid://80bmmo5iewj6" path="res://cave.tscn" id="12_0b716"]
+[ext_resource type="PackedScene" uid="uid://tui1ploag8d" path="res://hut_3.tscn" id="14_uckoo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8n6v7"]
 size = Vector2(8741.5, 616)
@@ -138,6 +139,9 @@ first_dialog = ExtResource("9_4t1tq")
 position = Vector2(200, 80)
 scale = Vector2(4.59833, 4.59833)
 
+[node name="Hut3" parent="." instance=ExtResource("14_uckoo")]
+position = Vector2(2588, 945)
+
 [node name="SideQuestNpc1" parent="." instance=ExtResource("8_b3bmq")]
 position = Vector2(311, 256)
 scale = Vector2(0.81624, 0.81624)
@@ -147,7 +151,7 @@ position = Vector2(-504, -776)
 scale = Vector2(1.45553, 1.45553)
 
 [node name="sidequest_npc3" parent="." instance=ExtResource("10_m4yhs")]
-position = Vector2(-497, -1019)
+position = Vector2(2560, 1183)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("9_yyag2")

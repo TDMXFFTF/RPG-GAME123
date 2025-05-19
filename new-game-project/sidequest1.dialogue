@@ -16,6 +16,7 @@ if State.state_quest == "finished1"
 		 => END
 if State.state_quest == "in_progress1"
 	Rodian: WHERES MY STICKS HELLO? GET THEM FOR ME ALREADY.
+	=> END
 if State.state_quest == "Main In Progress"
 	Rodian: HEY YOU
 	- Me?

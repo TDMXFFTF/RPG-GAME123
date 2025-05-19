@@ -9,7 +9,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bmapg"]
 size = Vector2(226, 3528)
 
-[node name="quest_3" type="Node2D"]
+[node name="quest_3" type="StaticBody2D"]
 script = ExtResource("1_gfiax")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -18,124 +18,88 @@ scale = Vector2(25.1833, 24.7567)
 texture = ExtResource("2_gexyu")
 
 [node name="Player" parent="." instance=ExtResource("3_gxvgf")]
+position = Vector2(571, 370)
 
 [node name="Mob" type="Node2D" parent="."]
 
 [node name="Mob2" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
-position = Vector2(-32, -208)
+position = Vector2(1806, -60)
 quest_3 = NodePath("../..")
-SPEED = 400.0
-damage = 2
 
 [node name="Mob3" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
-position = Vector2(160, -200)
+position = Vector2(1823, 469)
 quest_3 = NodePath("../..")
-SPEED = 400.0
-damage = 2
 
 [node name="Mob4" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
-position = Vector2(420, -200)
+position = Vector2(1281, -10)
 quest_3 = NodePath("../..")
-SPEED = 400.0
-damage = 2
 
 [node name="Mob5" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
-position = Vector2(632, -200)
+position = Vector2(1011, 254)
 quest_3 = NodePath("../..")
-SPEED = 400.0
-damage = 2
 
 [node name="Mob6" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
-position = Vector2(856, -200)
+position = Vector2(336, 1633)
 quest_3 = NodePath("../..")
-SPEED = 400.0
-damage = 2
 
 [node name="Mob7" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
-position = Vector2(1056, -200)
+position = Vector2(87, 373)
 quest_3 = NodePath("../..")
-SPEED = 400.0
-damage = 2
 
 [node name="Mob8" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
-position = Vector2(1288, -200)
+position = Vector2(1356, 1089)
 quest_3 = NodePath("../..")
-SPEED = 400.0
-damage = 2
 
 [node name="Mob9" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
-position = Vector2(1568, -192)
+position = Vector2(482, -45)
 quest_3 = NodePath("../..")
-SPEED = 400.0
-damage = 2
 
 [node name="Mob10" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
-position = Vector2(1736, -80)
+position = Vector2(-289, 247)
 quest_3 = NodePath("../..")
-SPEED = 400.0
-damage = 2
 
 [node name="Mob11" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
-position = Vector2(1776, 360)
+position = Vector2(1181, 544)
 quest_3 = NodePath("../..")
-SPEED = 400.0
-damage = 2
 
 [node name="Mob12" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
-position = Vector2(1840, 592)
+position = Vector2(67, 759)
 quest_3 = NodePath("../..")
-SPEED = 400.0
-damage = 2
 
 [node name="Mob13" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
-position = Vector2(1624, 864)
+position = Vector2(756, 967)
 quest_3 = NodePath("../..")
-SPEED = 400.0
-damage = 2
 
 [node name="Mob14" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
-position = Vector2(1480, 1532)
+position = Vector2(1059, 875)
 quest_3 = NodePath("../..")
-SPEED = 400.0
-damage = 2
 
 [node name="Mob15" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
-position = Vector2(1224, 1532)
+position = Vector2(-363, 666)
 quest_3 = NodePath("../..")
-SPEED = 400.0
-damage = 2
 
 [node name="Mob16" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
-position = Vector2(872, 1540)
+position = Vector2(-258, 1169)
 quest_3 = NodePath("../..")
-SPEED = 400.0
-damage = 2
 
 [node name="Mob17" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
-position = Vector2(576, 1548)
+position = Vector2(288, 1174)
 quest_3 = NodePath("../..")
-SPEED = 400.0
-damage = 2
 
 [node name="Mob18" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
-position = Vector2(296, 1540)
+position = Vector2(693, 1259)
 quest_3 = NodePath("../..")
-SPEED = 400.0
-damage = 2
 
 [node name="Mob19" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
-position = Vector2(8, 1540)
+position = Vector2(1548, 734)
 quest_3 = NodePath("../..")
-SPEED = 400.0
-damage = 2
 
 [node name="Mob20" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
-position = Vector2(-432, 1440)
+position = Vector2(915, -8)
 quest_3 = NodePath("../..")
-SPEED = 400.0
-damage = 2
 
 [node name="Mob21" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
+position = Vector2(68, 60)
 quest_3 = NodePath("../..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
