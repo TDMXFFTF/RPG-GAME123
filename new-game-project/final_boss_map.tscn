@@ -1,10 +1,44 @@
-[gd_scene load_steps=2 format=3 uid="uid://btx3lefrx7lmg"]
+[gd_scene load_steps=5 format=3 uid="uid://btx3lefrx7lmg"]
 
 [ext_resource type="Texture2D" uid="uid://b6i3l2ivp4qqs" path="res://Cave2.png" id="1_3msax"]
+[ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="2_q2gbv"]
+[ext_resource type="PackedScene" uid="uid://bex1i2tpeixw7" path="res://boss.tscn" id="3_pq332"]
 
-[node name="FinalBoss" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i34dt"]
+size = Vector2(1.16451, 912.885)
+
+[node name="FinalBoss" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(651, 434)
-scale = Vector2(5.34, 5.34)
+scale = Vector2(11.5431, 11.5431)
 texture = ExtResource("1_3msax")
+
+[node name="Player" parent="." instance=ExtResource("2_q2gbv")]
+
+[node name="Boss" parent="." instance=ExtResource("3_pq332")]
+position = Vector2(-160, 952)
+scale = Vector2(1.04347, 1.04347)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-720, 384)
+scale = Vector2(405.496, 2.71146)
+shape = SubResource("RectangleShape2D_i34dt")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(2000, 512)
+scale = Vector2(405.496, 2.71146)
+shape = SubResource("RectangleShape2D_i34dt")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-414.186, -584)
+scale = Vector2(4455.03, 0.343541)
+shape = SubResource("RectangleShape2D_i34dt")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(-414, 1488)
+scale = Vector2(4455.03, 0.343541)
+shape = SubResource("RectangleShape2D_i34dt")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.103744, 0.103744, 0.103744, 1)
