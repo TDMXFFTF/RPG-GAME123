@@ -3,9 +3,11 @@ extends Mob
 @export var projectile_scene: PackedScene
 @onready var projectile_detect: Area2D = %ProjectileDetection
 @onready var _projectile_timer: Timer = Timer.new()
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 
 func _ready() -> void:
+	animated_sprite_2d.play("default")
 	super._ready()
 	add_child(_projectile_timer)
 	_projectile_timer.wait_time = 2.0

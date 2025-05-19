@@ -19,7 +19,7 @@ texture = ExtResource("1_3msax")
 
 [node name="Boss" parent="." instance=ExtResource("3_pq332")]
 position = Vector2(56, 864)
-scale = Vector2(1.77608, 1.77608)
+scale = Vector2(0.935483, 0.935483)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-720, 384)
