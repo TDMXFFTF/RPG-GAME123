@@ -13,8 +13,8 @@ size = Vector2(472, 6118.5)
 script = ExtResource("1_ees1u")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(654, 594)
-scale = Vector2(32.9333, 30.5733)
+position = Vector2(747, 545)
+scale = Vector2(27.7, 23.8733)
 texture = ExtResource("2_e6275")
 
 [node name="Player" parent="." instance=ExtResource("1_inleu")]
@@ -26,101 +26,101 @@ position = Vector2(-1153, 576)
 position = Vector2(554, -816)
 
 [node name="Mob3" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
-position = Vector2(1773, -141)
+position = Vector2(52, 107)
 quest_4 = NodePath("../..")
 
 [node name="Mob4" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
-position = Vector2(492, -271)
+position = Vector2(526, 212)
 quest_4 = NodePath("../..")
 
 [node name="Mob5" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
-position = Vector2(-765, -273)
+position = Vector2(-474, 157)
 quest_4 = NodePath("../..")
 
 [node name="Mob6" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
-position = Vector2(-1609, 338)
+position = Vector2(-843, 587)
 quest_4 = NodePath("../..")
 
 [node name="Mob7" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
-position = Vector2(-1753, 1166)
+position = Vector2(-956, 1366)
 quest_4 = NodePath("../..")
 
 [node name="Mob8" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
-position = Vector2(-1718, 2289)
+position = Vector2(-310, 2255)
 quest_4 = NodePath("../..")
 
 [node name="Mob9" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
-position = Vector2(-1094, 3019)
+position = Vector2(-618, 2184)
 quest_4 = NodePath("../..")
 
 [node name="Mob10" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
-position = Vector2(-314, 3028)
+position = Vector2(683, 2112)
 quest_4 = NodePath("../..")
 
 [node name="Mob11" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
-position = Vector2(904, 2959)
+position = Vector2(1097, 1850)
 quest_4 = NodePath("../..")
 
 [node name="Mob12" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
-position = Vector2(1851, 2455)
+position = Vector2(1413, 1226)
 quest_4 = NodePath("../..")
 
 [node name="Mob13" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
-position = Vector2(1786, 1597)
+position = Vector2(1419, 817)
 quest_4 = NodePath("../..")
 
 [node name="Mob14" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
-position = Vector2(1858, 541)
+position = Vector2(1192, 691)
 quest_4 = NodePath("../..")
 
 [node name="Mob15" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
-position = Vector2(-860, 1036)
+position = Vector2(-938, 990)
 quest_4 = NodePath("../..")
 
 [node name="Mob16" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
-position = Vector2(-841, 2004)
+position = Vector2(-1080, 1726)
 quest_4 = NodePath("../..")
 
 [node name="Mob17" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
-position = Vector2(241, 2244)
+position = Vector2(209, 2240)
 quest_4 = NodePath("../..")
 
 [node name="Mob18" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
-position = Vector2(1247, 1605)
+position = Vector2(1375, 1523)
 quest_4 = NodePath("../..")
 
 [node name="Mob19" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
-position = Vector2(883, 595)
+position = Vector2(876, 467)
 quest_4 = NodePath("../..")
 
 [node name="Mob20" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
-position = Vector2(105, 479)
+position = Vector2(-137, 550)
 quest_4 = NodePath("../..")
 
 [node name="Mob21" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
-position = Vector2(-420, 1386)
+position = Vector2(-541, 1575)
 quest_4 = NodePath("../..")
 
 [node name="Mob22" parent="Mob" node_paths=PackedStringArray("quest_4") instance=ExtResource("4_2dtqf")]
-position = Vector2(467, 1238)
+position = Vector2(731, 1195)
 quest_4 = NodePath("../..")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-1580, 688)
+position = Vector2(-1179, 711)
 shape = SubResource("RectangleShape2D_tjwya")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(830, -1536)
+position = Vector2(807, -1151)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_tjwya")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(2901, 1080)
+position = Vector2(2686, 1052)
 shape = SubResource("RectangleShape2D_tjwya")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(680, 2688)
+position = Vector2(771, 2264)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_tjwya")
