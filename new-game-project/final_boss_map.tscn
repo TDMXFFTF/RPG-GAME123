@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://btx3lefrx7lmg"]
+
+[ext_resource type="Texture2D" uid="uid://b6i3l2ivp4qqs" path="res://Cave2.png" id="1_3msax"]
+
+[node name="FinalBoss" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(651, 434)
+scale = Vector2(5.34, 5.34)
+texture = ExtResource("1_3msax")
