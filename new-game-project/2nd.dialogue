@@ -18,6 +18,13 @@ if State.state_quest == "completed2"
 	- So what DO you actually grow in a place this dark?
 		Patricia: don't ask questions you dont want answers to.......
 	=> END
+if State.state_quest == "completed!"
+	Patricia: HI!! Thanks again for helping what can I do for you?
+	- Why did the forest suddenly go dark?
+		Patricia: You see the forest was powered by this gigantic orb, and it was what generated light for this forest. But one day, someone stole it! Now this is what the forest has become. 
+	- So what DO you actually grow in a place this dark?
+		Patricia: don't ask questions you dont want answers to.......
+	=> END
 if State.state_quest == "finished1"
 	Patricia: PLEASE HELP
  	- Whats wrong?

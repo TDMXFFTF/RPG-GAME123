@@ -1,5 +1,14 @@
 ~ start
-Steve: hello fellow traveller
+if State.state_quest == "finished1"
+	Steve: Looks like you got 1 key. Talk to Patricia to get the next key. She's top left of Rodian!
+	=> END
+if State.state_quest == "completed2"
+	Steve: Looks like you got 2 keys! Congrats! Talk to Kayle next to get the last key, but be warned. She's challenging!
+	=> END
+if State.state_quest == "completed!"
+	Steve: Congrats! You have all the keys! You now can go up to the cave now and maybe find who you're looking for! But good luck! The entity that lives in there doesn't like visitors!
+else
+	Steve: hello fellow traveller
  	- Who are you?
 		Steve: I.... am STEVE![wait=0.5] Looked like you passed out back there, How are you feeling?
 		- Where am I? 
@@ -12,14 +21,3 @@ Steve: hello fellow traveller
  	- Goodbye 
 		Steve: Ok wtv
 => END
-if State.state_quest == "finished1"
-	Steve: Looks like you got 1 key. Talk to Patricia to get the next key. She's top right of Rodian!
-	=> END
-if State.state_quest == "completed2"
-	Steve: Looks like you got 2 keys! Congrats! Talk to Kayle next to get the last key, but be warned. She's challenging!
-	=> END
-if State.state_quest == "completed!"
-	Steve: Congrats! You have all the keys! You now can go up to the cave now and maybe find who you're looking for! But good luck! The entity that lives in there doesn't like visitors!
-else
-	Steve: Good luck out there
-	=> END
