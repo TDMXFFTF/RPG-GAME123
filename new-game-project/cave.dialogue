@@ -10,6 +10,7 @@ if State.state_quest == "completed!"
 	- Yes
 		Aziel: Ok here goes nothing
 		set State.state_quest == "Final Boss"
+		set State.func_call = "change_to_boss"
 	- No
 else
 	Aziel: This place looks too scary. I won't go in there yet
@@ -19,4 +20,5 @@ if State.state_quest == "completed!2"
 	- Yes
 		Aziel: Ok here goes nothing
 		set State.state_quest == "Final Boss"
+		set State.func_call = "change_to_boss"
 => END
