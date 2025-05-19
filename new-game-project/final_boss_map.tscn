@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://btx3lefrx7lmg"]
+[gd_scene load_steps=7 format=3 uid="uid://btx3lefrx7lmg"]
 
 [ext_resource type="Texture2D" uid="uid://b6i3l2ivp4qqs" path="res://Cave2.png" id="1_3msax"]
 [ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="2_q2gbv"]
 [ext_resource type="PackedScene" uid="uid://bex1i2tpeixw7" path="res://boss.tscn" id="3_pq332"]
 [ext_resource type="Texture2D" uid="uid://c3ukds1btji4i" path="res://DwaneJohnson.png" id="4_dngra"]
+[ext_resource type="AudioStream" uid="uid://ckaahtov57rcx" path="res://Unholy Knight.mp3" id="5_h7qmi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i34dt"]
 size = Vector2(1.16451, 912.885)
@@ -98,3 +99,9 @@ texture = ExtResource("4_dngra")
 position = Vector2(504, -280)
 scale = Vector2(1.62842, 1.62842)
 texture = ExtResource("4_dngra")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_h7qmi")
+volume_db = 10.0
+autoplay = true
+max_distance = 1.20392e+15
