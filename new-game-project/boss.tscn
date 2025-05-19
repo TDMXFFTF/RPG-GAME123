@@ -3,9 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://s1qekke3u7nt" path="res://mob.tscn" id="1_1n0kb"]
 [ext_resource type="Script" path="res://boss.gd" id="2_2v0y1"]
 [ext_resource type="PackedScene" uid="uid://b0m5h05ml4adp" path="res://boss_projectile.tscn" id="3_6r6le"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a3m83"]
-load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+[ext_resource type="Texture2D" uid="uid://b7d7mo2s66gbm" path="res://Monster 1 copy1.png" id="4_fi8bm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_04pg6"]
 radius = 83.0241
@@ -29,7 +27,7 @@ damage = 7
 
 [node name="Sprite2D" parent="." index="0"]
 scale = Vector2(1.5, 1.5)
-texture = SubResource("CompressedTexture2D_a3m83")
+texture = ExtResource("4_fi8bm")
 
 [node name="CollisionShape2D" parent="." index="1"]
 scale = Vector2(1.5, 1.5)
