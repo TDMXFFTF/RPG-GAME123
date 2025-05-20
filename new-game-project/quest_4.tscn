@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://b41vk60ub2x8l"]
+[gd_scene load_steps=8 format=3 uid="uid://b41vk60ub2x8l"]
 
 [ext_resource type="Script" path="res://quest_4.gd" id="1_ees1u"]
 [ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="1_inleu"]
 [ext_resource type="PackedScene" uid="uid://bien7vapc4nm3" path="res://sidequest_npc_3.tscn" id="2_bisa5"]
 [ext_resource type="Texture2D" uid="uid://bf2imuesangr3" path="res://lvl3background.png" id="2_e6275"]
 [ext_resource type="PackedScene" uid="uid://dkede6xx5h552" path="res://mob_3.tscn" id="4_2dtqf"]
+[ext_resource type="AudioStream" uid="uid://l21o1iiybr0r" path="res://Malicious.mp3" id="6_e607j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tjwya"]
 size = Vector2(472, 6118.5)
@@ -124,3 +125,7 @@ shape = SubResource("RectangleShape2D_tjwya")
 position = Vector2(771, 2264)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_tjwya")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_e607j")
+autoplay = true

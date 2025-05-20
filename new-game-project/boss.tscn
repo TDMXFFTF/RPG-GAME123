@@ -49,7 +49,7 @@ animations = [{
 [node name="Boss" instance=ExtResource("1_1n0kb")]
 script = ExtResource("2_2v0y1")
 projectile_scene = ExtResource("3_6r6le")
-SPEED = 315.0
+SPEED = 350.0
 acceleration = 500.0
 max_health = 75
 damage = 7

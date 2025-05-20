@@ -75,6 +75,10 @@ quest_3 = NodePath("../..")
 position = Vector2(1384, 1952)
 quest_3 = NodePath("../..")
 
+[node name="Mob18" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
+position = Vector2(347, 2072)
+quest_3 = NodePath("../..")
+
 [node name="Mob19" parent="Mob" node_paths=PackedStringArray("quest_3") instance=ExtResource("2_coc81")]
 position = Vector2(1548, 734)
 quest_3 = NodePath("../..")
@@ -103,7 +107,6 @@ position = Vector2(-642, 512)
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(-24, 0)
 stream = ExtResource("6_3hfo0")
-volume_db = 5.0
 autoplay = true
 max_distance = 1e+06
 

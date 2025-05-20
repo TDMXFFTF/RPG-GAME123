@@ -7,6 +7,7 @@ if State.state_quest == "completed2"
 	=> END
 if State.state_quest == "completed!"
 	Steve: Congrats! You have all the keys! You now can go up to the cave now and maybe find who you're looking for! But good luck! The entity that lives in there doesn't like visitors!
+=> END
 else
 	Steve: hello fellow traveller
  	- Who are you?
@@ -20,4 +21,4 @@ else
 					set State.state_quest = "Main In Progress"
  	- Goodbye 
 		Steve: Ok wtv
-=> END
+	=> END

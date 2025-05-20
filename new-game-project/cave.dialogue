@@ -10,15 +10,15 @@ if State.state_quest == "completed!"
 	- Yes
 		Aziel: Ok here goes nothing
 		set State.state_quest == "Final Boss"
-		set State.func_call = "change_to_boss"
+		set State.func_call = "change_to_cutscene"
 	- No
 else
 	Aziel: This place looks too scary. I won't go in there yet
 => END
-if State.state_quest == "completed!2"
+if State.state_quest == "completed!2" 
 	Aziel: Am I ACTUALLY ready to do this?
 	- Yes
 		Aziel: Ok here goes nothing
 		set State.state_quest == "Final Boss"
-		set State.func_call = "change_to_boss"
+		set State.func_call = "change_to_cutscene"
 => END

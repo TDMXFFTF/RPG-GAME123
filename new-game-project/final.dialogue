@@ -11,4 +11,5 @@ Mom: This forest used to be a wonderful place. Things prospered and all was goin
 Aziel: Oh, I never knew that.
 Mom: Yes and now you know. Now I gotta kill you.
 Aziel: Wait what?
+set state.func_call = "change_to_boss"
 => END
