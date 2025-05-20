@@ -12,7 +12,7 @@ radius = 83.0241
 radius = 186.431
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_67j5v"]
-radius = 96.5908
+radius = 74.6667
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3rb53"]
 radius = 600.001
@@ -51,7 +51,7 @@ script = ExtResource("2_2v0y1")
 projectile_scene = ExtResource("3_6r6le")
 SPEED = 315.0
 acceleration = 500.0
-max_health = 75
+max_health = 90
 damage = 4
 
 [node name="Sprite2D" parent="." index="0"]
@@ -68,7 +68,7 @@ scale = Vector2(3, 3)
 shape = SubResource("CircleShape2D_i6cly")
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
-position = Vector2(16, 72)
+position = Vector2(-16, 40)
 scale = Vector2(1.5, 1.5)
 shape = SubResource("CircleShape2D_67j5v")
 

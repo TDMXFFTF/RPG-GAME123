@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://btx3lefrx7lmg"]
 
-[ext_resource type="Texture2D" uid="uid://b6i3l2ivp4qqs" path="res://Cave2.png" id="1_3msax"]
+[ext_resource type="Texture2D" uid="uid://cxpsej57vurmt" path="res://Cave23.png" id="1_wxfyb"]
 [ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="2_q2gbv"]
 [ext_resource type="PackedScene" uid="uid://bex1i2tpeixw7" path="res://boss.tscn" id="3_pq332"]
 [ext_resource type="Texture2D" uid="uid://c3ukds1btji4i" path="res://DwaneJohnson.png" id="4_dngra"]
@@ -19,7 +19,7 @@ radius = 72.0
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(651, 434)
 scale = Vector2(11.5431, 11.5431)
-texture = ExtResource("1_3msax")
+texture = ExtResource("1_wxfyb")
 
 [node name="Player" parent="." instance=ExtResource("2_q2gbv")]
 position = Vector2(574, 1104)
@@ -29,17 +29,22 @@ position = Vector2(624, 288)
 scale = Vector2(0.935483, 0.935483)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-720, 384)
+position = Vector2(-1272, 336)
 scale = Vector2(405.496, 2.71146)
 shape = SubResource("RectangleShape2D_i34dt")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
-position = Vector2(2000, 512)
+position = Vector2(2576, 368)
+scale = Vector2(405.496, 2.71146)
+shape = SubResource("RectangleShape2D_i34dt")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="."]
+position = Vector2(2224, 1968)
 scale = Vector2(405.496, 2.71146)
 shape = SubResource("RectangleShape2D_i34dt")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(-414.186, -584)
+position = Vector2(-2728, -584)
 scale = Vector2(4455.03, 0.343541)
 shape = SubResource("RectangleShape2D_i34dt")
 
@@ -48,8 +53,22 @@ position = Vector2(-414, 1488)
 scale = Vector2(4455.03, 0.343541)
 shape = SubResource("RectangleShape2D_i34dt")
 
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="."]
+position = Vector2(120, -848)
+scale = Vector2(4455.03, 0.343541)
+shape = SubResource("RectangleShape2D_i34dt")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2(-2344, 1360)
+scale = Vector2(4455.03, 0.343541)
+shape = SubResource("RectangleShape2D_i34dt")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
+position = Vector2(-3176, 1128)
+scale = Vector2(4455.03, 0.343541)
+shape = SubResource("RectangleShape2D_i34dt")
+
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0.103744, 0.103744, 0.103744, 1)
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
@@ -113,6 +132,7 @@ autoplay = true
 max_distance = 1.20392e+15
 
 [node name="actionable" parent="." instance=ExtResource("6_1s7f6")]
+position = Vector2(0, -248)
 dialogue_resource = ExtResource("7_uis3r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="actionable"]
@@ -120,5 +140,5 @@ position = Vector2(-392, 1240)
 shape = SubResource("CircleShape2D_ur782")
 
 [node name="Sprite2D13" type="Sprite2D" parent="."]
-position = Vector2(-392, 1240)
+position = Vector2(-392, 992)
 texture = ExtResource("4_dngra")
