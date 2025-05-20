@@ -1,6 +1,6 @@
 ~ start
 if State.state_quest == "start3"
-	Kayle: Prove yourself.
+	Kayle: Prove yourself. Theres still more mobs to kill.
 	=> END
 if State.state_quest == "start4"
 	Kayle: The trial is not finished.

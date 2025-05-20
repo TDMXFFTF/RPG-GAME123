@@ -1,13 +1,18 @@
-[gd_scene load_steps=7 format=3 uid="uid://btx3lefrx7lmg"]
+[gd_scene load_steps=10 format=3 uid="uid://btx3lefrx7lmg"]
 
 [ext_resource type="Texture2D" uid="uid://b6i3l2ivp4qqs" path="res://Cave2.png" id="1_3msax"]
 [ext_resource type="PackedScene" uid="uid://bjjy23482ltfb" path="res://player.tscn" id="2_q2gbv"]
 [ext_resource type="PackedScene" uid="uid://bex1i2tpeixw7" path="res://boss.tscn" id="3_pq332"]
 [ext_resource type="Texture2D" uid="uid://c3ukds1btji4i" path="res://DwaneJohnson.png" id="4_dngra"]
 [ext_resource type="AudioStream" uid="uid://ckaahtov57rcx" path="res://Unholy Knight.mp3" id="5_h7qmi"]
+[ext_resource type="PackedScene" uid="uid://gbqarcgrupfv" path="res://dialogue/actionable.tscn" id="6_1s7f6"]
+[ext_resource type="Resource" uid="uid://dbpfthx68nhxb" path="res://final_easter_egg.dialogue" id="7_uis3r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i34dt"]
 size = Vector2(1.16451, 912.885)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ur782"]
+radius = 72.0
 
 [node name="FinalBoss" type="StaticBody2D"]
 
@@ -106,3 +111,14 @@ stream = ExtResource("5_h7qmi")
 volume_db = 10.0
 autoplay = true
 max_distance = 1.20392e+15
+
+[node name="actionable" parent="." instance=ExtResource("6_1s7f6")]
+dialogue_resource = ExtResource("7_uis3r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="actionable"]
+position = Vector2(-392, 1240)
+shape = SubResource("CircleShape2D_ur782")
+
+[node name="Sprite2D13" type="Sprite2D" parent="."]
+position = Vector2(-392, 1240)
+texture = ExtResource("4_dngra")

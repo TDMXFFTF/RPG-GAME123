@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://dbpfthx68nhxb"
+path="res://.godot/imported/final_easter_egg.dialogue-3be21609e5e56cd7f72592da2533479e.tres"
+
+[deps]
+
+source_file="res://final_easter_egg.dialogue"
+dest_files=["res://.godot/imported/final_easter_egg.dialogue-3be21609e5e56cd7f72592da2533479e.tres"]
+
+[params]
+
+defaults=true

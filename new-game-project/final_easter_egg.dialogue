@@ -1,0 +1,4 @@
+~ start
+Dwane John: Hey its me the rock. Listen. This fight seems too lopsided. So take this cool and epic sword I stole from some lady name "Kale"
+set State.func_call = "give_sword3"
+=> END

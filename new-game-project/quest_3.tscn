@@ -111,4 +111,4 @@ autoplay = true
 max_distance = 1e+06
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.114897, 0.114897, 0.114897, 1)
+color = Color(0.0728426, 0.0728426, 0.0728426, 1)
