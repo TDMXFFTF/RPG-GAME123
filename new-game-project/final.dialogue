@@ -5,11 +5,12 @@ Aziel: You! Come out here! I know you have my mom trapped in here! Let her go!
 ???: Mom you say?
 Mom: I AM you mother Aziel, hows the family? Are they holding well?
 Aziel: ...
-Mom: I know its crazy, but since yu're here I might as well tell you. Your entire life is a lie. Your real mother was gone right after your birth. I became your new mom and no one knew about it, not even your dad. And you and your stupid family has caused this forest so much pain. 
+Mom: I know its crazy, but since you're here I might as well tell you. Your entire life is a lie. Your real mother was gone right after your birth. I became your new mom and no one knew about it, not even your dad. And you and your stupid family has caused this forest so much pain. 
 Aziel: What? Why? and How?
-Mom: This forest used to be a wonderful place. Things prospered and all was going well, until your stupid family. They took our only source of life, the orb. Everything started to die out and life became near to none. The people of this forest started to change and become less and less of themslves. YOUR family ruined us and I'm here to bring life back to this forest
+Mom: This forest used to be a wonderful place. Things prospered and all was going well, until your stupid family. They took our only source of life, the orb. Everything started to die out and life became near to none. The people of this forest started to change and become less and less of themslves.
+Mom: YOUR family ruined us and I'm here to bring life back to this forest
 Aziel: Oh, I never knew that.
 Mom: Yes and now you know. Now I gotta kill you.
 Aziel: Wait what?
-set state.func_call = "change_to_boss"
+set State.func_call = "change_to_boss"
 => END
