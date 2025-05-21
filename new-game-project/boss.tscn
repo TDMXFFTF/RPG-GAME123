@@ -8,13 +8,13 @@
 [ext_resource type="FontFile" uid="uid://b1p76i3ych1in" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/poco/Poco.ttf" id="6_hguwn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_04pg6"]
-radius = 83.0241
+radius = 108.033
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i6cly"]
-radius = 186.431
+radius = 198.351
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_67j5v"]
-radius = 74.6667
+radius = 110.129
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3rb53"]
 radius = 600.001
@@ -62,6 +62,7 @@ scale = Vector2(3.01102, 3.01102)
 texture = null
 
 [node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(34, 79)
 scale = Vector2(1.5, 1.5)
 shape = SubResource("CircleShape2D_04pg6")
 
@@ -70,7 +71,7 @@ scale = Vector2(3, 3)
 shape = SubResource("CircleShape2D_i6cly")
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
-position = Vector2(-16, 40)
+position = Vector2(33, 79)
 scale = Vector2(1.5, 1.5)
 shape = SubResource("CircleShape2D_67j5v")
 
