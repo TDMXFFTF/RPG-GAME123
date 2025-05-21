@@ -151,7 +151,7 @@ projectile_scene = ExtResource("3_6r6le")
 SPEED = 340.0
 acceleration = 500.0
 drag_factor = null
-max_health = 1
+max_health = 90
 damage = 6
 
 [node name="Sprite2D" parent="." index="0"]
