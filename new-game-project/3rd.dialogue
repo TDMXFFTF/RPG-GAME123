@@ -16,6 +16,8 @@ if State.state_quest == "completed2"
 				Kayle: Perfect lets get started!
 				set State.state_quest = "start3"
 				set State.func_call = "change_to_quest3"
+			- Let me think about it
+				Kayle: uhhh ok
 		=> END
 	- Why is your name "Kale"
 		Kayle: I hate you
@@ -42,6 +44,10 @@ if State.state_quest == "completed!"
 			Kayle: Perfect lets get moving!
 			set State.state_quest = "start4"
 			set State.func_call = "change_to_quest4"
+		- Ok maybe not
+			Kayle: You can always change your mind
+	 -  Who lives in the cave?
+		Kayle: The great "monster" lives in that cave. It's not really a monster, but it does hate new visitors. Last visitor got eaten up the moment they stepped foot into the forest.
 	=> END
 if State.state_quest == "completed!2"
 	Kayle: I have nothing more to give you, it is now up to you to enter the cave and defeat the monster.

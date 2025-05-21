@@ -10,7 +10,7 @@ Aziel: What? Why? and How?
 Mom: This forest used to be a wonderful place. Things prospered and all was going well, until your stupid family. They took our only source of life, the orb. Everything started to die out and life became near to none. The people of this forest started to change and become less and less of themslves.
 Mom: YOUR family ruined us and I'm here to bring life back to this forest
 Aziel: Oh, I never knew that.
-Mom: Yes and now you know. Now I gotta kill you.
+Mom: Yes and you've known too much now. I must kill you
 Aziel: Wait what?
 set State.func_call = "change_to_boss"
 => END
