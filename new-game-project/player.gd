@@ -15,7 +15,7 @@ var inventory: Node
 		current_item = value
 		_equip_weapon_from_item(value)
 var current_weapon: Node2D
-@onready var _health_bar: ProgressBar = %HealthBar
+@onready var _health_bar = $CanvasLayer/HealthBar
 
 @onready var weapons = %Weapons
 

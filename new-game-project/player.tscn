@@ -328,12 +328,13 @@ shape = SubResource("RectangleShape2D_k0rft")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="HealthBar" parent="." instance=ExtResource("3_352dy")]
-unique_name_in_owner = true
-offset_left = -115.0
-offset_top = -105.0
-offset_right = 125.0
-offset_bottom = -78.0
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HealthBar" parent="CanvasLayer" instance=ExtResource("3_352dy")]
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 320.0
+offset_bottom = 34.0
 
 [node name="Node2D" type="Node2D" parent="."]
 script = ExtResource("3_dbr1r")

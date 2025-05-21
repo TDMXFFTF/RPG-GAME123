@@ -1,9 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://bex1i2tpeixw7"]
+[gd_scene load_steps=15 format=3 uid="uid://bex1i2tpeixw7"]
 
 [ext_resource type="PackedScene" uid="uid://s1qekke3u7nt" path="res://mob.tscn" id="1_1n0kb"]
 [ext_resource type="Script" path="res://boss.gd" id="2_2v0y1"]
 [ext_resource type="PackedScene" uid="uid://b0m5h05ml4adp" path="res://boss_projectile.tscn" id="3_6r6le"]
 [ext_resource type="Texture2D" uid="uid://b44nb7nvikhip" path="res://MONSTERS MOVING-Sheet.png" id="4_hlv5s"]
+[ext_resource type="PackedScene" uid="uid://bv6fyy7icqkqb" path="res://health_bar.tscn" id="5_g65f6"]
+[ext_resource type="FontFile" uid="uid://b1p76i3ych1in" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/poco/Poco.ttf" id="6_hguwn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_04pg6"]
 radius = 83.0241
@@ -49,10 +51,10 @@ animations = [{
 [node name="Boss" instance=ExtResource("1_1n0kb")]
 script = ExtResource("2_2v0y1")
 projectile_scene = ExtResource("3_6r6le")
-SPEED = 315.0
+SPEED = 340.0
 acceleration = 500.0
 max_health = 90
-damage = 4
+damage = 6
 
 [node name="Sprite2D" parent="." index="0"]
 position = Vector2(408, 0)
@@ -79,13 +81,47 @@ unique_name_in_owner = true
 shape = SubResource("CircleShape2D_3rb53")
 
 [node name="HealthBar" parent="." index="6"]
-offset_top = -140.0
-offset_bottom = -113.0
+visible = false
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1.0
+offset_bottom = 1.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="7"]
 scale = Vector2(4.4625, 4.4625)
 sprite_frames = SubResource("SpriteFrames_oxytu")
 frame = 1
 frame_progress = 0.581681
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="8"]
+
+[node name="HealthBar" parent="CanvasLayer" index="0" instance=ExtResource("5_g65f6")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -245.0
+offset_top = -58.0
+offset_right = 245.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="CanvasLayer" index="1"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -29.5
+offset_top = -95.0
+offset_right = 29.5
+offset_bottom = -63.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("6_hguwn")
+theme_override_font_sizes/font_size = 35
+text = "MOM"
 
 [editable path="HealthBar"]

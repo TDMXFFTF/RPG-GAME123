@@ -4,6 +4,7 @@ extends Mob
 @onready var projectile_detect: Area2D = %ProjectileDetection
 @onready var _projectile_timer: Timer = Timer.new()
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var boss_health_bar = $CanvasLayer/HealthBar
 
 
 func _ready() -> void:
@@ -24,6 +25,10 @@ func _ready() -> void:
 			_projectile_timer.stop()
 	)
 	_projectile_timer.timeout.connect(_shoot_projectile)
+	health = max_health
+	boss_health_bar.max_value = max_health
+	boss_health_bar.value = health
+	boss_health_bar.init_health(health)
 
 func _shoot_projectile() -> void:
 	if _player == null:
@@ -33,3 +38,11 @@ func _shoot_projectile() -> void:
 	projectile.global_position = global_position
 	projectile.direction = (_player.global_position - global_position).normalized()
 	get_tree().root.add_child(projectile)
+
+func set_health(new_health: int) -> void:
+	var _previous_health := health
+	health = clampi(new_health, 0, max_health)
+	boss_health_bar.value = health
+	if health <= 0:
+		queue_free()
+	boss_health_bar.health = health
