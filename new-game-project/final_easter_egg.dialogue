@@ -1,4 +1,13 @@
 ~ start
-Dwane John: Hey its me the rock. Listen. This fight seems too lopsided. So take this cool and epic sword I stole from some lady name "Kale"
-set State.func_call = "give_sword3"
+
+if State.state_quest == "rock"
+	Dwane John: ITS ABOUT DRIVE ITS ABOUT POWER
+	Dwane John: WAH WAH WANH WAH WAH WAH
+	Dwane John: FREE NBA YOUNGBOY
+=> END
+
+else
+	Dwane John: Hey its me the rock. Listen. This fight seems too lopsided. So take this cool and epic sword I stole from some lady name "Kale"
+	set State.func_call = "give_sword3"
+	set State.state_quest = "rock"
 => END
