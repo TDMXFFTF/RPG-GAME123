@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://bex1i2tpeixw7"]
+[gd_scene load_steps=29 format=3 uid="uid://bex1i2tpeixw7"]
 
 [ext_resource type="PackedScene" uid="uid://s1qekke3u7nt" path="res://mob.tscn" id="1_1n0kb"]
 [ext_resource type="Script" path="res://boss.gd" id="2_2v0y1"]
 [ext_resource type="PackedScene" uid="uid://b0m5h05ml4adp" path="res://boss_projectile.tscn" id="3_6r6le"]
 [ext_resource type="Texture2D" uid="uid://b44nb7nvikhip" path="res://MONSTERS MOVING-Sheet.png" id="4_hlv5s"]
+[ext_resource type="Texture2D" uid="uid://bs4nypivudd4k" path="res://DEAD-Sheet.png" id="4_k2moi"]
 [ext_resource type="PackedScene" uid="uid://bv6fyy7icqkqb" path="res://health_bar.tscn" id="5_g65f6"]
 [ext_resource type="FontFile" uid="uid://b1p76i3ych1in" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/poco/Poco.ttf" id="6_hguwn"]
 
@@ -19,6 +20,58 @@ radius = 110.129
 [sub_resource type="CircleShape2D" id="CircleShape2D_3rb53"]
 radius = 600.001
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_7gtih"]
+atlas = ExtResource("4_k2moi")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a30b8"]
+atlas = ExtResource("4_k2moi")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t01ww"]
+atlas = ExtResource("4_k2moi")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ibmq0"]
+atlas = ExtResource("4_k2moi")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hnsji"]
+atlas = ExtResource("4_k2moi")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjbbb"]
+atlas = ExtResource("4_k2moi")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kia4q"]
+atlas = ExtResource("4_k2moi")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_no0pc"]
+atlas = ExtResource("4_k2moi")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0gonk"]
+atlas = ExtResource("4_k2moi")
+region = Rect2(1024, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pochy"]
+atlas = ExtResource("4_k2moi")
+region = Rect2(1152, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_palq7"]
+atlas = ExtResource("4_k2moi")
+region = Rect2(1280, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3a2i6"]
+atlas = ExtResource("4_k2moi")
+region = Rect2(1408, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6uxdt"]
+atlas = ExtResource("4_k2moi")
+region = Rect2(1536, 0, 128, 128)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_b10by"]
 atlas = ExtResource("4_hlv5s")
 region = Rect2(0, 0, 126, 126)
@@ -33,6 +86,50 @@ region = Rect2(252, 0, 126, 126)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_oxytu"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7gtih")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a30b8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t01ww")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ibmq0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hnsji")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjbbb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kia4q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_no0pc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0gonk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pochy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_palq7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3a2i6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6uxdt")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_b10by")
@@ -53,7 +150,8 @@ script = ExtResource("2_2v0y1")
 projectile_scene = ExtResource("3_6r6le")
 SPEED = 340.0
 acceleration = 500.0
-max_health = 90
+drag_factor = null
+max_health = 1
 damage = 6
 
 [node name="Sprite2D" parent="." index="0"]
@@ -91,8 +189,7 @@ offset_bottom = 1.0
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="7"]
 scale = Vector2(4.4625, 4.4625)
 sprite_frames = SubResource("SpriteFrames_oxytu")
-frame = 1
-frame_progress = 0.581681
+animation = &"dead"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="8"]
 
@@ -124,5 +221,10 @@ grow_vertical = 0
 theme_override_fonts/font = ExtResource("6_hguwn")
 theme_override_font_sizes/font_size = 35
 text = "MOM"
+
+[node name="TimerDead" type="Timer" parent="." index="9"]
+wait_time = 3.0
+
+[connection signal="timeout" from="TimerDead" to="." method="_on_timer_timeout"]
 
 [editable path="HealthBar"]

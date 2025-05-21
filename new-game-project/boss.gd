@@ -5,6 +5,7 @@ extends Mob
 @onready var _projectile_timer: Timer = Timer.new()
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var boss_health_bar = $CanvasLayer/HealthBar
+@onready var timer_dead: Timer = $TimerDead
 
 
 func _ready() -> void:
@@ -44,5 +45,12 @@ func set_health(new_health: int) -> void:
 	health = clampi(new_health, 0, max_health)
 	boss_health_bar.value = health
 	if health <= 0:
-		queue_free()
+		animated_sprite_2d.play("dead")
+		timer_dead.start()
+		SPEED = 0.0
+		damage = 0.0
 	boss_health_bar.health = health
+
+
+func _on_timer_timeout() -> void:
+	queue_free()
