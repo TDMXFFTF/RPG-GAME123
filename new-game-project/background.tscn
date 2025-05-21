@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bien7vapc4nm3" path="res://sidequest_npc_3.tscn" id="10_m4yhs"]
 [ext_resource type="PackedScene" uid="uid://bchf7r533dbvw" path="res://hut_2.tscn" id="11_knja1"]
 [ext_resource type="PackedScene" uid="uid://80bmmo5iewj6" path="res://cave.tscn" id="12_0b716"]
-[ext_resource type="PackedScene" path="res://hut_3.tscn" id="14_uckoo"]
+[ext_resource type="PackedScene" uid="uid://tui1ploag8d" path="res://hut_3.tscn" id="14_uckoo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8n6v7"]
 size = Vector2(8741.5, 616)
