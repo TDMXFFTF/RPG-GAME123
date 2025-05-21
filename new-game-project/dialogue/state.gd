@@ -35,7 +35,7 @@ var func_call:
 			"change_to_boss":
 				change_scene_with_loading("res://final_boss_map.tscn")
 			"change_to_cutscene":
-				change_scene_with_loading("res://cutscene.tcsn")
+				change_scene_with_loading("res://cutscene.tscn")
 			_:
 				print("Unknown func_call:", value)
 
