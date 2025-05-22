@@ -56,9 +56,12 @@ func set_health(new_health: int) -> void:
 
 
 func _on_timer_timeout() -> void:
+	open_mode()
 	queue_free()
 	show_ending()
 
+func open_mode():
+	visible = not visible
 
 func show_ending():
 	State.change_scene_with_loading("res://the_end.tscn")
