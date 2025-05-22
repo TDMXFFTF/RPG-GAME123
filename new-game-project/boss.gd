@@ -1,6 +1,7 @@
 extends Mob
 
 @export var projectile_scene: PackedScene
+var is_dead: bool = false
 @onready var projectile_detect: Area2D = %ProjectileDetection
 @onready var _projectile_timer: Timer = Timer.new()
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
@@ -32,7 +33,7 @@ func _ready() -> void:
 	boss_health_bar.init_health(health)
 
 func _shoot_projectile() -> void:
-	if _player == null:
+	if _player == null or is_dead:
 		return
 
 	var projectile = projectile_scene.instantiate() as Area2D
@@ -44,11 +45,13 @@ func set_health(new_health: int) -> void:
 	var _previous_health := health
 	health = clampi(new_health, 0, max_health)
 	boss_health_bar.value = health
-	if health <= 0:
+	if health <= 0 and not is_dead:
+		is_dead = true
 		animated_sprite_2d.play("dead")
 		timer_dead.start()
 		SPEED = 0.0
 		damage = 0.0
+		_projectile_timer.stop()  # <- stop the projectile timer too
 	boss_health_bar.health = health
 
 
