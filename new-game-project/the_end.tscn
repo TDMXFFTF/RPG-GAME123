@@ -1,18 +1,61 @@
-[gd_scene load_steps=3 format=3 uid="uid://88fhu0ojojvd"]
+[gd_scene load_steps=10 format=3 uid="uid://88fhu0ojojvd"]
 
 [ext_resource type="Texture2D" uid="uid://b25djsdjwrlvm" path="res://Artwork/Celebration.png" id="1_4a2nu"]
+[ext_resource type="Script" path="res://the_end.gd" id="1_vkdm8"]
 [ext_resource type="FontFile" uid="uid://b1p76i3ych1in" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/poco/Poco.ttf" id="1_vnj2u"]
+[ext_resource type="Texture2D" uid="uid://5j6qnvjox10s" path="res://white_circle copy.png" id="3_uxssl"]
+
+[sub_resource type="Gradient" id="Gradient_lbftb"]
+offsets = PackedFloat32Array(0, 0.209016, 0.381148, 0.565574, 0.815574, 0.946721)
+colors = PackedColorArray(0.964706, 0, 0, 1, 0.839216, 0.419608, 0, 1, 0.94902, 0.929412, 0.176471, 1, 0.305882, 0.972549, 0.305882, 1, 0.160784, 0.968627, 0.772549, 1, 0.45098, 0.337255, 0.964706, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_evq42"]
+gradient = SubResource("Gradient_lbftb")
+
+[sub_resource type="Curve" id="Curve_meshe"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.00662251, 0.0593555), 0.0, 0.0, 0, 0, Vector2(0.231788, 1), 0.0, 0.0, 0, 0, Vector2(0.410596, 0.992651), 0.0, 0.0, 0, 0, Vector2(0.741722, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 6
+
+[sub_resource type="CurveTexture" id="CurveTexture_mwk6o"]
+curve = SubResource("Curve_meshe")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_57524"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(1236, 694, 1)
+direction = Vector3(0, -1, 0)
+initial_velocity_max = 250.0
+angular_velocity_min = 4.99998
+angular_velocity_max = 9.99998
+gravity = Vector3(0, 500, 0)
+damping_max = 1.0
+scale_min = 0.3
+scale_max = 0.3
+scale_curve = SubResource("CurveTexture_mwk6o")
+color_ramp = SubResource("GradientTexture1D_evq42")
 
 [node name="TheEnd" type="Node2D"]
+script = ExtResource("1_vkdm8")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
-offset_left = 15.0
-offset_top = 6.0
-offset_right = 1218.0
-offset_bottom = 675.0
+offset_left = 3.0
+offset_top = -3.0
+offset_right = 1239.0
+offset_bottom = 691.0
 texture = ExtResource("1_4a2nu")
+
+[node name="Confetti" type="GPUParticles2D" parent="CanvasLayer"]
+unique_name_in_owner = true
+position = Vector2(604, -8)
+emitting = false
+amount = 500
+process_material = SubResource("ParticleProcessMaterial_57524")
+texture = ExtResource("3_uxssl")
+lifetime = 2.0
+one_shot = true
+explosiveness = 1.0
 
 [node name="Label" type="Label" parent="CanvasLayer"]
 anchors_preset = 8
