@@ -5,12 +5,20 @@ class_name Slot
 @export var item : Item = null:
 	set(value):
 		item = value
-		if get_parent().name == "Character" and value != null:
-			get_parent().equip(value)
+		if get_parent().name == "Character":
+			var player = get_tree().current_scene.get_node_or_null("Player")
+			if value != null:
+				if player:
+					player.current_item = value
+			else:
+				if player:
+					player.current_item = null
 		if value != null:
 			texture_rect.texture = value.icon
 		else:
 			texture_rect.texture = null
+
+
 
 func get_preview():
 	var preview_texture = TextureRect.new()

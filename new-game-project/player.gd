@@ -47,6 +47,7 @@ func _ready() -> void:
 
 	if inventory:
 		inventory.load_inventory()
+		inventory.character.reapply_equipped_item()
 	else:
 		print("Inventory not found in Autoload")
 
@@ -98,20 +99,34 @@ func _equip_weapon_from_item(item: Item) -> void:
 	for weapon in weapons.get_children():
 		weapon.hide()
 		weapon.set_process(false)
+
+	if item == null:
+		current_weapon = null
+		return
+
+	for weapon in weapons.get_children():
 		if weapon.name == item.weapon_scene_name:
 			current_weapon = weapon
 			weapon.show()
 			weapon.set_process(true)
+
 
 func equip(item: Item):
 	current_item = item  
 	for weapon in $Weapons.get_children():
 		weapon.hide()
 		weapon.set_process(false)
+
+	if item == null:
+		current_weapon = null
+		return
+
+	for weapon in $Weapons.get_children():
 		if weapon.name == item.weapon_scene_name:
 			weapon.show()
 			weapon.set_process(true)
 			current_weapon = weapon
+
 
 
 func set_health(new_health: int) -> void:
