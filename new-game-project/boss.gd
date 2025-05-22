@@ -42,26 +42,29 @@ func _shoot_projectile() -> void:
 	get_tree().root.add_child(projectile)
 
 func set_health(new_health: int) -> void:
+	if is_dead:
+		return  # Don't allow any changes if already dead
+
 	var _previous_health := health
 	health = clampi(new_health, 0, max_health)
-	boss_health_bar.value = health
+	if boss_health_bar:  # Double safety: check if still valid
+		boss_health_bar.value = health
+		boss_health_bar.health = health
+
 	if health <= 0 and not is_dead:
 		is_dead = true
 		animated_sprite_2d.play("dead")
 		timer_dead.start()
 		SPEED = 0.0
 		damage = 0.0
-		_projectile_timer.stop()  # <- stop the projectile timer too
-	boss_health_bar.health = health
+		_projectile_timer.stop()
+
 
 
 func _on_timer_timeout() -> void:
-	open_mode()
 	queue_free()
 	show_ending()
 
-func open_mode():
-	visible = not visible
 
 func show_ending():
 	State.change_scene_with_loading("res://the_end.tscn")
