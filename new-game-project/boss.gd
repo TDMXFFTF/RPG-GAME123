@@ -57,3 +57,10 @@ func set_health(new_health: int) -> void:
 
 func _on_timer_timeout() -> void:
 	queue_free()
+	
+#func _process(delta):
+	#if is_quest_completed():
+		#show_ending()
+
+#func show_ending():
+	#get_tree().change_scene_to_file("res://scenes/EndingScene.tscn")
