@@ -8,7 +8,6 @@ func toggle_visibility():
 
 func _ready():
 	State.inventory = self
-	add_item(load("res://Final Sword.tres"))
 
 func add_item(item: Item):
 	if item.resource_path != "":
