@@ -5,7 +5,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h5b44"]
 radius = 45.8726
-height = 206.587
+height = 218.327
 
 [node name="FinalSword" instance=ExtResource("1_8vu4c")]
 damage = 3.0
@@ -15,5 +15,5 @@ attack_speed = 1.8
 texture = ExtResource("2_br7hy")
 
 [node name="CollisionShape2D" parent="Marker2D/Sprite2D/HitBox" index="0"]
-position = Vector2(-9.17464, -19.9956)
+position = Vector2(-8.11608, -24.8823)
 shape = SubResource("CapsuleShape2D_h5b44")

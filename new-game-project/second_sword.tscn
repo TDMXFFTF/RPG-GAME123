@@ -5,7 +5,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kvib0"]
 radius = 46.7814
-height = 207.57
+height = 224.491
 
 [node name="SecondSword" instance=ExtResource("1_svolb")]
 damage = 2.0
@@ -15,5 +15,5 @@ attack_speed = 1.4
 texture = ExtResource("2_pynth")
 
 [node name="CollisionShape2D" parent="Marker2D/Sprite2D/HitBox" index="0"]
-position = Vector2(-2.27767, -12.1578)
+position = Vector2(-2.33704, -16.6833)
 shape = SubResource("CapsuleShape2D_kvib0")
