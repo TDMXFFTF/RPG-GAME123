@@ -13,24 +13,17 @@ func add_item(item: Item):
 	if item.resource_path == "":
 		print("Item is not a saved resource")
 		return
-
-	# Prevent duplicates
 	if item.resource_path in Global.inventory_items:
 		print("Item already in inventory:", item.resource_path)
 		return
-
 	Global.inventory_items.append(item.resource_path)
-
-	# Don't add if already in a slot
 	for slot in slots:
 		if slot.item == item:
 			return
-
 	for slot in slots:
 		if slot.item == null:
 			slot.item = item
 			return
-	
 	print("Can't add any more item...")
 
 
@@ -50,7 +43,6 @@ func load_inventory():
 	for path in Global.inventory_items:
 		var item = load(path)
 		if item:
-			# This will now only add if not already in a slot
 			add_item(item)
 		else:
 			print("Failed to load item from:", path)

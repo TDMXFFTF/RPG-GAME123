@@ -24,11 +24,11 @@ func get_preview():
 	var preview_texture = TextureRect.new()
 	preview_texture.texture = texture_rect.texture
 	preview_texture.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-	preview_texture.custom_minimum_size = Vector2(20,20)
+	preview_texture.custom_minimum_size = Vector2(100,100)
 	
 	var preview = Control.new()
 	preview.add_child(preview_texture)
-	preview_texture.position = -0.5 * Vector2(20,20)
+	preview_texture.position = -0.5 * Vector2(100,100)
 	
 	return preview
 
