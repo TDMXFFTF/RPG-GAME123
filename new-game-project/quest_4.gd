@@ -7,4 +7,4 @@ func mob_killed() -> void:
 	kill += 1
 	if kill >= 20:
 		State.state_quest = "finished4"
-		print ("quest complete")
+		QuestUI.show_message("QUEST COMPLETE")

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dr5vs5y2lngs0"]
+
+[ext_resource type="FontFile" uid="uid://b1p76i3ych1in" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/poco/Poco.ttf" id="1_bn2j7"]
+[ext_resource type="Script" path="res://QuestUI.gd" id="1_i6xvq"]
+
+[node name="QuestUI" type="CanvasLayer"]
+script = ExtResource("1_i6xvq")
+
+[node name="QuestMessage" type="Label" parent="."]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -69.5
+offset_right = 69.5
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_bn2j7")
+theme_override_font_sizes/font_size = 75
+text = "QUEST COMPLETE"

@@ -16,3 +16,4 @@ func stick_collected() -> void:
 	if pickup >= 3:
 		print("compledt!")
 		State.state_quest = "done1"
+		QuestUI.show_message("QUEST COMPLETE")
