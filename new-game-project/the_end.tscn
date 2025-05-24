@@ -1,9 +1,18 @@
-[gd_scene load_steps=10 format=3 uid="uid://88fhu0ojojvd"]
+[gd_scene load_steps=19 format=3 uid="uid://88fhu0ojojvd"]
 
 [ext_resource type="Texture2D" uid="uid://b25djsdjwrlvm" path="res://Artwork/Celebration.png" id="1_4a2nu"]
 [ext_resource type="Script" path="res://the_end.gd" id="1_vkdm8"]
 [ext_resource type="FontFile" uid="uid://b1p76i3ych1in" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/poco/Poco.ttf" id="1_vnj2u"]
 [ext_resource type="Texture2D" uid="uid://5j6qnvjox10s" path="res://white_circle copy.png" id="3_uxssl"]
+[ext_resource type="Texture2D" uid="uid://bhvd84ho1r8vx" path="res://W_Corp._L3_Cleanup_Agent_Don_Quixote_Profile.webp" id="5_1wbw6"]
+[ext_resource type="Texture2D" uid="uid://c4yted3v6b2sm" path="res://Lobotomy_E.G.O_Lantern_Don_Quixote_Profile.webp" id="6_wq52x"]
+[ext_resource type="Texture2D" uid="uid://dc62m38sifegw" path="res://Rosespanner_Workshop_Rep_Rodion_Acquisition.jpg" id="7_0fgqb"]
+[ext_resource type="Texture2D" uid="uid://doljjhhfa0mep" path="res://LCB_Sinner_Don_Quixote_Full.webp" id="8_owfo1"]
+[ext_resource type="Texture2D" uid="uid://cv1uo1sjkyilk" path="res://noFilter.webp" id="9_e3uff"]
+[ext_resource type="Texture2D" uid="uid://cvfgbur7xw24l" path="res://t0UnJsCJ_400x400.jpg" id="10_onpdy"]
+[ext_resource type="Texture2D" uid="uid://gse1hxy227kj" path="res://don-quixote-from-limbus-company-v0-blbg0al91l6c1.webp" id="11_h8tjt"]
+[ext_resource type="Texture2D" uid="uid://do5c6jpjo7rnb" path="res://images.png" id="12_yytxx"]
+[ext_resource type="Texture2D" uid="uid://cl833asdlot37" path="res://don_quixote_don.webp" id="13_b38p7"]
 
 [sub_resource type="Gradient" id="Gradient_lbftb"]
 offsets = PackedFloat32Array(0, 0.209016, 0.381148, 0.565574, 0.815574, 0.946721)
@@ -72,3 +81,47 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_vnj2u")
 theme_override_font_sizes/font_size = 200
 text = "TheEnd"
+
+[node name="WCorp_L3CleanupAgentDonQuixoteProfile" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(114, 129.5)
+scale = Vector2(0.632813, 0.777344)
+texture = ExtResource("5_1wbw6")
+
+[node name="LobotomyE_g_oLanternDonQuixoteProfile" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(1125, 155.5)
+scale = Vector2(0.5, 1.01172)
+texture = ExtResource("6_wq52x")
+
+[node name="RosespannerWorkshopRepRodionAcquisition" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(1089.75, 496.75)
+scale = Vector2(0.115365, 0.286574)
+texture = ExtResource("7_0fgqb")
+
+[node name="LcbSinnerDonQuixoteFull" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(193, 545)
+scale = Vector2(0.0979167, 0.208333)
+texture = ExtResource("8_owfo1")
+
+[node name="NoFilter" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(702, 555)
+scale = Vector2(0.492857, 0.621428)
+texture = ExtResource("9_e3uff")
+
+[node name="T0UnJsCj400x400" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(472, 563)
+texture = ExtResource("10_onpdy")
+
+[node name="Don-quixote-from-limbus-company-v0-blbg0Al91l6c1" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(902, 531)
+scale = Vector2(0.448, 0.809278)
+texture = ExtResource("11_h8tjt")
+
+[node name="Images" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(169, 340)
+scale = Vector2(0.588889, 0.713333)
+texture = ExtResource("12_yytxx")
+
+[node name="DonQuixoteDon" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(965, 178)
+scale = Vector2(0.375817, 0.51006)
+texture = ExtResource("13_b38p7")
